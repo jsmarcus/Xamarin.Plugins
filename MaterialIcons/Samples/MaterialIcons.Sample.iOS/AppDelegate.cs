@@ -23,8 +23,8 @@ namespace MaterialIcons.Sample.iOS
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
             FormsPlugin.iOS.MaterialIconControls.Init();
+            LoadApplication(new App());            
             return base.FinishedLaunching(uiApplication, launchOptions);
         }
     }
