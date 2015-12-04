@@ -22,50 +22,38 @@ Add the NuGet package (https://www.nuget.org/packages/Xam.FormsPlugin.MaterialIc
 #### Xaml
 First add the xmlns namespace:
 
-`
-xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
-`
+    xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
 
 Then add the xaml:
 
-`
-<mi:IconLabel Icon="ic_check_circle" FontSize="12" TextColor="Blue" />
-`
+    <mi:IconLabel Icon="ic_check_circle" FontSize="12" TextColor="Blue" />
 
 Icon names are in the form of **ic_{ligature_name}**
 
 ### Android
 Initialize the control library
 
-`
-Xamarin.Forms.Init(this, savedInstanceState);
-MaterialIconControls.Init();
-`
+    Xamarin.Forms.Init(this, savedInstanceState);  
+    MaterialIconControls.Init();
 
 ### iOS
 **Important:** You must add the custom font to your Info.plist
 
-`
-<key>UIAppFonts</key>
-<array>
-    <string>MaterialIcons-Regular.ttf</string>
-</array>
-`
+    <key>UIAppFonts</key>
+    <array>
+        <string>MaterialIcons-Regular.ttf</string>
+    </array>
 
 Initialize the control library
 
-`
-Xamarin.Forms.Init();
-MaterialIconControls.Init();
-`
+    Xamarin.Forms.Init();
+    MaterialIconControls.Init();
 
 ### Windows Phone
 Initialize the control library
 
-`
-Xamarin.Forms.Init();
-MaterialIconControls.Init();
-`
+    Xamarin.Forms.Init();
+    MaterialIconControls.Init();
 
 #### Contributors
 * [jsmarcus](https://github.com/jsmarcus)
