@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>Xam.FormsPlugin.MaterialIcons</id>
+    <version>0.0.1-alpha</version>
+    <title>Material Icon Controls Plugin for Xamarin.Forms</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Adds custom controls for Xamarin.Forms that use the Google Material Icon font for their content.
+      Create buttons and labels, customize the size and color.
+      Ensure you call MaterialIconControls.Init() on each platform.
+      Built against: 2.0.0.6490
+    </description>
+    <summary>Use the Google Material Icon font in your Xamarin.Forms projects! Ensure you call MaterialIconControls.Init() on each platform.</summary>
+    <tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin.forms, android, xamarin.forms, ios</tags>
+    <dependencies>
+      <dependency id="Xamarin.Forms" version="2.0.0.6490" />
+    </dependencies>
+    <releaseNotes>
+      [0.0.1-alpha]
+      Initial version supporting Android and iOS.
+      Windows to come soon.
+    </releaseNotes>
+  </metadata>
+  <files>
+    <!--Core-->
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.dll" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\MaterialIcons.FormsPlugin.Abstractions.dll" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.xml" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\MaterialIcons.FormsPlugin.Abstractions.xml" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.pdb" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\MaterialIcons.FormsPlugin.Abstractions.pdb" />
+
+    <!--Xamarin.Android-->
+    <file src="MaterialIcons.FormsPlugin.Droid\bin\Release\MaterialIcons.FormsPlugin.Droid.dll" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Droid.dll" />
+    <file src="MaterialIcons.FormsPlugin.Droid\bin\Release\MaterialIcons.FormsPlugin.Droid.xml" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Droid.xml" />
+    <file src="MaterialIcons.FormsPlugin.Droid\bin\Release\MaterialIcons.FormsPlugin.Droid.pdb" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Droid.pdb" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.dll" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Abstractions.dll" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.xml" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Abstractions.xml" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.pdb" target="lib\MonoAndroid10\MaterialIcons.FormsPlugin.Abstractions.pdb" />
+
+    <!--Xamarin.iOS-->
+    <file src="MaterialIcons.FormsPlugin.iOS\bin\iPhone\Release\MaterialIcons.FormsPlugin.iOS.dll" target="lib\Xamarin.iOS10\MaterialIcons.FormsPlugin.iOS.dll" />
+    <file src="MaterialIcons.FormsPlugin.iOS\bin\iPhone\Release\MaterialIcons.FormsPlugin.iOS.xml" target="lib\Xamarin.iOS10\MaterialIcons.FormsPlugin.iOS.xml" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.dll" target="lib\Xamarin.iOS10\MaterialIcons.FormsPlugin.Abstractions.dll" />
+    <file src="MaterialIcons.FormsPlugin.Abstractions\bin\Release\MaterialIcons.FormsPlugin.Abstractions.xml" target="lib\Xamarin.iOS10\MaterialIcons.FormsPlugin.Abstractions.xml" />
+  </files>
+</package>
