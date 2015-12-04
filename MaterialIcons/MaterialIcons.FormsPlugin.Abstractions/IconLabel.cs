@@ -2,6 +2,10 @@
 
 namespace MaterialIcons.FormsPlugin.Abstractions
 {
+    /// <summary>
+    /// Class definition for the <see cref="IconLabel"/> Control
+    /// </summary>
+    /// <seealso cref="Label" />
     public class IconLabel : Label
     {
         /// <summary>

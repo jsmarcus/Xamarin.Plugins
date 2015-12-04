@@ -7,9 +7,12 @@ namespace MaterialIcons.FormsPlugin.iOS
     /// </summary>
     public static class MaterialIconControls
     {
+        /// <summary>
+        /// Initializes the control library.
+        /// </summary>
         public static void Init()
         {
-            var date = DateTime.Now;
+            var now = DateTime.Now;
         }
     }
 }

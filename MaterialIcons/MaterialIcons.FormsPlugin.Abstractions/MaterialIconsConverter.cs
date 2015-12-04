@@ -17,7 +17,8 @@ namespace MaterialIcons.FormsPlugin.Abstractions
         public override Boolean CanConvertFrom(Type sourceType)
         {
             if (sourceType == null)
-                throw new ArgumentNullException(nameof(sourceType));
+                //throw new ArgumentNullException(nameof(sourceType));
+                throw new ArgumentNullException("sourceType");
             return sourceType == typeof(String);
         }
 
@@ -43,7 +44,8 @@ namespace MaterialIcons.FormsPlugin.Abstractions
                 }
             }
 
-            throw new InvalidOperationException($"Cannot convert {value} into {typeof(MaterialIcons)}");
+            //throw new InvalidOperationException($"Cannot convert {value} into {typeof(MaterialIcons)}");
+            throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", value, typeof(MaterialIcons)));
         }
     }
 }

@@ -17,7 +17,7 @@ namespace MaterialIcons.Sample.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            FormsPlugin.iOS.MaterialIconControls.Init();
+            FormsPlugin.Droid.MaterialIconControls.Init();
             ToolbarResource = Resource.Layout.toolbar;
             TabLayoutResource = Resource.Layout.tabs;
             LoadApplication(new App());

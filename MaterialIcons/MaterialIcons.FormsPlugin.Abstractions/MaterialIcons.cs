@@ -4,7 +4,7 @@ using Xamarin.Forms;
 namespace MaterialIcons.FormsPlugin.Abstractions
 {
     [TypeConverter(typeof(MaterialIconsConverter))]
-    public struct MaterialIcons
+    public class MaterialIcons
     {
         public static readonly MaterialIcons ic_3d_rotation = new MaterialIcons("\ue84d");
         public static readonly MaterialIcons ic_ac_unit = new MaterialIcons("\ueb3b");
@@ -898,13 +898,30 @@ namespace MaterialIcons.FormsPlugin.Abstractions
         public static readonly MaterialIcons ic_zoom_out = new MaterialIcons("\ue900");
         public static readonly MaterialIcons ic_zoom_out_map = new MaterialIcons("\ue56b");
 
+        /// <summary>
+        /// Gets or sets the icon.
+        /// </summary>
+        /// <value>
+        /// The icon.
+        /// </value>
         public String Icon { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MaterialIcons"/> struct.
+        /// </summary>
+        /// <param name="icon">The icon.</param>
         public MaterialIcons(String icon)
         {
             Icon = icon;
         }
 
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="MaterialIcons"/> to <see cref="String"/>.
+        /// </summary>
+        /// <param name="icon">The icon.</param>
+        /// <returns>
+        /// The result of the conversion.
+        /// </returns>
         public static implicit operator String(MaterialIcons icon)
         {
             return icon.ToString();

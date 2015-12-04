@@ -4,7 +4,15 @@
              xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
              x:Class="MaterialIcons.Sample.Page1">
   <StackLayout VerticalOptions="Center">
-    <mi:IconLabel HorizontalTextAlignment="Center" Icon="ic_check_circle" />
-    <mi:IconButton Icon="ic_check_circle" />
+    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+      <mi:IconLabel Icon="ic_check_circle" FontSize="12" TextColor="Blue" />
+      <mi:IconLabel Icon="ic_check_circle" FontSize="16" TextColor="Red" />
+      <mi:IconLabel Icon="ic_check_circle" FontSize="20" TextColor="Green" />
+      <mi:IconLabel Icon="ic_check_circle" FontSize="24" TextColor="Yellow" />
+    </StackLayout>
+    <mi:IconButton Icon="ic_check_circle" FontSize="12" TextColor="Blue" />
+    <mi:IconButton Icon="ic_check_circle" FontSize="16" TextColor="Red" />
+    <mi:IconButton Icon="ic_check_circle" FontSize="20" TextColor="Green" />
+    <mi:IconButton Icon="ic_check_circle" FontSize="24" TextColor="Yellow" />
   </StackLayout>
 </ContentPage>

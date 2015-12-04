@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MaterialIcons.FormsPlugin.Droid
+namespace MaterialIcons.FormsPlugin.WinPhone
 {
     /// <summary>
     /// Enables renderers for various aspects of the library.
