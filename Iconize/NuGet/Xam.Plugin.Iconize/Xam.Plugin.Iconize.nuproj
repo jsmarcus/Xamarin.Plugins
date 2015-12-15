@@ -19,7 +19,7 @@
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>Xam.Plugin.Iconize</Id>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Title>Iconize Plugin for Xamarin</Title>
     <Authors>Jeremy Marcus</Authors>
     <Owners>Jeremy Marcus</Owners>
@@ -27,8 +27,8 @@
     <Description>Easily add icon fonts to your Xamarin applications!</Description>
     <ReleaseNotes>
     </ReleaseNotes>
-    <ProjectUrl>https://github.com/jsmarcus/Xamarin.Plugins/Iconize</ProjectUrl>
-    <LicenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/Iconize/LICENSE</LicenseUrl>
+    <ProjectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</ProjectUrl>
+    <LicenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</LicenseUrl>
     <Copyright>Copyright © Jeremy Marcus</Copyright>
     <Tags>xamarin pcl xam.pcl plugin plugin for xamarin.forms android ios</Tags>
   </PropertyGroup>
