@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>41f62f01-21f0-4ee6-8c9f-e437e5c79e01</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Xam.Plugin.Iconize.Material</Id>
+    <Version>1.0.0</Version>
+    <Title>Iconize Plugin for Xamarin - Material design icons</Title>
+    <Authors>Jeremy Marcus</Authors>
+    <Owners>Jeremy Marcus</Owners>
+    <Summary>Iconize Plugin for Xamarin - Material design icons</Summary>
+    <Description>Easily add icon fonts to your Xamarin applications!</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>https://github.com/jsmarcus/Xamarin.Plugins/Iconize</ProjectUrl>
+    <LicenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/Iconize/LICENSE</LicenseUrl>
+    <Copyright>Copyright © Jeremy Marcus</Copyright>
+    <Tags>xamarin pcl xam.pcl plugin plugin for xamarin.forms android ios</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.Android\Plugin.Iconize.Material.Android.csproj" />
+    <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.iOS\Plugin.Iconize.Material.iOS.csproj" />
+    <ProjectReference Include="..\Xam.Plugin.Iconize\Xam.Plugin.Iconize.nuproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

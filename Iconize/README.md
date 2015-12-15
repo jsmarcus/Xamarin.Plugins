@@ -1,0 +1,149 @@
+#Iconize Plugin for Xamarin#
+A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
+Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms application!
+
+##Icon Fonts##
+
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Material design icons](http://google.github.io/material-design-icons/)
+* [Meteocons](http://www.alessioatzeni.com/meteocons/)
+* [Typicons](https://github.com/stephenhutchings/typicons.font)
+
+**Coming Soon**
+
+* [Entypo+](http://entypo.com/)
+* [Ionicons](http://ionicons.com/)
+* [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
+* [Weather Icons](http://weathericons.io)
+* And more!
+
+**Extensibility**  
+In case you can't find the icon you want, you can extend the available icon directly from your app.
+All you need to do is to implement IIconModule with a .ttf file in your assets/resources and provide the mapping between keys and special characters, then give it to Iconize.With().
+
+There are no constraints on the icon keys, but I strongly suggest you use a unique prefix like my- or anything, to avoid conflicts with other modules.
+FYI, if there is a conflict, the first module declared with Iconize.With() has priority.
+
+##Controls##
+
+**Xamarin.Android (AppCompat)**
+
+* IconButton (Button)
+* IconDrawable (Drawable)
+* IconTextView (TextView)
+* IconToggleButton (ToggleButton)
+
+**Xamarin.iOS (Unified)**
+
+* IconButton (UIButton)
+* IconLabel (UILabel)
+* UIImage (extension)
+
+**Xamarin.Forms**
+
+* IconButton (Button)
+* IconImage (Image)
+* IconLabel (Label)
+* IconToolbarItem (ToolbarItem) **Coming soon!**
+
+##Setup##
+
+###Install###
+
+**Nuget**  
+All packages are provided via NuGet.
+
+* [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize) - Required by all projects
+* [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
+* [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
+* [Xam.Plugin.Iconize.Meteocons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Meteocons)
+* [Xam.Plugin.Iconize.Typicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Typicons)
+* [Xam.FormsPlugin.Iconize](https://www.nuget.org/packages/Xam.FormsPlugin.Iconize) - Required by Xamarin.Forms projects
+
+###Configure###
+
+**Xamarin.Android**  
+Initialize any number of modules in Application.OnCreate().
+```c#
+public override void OnCreate()
+{
+    base.OnCreate();
+
+    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+    ...
+}
+```
+
+**Xamarin.iOS**  
+Initialize any number of modules in AppDelegate.FinishedLaunching().
+```c#
+public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+{
+    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+
+    ...
+}
+```
+
+Add the UIAppFonts key to Info.plist.
+```xml
+<key>UIAppFonts</key>
+<array>
+    <string>iconize-fontawesome.ttf</string>
+    <string>iconize-material.ttf</string>
+    <string>iconize-meteocons.ttf</string>
+    <string>iconize-typicons.ttf</string>
+</array>
+```
+
+**Xamarin.Forms**  
+Follow the instructions for the specific platforms above and add the following:
+
+Android:
+```c#
+Xamarin.Forms.Forms.Init(this, savedInstanceState);
+...
+FormsPlugin.Iconize.Android.IconControls.Init();
+...
+LoadApplication(new App());
+```
+
+iOS:
+```c#
+Xamarin.Forms.Forms.Init();
+...
+FormsPlugin.Iconize.iOS.IconControls.Init();
+...
+LoadApplication(new App());
+```
+
+##Contributions##
+
+* Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
+
+##License##
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
+This work is licensed under a [Creative Commons Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+**Font Awesome**  
+Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+
+**Material design icons**  
+Material design icons are licensed under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+**Meteocons**  
+Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www.alessioatzeni.com/).
+
+**Typicons**  
+Typicons is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+
+**Brand Icons**  
+All brand icons are trademarks of their respective owners.
+The use of these trademarks does not indicate endorsement of the trademark holder by Iconize, nor vice versa.
+Brand icons should only be used to represent the company or product to which they refer.

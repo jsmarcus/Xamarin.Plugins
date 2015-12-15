@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+            x:Class="Iconize.FormsSample.Page1"
+            Title="Iconize">
+
+  <TabbedPage.ItemTemplate>
+    <DataTemplate>
+      <ContentPage Title="{Binding FontFamily}">
+        <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding Characters}">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <StackLayout Orientation="Horizontal">
+                  <iconize:IconImage HeightRequest="20" Icon="{Binding Key}" IconColor="Blue" WidthRequest="20" />
+                  <iconize:IconLabel Text="{Binding Key, StringFormat='{}{{{0}}} {0}'}" />
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </ContentPage>
+    </DataTemplate>
+  </TabbedPage.ItemTemplate>
+
+</TabbedPage>
