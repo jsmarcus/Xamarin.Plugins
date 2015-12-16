@@ -5,16 +5,16 @@ Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms applicatio
 ##Icon Fonts##
 
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Ionicons](http://ionicons.com/)
 * [Material design icons](http://google.github.io/material-design-icons/)
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
 * [Typicons](https://github.com/stephenhutchings/typicons.font)
+* [Weather Icons](http://weathericons.io)
 
 **Coming Soon**
 
 * [Entypo+](http://entypo.com/)
-* [Ionicons](http://ionicons.com/)
 * [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
-* [Weather Icons](http://weathericons.io)
 * And more!
 
 **Extensibility**  
@@ -134,6 +134,9 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 **Font Awesome**  
 Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
 
+**Ionicons**  
+Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+
 **Material design icons**  
 Material design icons are licensed under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
@@ -142,6 +145,9 @@ Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www
 
 **Typicons**  
 Typicons is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+
+**Weather Icons**  
+Weather Icons are licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
 
 **Brand Icons**  
 All brand icons are trademarks of their respective owners.
