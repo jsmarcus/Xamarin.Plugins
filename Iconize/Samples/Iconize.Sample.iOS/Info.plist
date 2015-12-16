@@ -38,9 +38,12 @@
     <key>UIAppFonts</key>
     <array>
       <string>iconize-fontawesome.ttf</string>
+      <string>iconize-ionicons.ttf</string>
       <string>iconize-material.ttf</string>
       <string>iconize-meteocons.ttf</string>
+      <string>iconize-simplelineicons.ttf</string>
       <string>iconize-typicons.ttf</string>
+      <string>iconize-weathericons.ttf</string>
     </array>
   </dict>
 </plist>

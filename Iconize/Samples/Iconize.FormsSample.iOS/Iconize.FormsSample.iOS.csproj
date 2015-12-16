@@ -104,6 +104,12 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\Plugin.Iconize.Ionicons.iOS.csproj">
+      <Project>{9c1ad7ca-b144-4513-b8ab-ab9ef991e122}</Project>
+      <Name>Plugin.Iconize.Ionicons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.iOS\Plugin.Iconize.Material.iOS.csproj">
       <Project>{17f95d3f-8e66-4e15-ab16-9a537901321d}</Project>
       <Name>Plugin.Iconize.Material.iOS</Name>
@@ -116,9 +122,21 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\Plugin.Iconize.SimpleLineIcons.iOS.csproj">
+      <Project>{dc4b2b3e-2bd9-4750-95e1-faf485d5c394}</Project>
+      <Name>Plugin.Iconize.SimpleLineIcons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\..\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\Plugin.Iconize.Typicons.iOS.csproj">
       <Project>{9be2c151-3510-4b48-89d3-3a7cadd8b804}</Project>
       <Name>Plugin.Iconize.Typicons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\Plugin.Iconize.WeatherIcons.iOS.csproj">
+      <Project>{444c4ea5-608f-4c9e-82d3-6750c846f0e7}</Project>
+      <Name>Plugin.Iconize.WeatherIcons.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>

@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Iconize.FormsSample
 {
-    public partial class Page1 : TabbedPage
+    public partial class Page1 : ContentPage
     {
         public Page1()
         {

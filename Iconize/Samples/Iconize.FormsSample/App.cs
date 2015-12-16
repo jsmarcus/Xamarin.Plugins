@@ -14,7 +14,14 @@ namespace Iconize.FormsSample
         public App()
         {
             // The root page of your application
-            MainPage = new NavigationPage(new Page1 { ItemsSource = Plugin.Iconize.Iconize.Modules });
+            var tabbedPage = new TabbedPage { Title = "Iconize" };
+
+            foreach (var module in Plugin.Iconize.Iconize.Modules)
+            {
+                tabbedPage.Children.Add(new Page1 { BindingContext = module });
+            }
+
+            MainPage = new NavigationPage(tabbedPage);
         }
 
         protected override void OnStart()

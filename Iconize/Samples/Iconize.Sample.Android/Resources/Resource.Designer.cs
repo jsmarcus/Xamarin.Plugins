@@ -2284,11 +2284,8 @@ namespace Iconize.Sample.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070014
-			public const int ApplicationName = 2131165204;
-			
 			// aapt resource value: 0x7f070013
-			public const int Hello = 2131165203;
+			public const int ApplicationName = 2131165203;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
