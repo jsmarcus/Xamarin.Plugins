@@ -8,13 +8,13 @@ Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms applicatio
 * [Ionicons](http://ionicons.com/)
 * [Material design icons](http://google.github.io/material-design-icons/)
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
+* [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
 * [Typicons](https://github.com/stephenhutchings/typicons.font)
 * [Weather Icons](http://weathericons.io)
 
 **Coming Soon**
 
 * [Entypo+](http://entypo.com/)
-* [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
 * And more!
 
 **Extensibility**  
@@ -142,6 +142,9 @@ Material design icons are licensed under the [Creative Common Attribution 4.0 In
 
 **Meteocons**  
 Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www.alessioatzeni.com/).
+
+**Simple Line Icons**  
+Simple Line Icons are licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 **Typicons**  
 Typicons is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
