@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9C1AD7CA-B144-4513-B8AB-AB9EF991E122}</ProjectGuid>
+    <ProjectGuid>{444C4EA5-608F-4C9E-82D3-6750C846F0E7}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.Ionicons.iOS</AssemblyName>
+    <AssemblyName>Plugin.Iconize.WeatherIcons.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,18 +32,18 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Ionicons.iOS.XML</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.WeatherIcons.iOS.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\IoniconsCollection.cs">
-      <Link>IoniconsCollection.cs</Link>
+    <Compile Include="..\WeatherIconsCollection.cs">
+      <Link>WeatherIconsCollection.cs</Link>
     </Compile>
-    <Compile Include="IoniconsModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherIconsModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="..\iconize-ionicons.ttf">
-      <Link>Resources\iconize-ionicons.ttf</Link>
+    <BundleResource Include="..\iconize-weathericons.ttf">
+      <Link>Resources\iconize-weathericons.ttf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
   </ItemGroup>
