@@ -86,6 +86,9 @@ EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Xam.Plugin.Iconize.Typicons", "NuGet\Xam.Plugin.Iconize.Typicons\Xam.Plugin.Iconize.Typicons.nuproj", "{CA1A9868-C0DB-4638-87DC-5BC10CFB6588}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ionicons", "Ionicons", "{B04A2021-0569-4552-9A98-2717BA1A2FE6}"
+	ProjectSection(SolutionItems) = preProject
+		Fonts\Ionicons\README.md = Fonts\Ionicons\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Iconize.Ionicons.Android", "Fonts\Ionicons\Plugin.Iconize.Ionicons.Android\Plugin.Iconize.Ionicons.Android.csproj", "{D158E046-BC30-4726-9F11-7A8FE09A0701}"
 EndProject
@@ -94,6 +97,9 @@ EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Xam.Plugin.Iconize.Ionicons", "NuGet\Xam.Plugin.Iconize.Ionicons\Xam.Plugin.Iconize.Ionicons.nuproj", "{3026D642-D72C-4477-8A23-99D7F0FCAA6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherIcons", "WeatherIcons", "{7D652CE8-5A35-49EB-ABA0-39302F3B967F}"
+	ProjectSection(SolutionItems) = preProject
+		Fonts\WeatherIcons\README.md = Fonts\WeatherIcons\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Iconize.WeatherIcons.Android", "Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Android\Plugin.Iconize.WeatherIcons.Android.csproj", "{D19DAA47-6696-40F4-8D7C-591A16D3991E}"
 EndProject
@@ -102,6 +108,9 @@ EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Xam.Plugin.Iconize.WeatherIcons", "NuGet\Xam.Plugin.Iconize.WeatherIcons\Xam.Plugin.Iconize.WeatherIcons.nuproj", "{A437D28C-9E3D-42C7-BE80-96E13BD89859}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleLineIcons", "SimpleLineIcons", "{104CDEBB-6872-457C-BDEE-DE9161AA40E9}"
+	ProjectSection(SolutionItems) = preProject
+		Fonts\Meteocons\README.md = Fonts\Meteocons\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Iconize.SimpleLineIcons.Android", "Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Android\Plugin.Iconize.SimpleLineIcons.Android.csproj", "{5187AA08-61CB-4749-81D5-4B78DC81633F}"
 EndProject

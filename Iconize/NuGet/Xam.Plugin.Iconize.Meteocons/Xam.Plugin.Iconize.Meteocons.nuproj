@@ -14,12 +14,12 @@
     <ProjectGuid>fe067f72-2db3-420b-8445-87118f0a298a</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">..\..\packages\NuProj.0.10.4-beta-gf7fc34e7d8\tools</NuProjPath>
   </PropertyGroup>
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>Xam.Plugin.Iconize.Meteocons</Id>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <Title>Iconize Plugin for Xamarin - Meteocons</Title>
     <Authors>Jeremy Marcus</Authors>
     <Owners>Jeremy Marcus</Owners>
@@ -32,9 +32,6 @@
     <Copyright>Copyright © Jeremy Marcus</Copyright>
     <Tags>xamarin pcl xam.pcl plugin plugin for xamarin.forms android ios</Tags>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="Readme.txt" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\Plugin.Iconize.Meteocons.Android.csproj" />
     <ProjectReference Include="..\..\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\Plugin.Iconize.Meteocons.iOS.csproj" />

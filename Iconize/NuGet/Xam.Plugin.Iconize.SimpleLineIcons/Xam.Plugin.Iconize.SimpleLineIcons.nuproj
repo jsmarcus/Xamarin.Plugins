@@ -14,12 +14,12 @@
     <ProjectGuid>17bf2a80-f96e-4120-afba-70c83d5596a4</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">..\..\packages\NuProj.0.10.4-beta-gf7fc34e7d8\tools</NuProjPath>
   </PropertyGroup>
   <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
   <PropertyGroup Label="Configuration">
     <Id>Xam.Plugin.Iconize.SimpleLineIcons</Id>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <Title>Iconize Plugin for Xamarin - Simple Line Icons</Title>
     <Authors>Jeremy Marcus</Authors>
     <Owners>Jeremy Marcus</Owners>
@@ -32,9 +32,6 @@
     <Copyright>Copyright © Jeremy Marcus</Copyright>
     <Tags>xamarin pcl xam.pcl plugin plugin for xamarin.forms android ios</Tags>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="Readme.txt" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Android\Plugin.Iconize.SimpleLineIcons.Android.csproj" />
     <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\Plugin.Iconize.SimpleLineIcons.iOS.csproj" />

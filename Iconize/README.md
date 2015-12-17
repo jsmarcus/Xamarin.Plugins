@@ -55,9 +55,12 @@ All packages are provided via NuGet.
 
 * [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize) - Required by all projects
 * [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
+* [Xam.Plugin.Iconize.Ionicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Ionicons)
 * [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
 * [Xam.Plugin.Iconize.Meteocons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Meteocons)
+* [Xam.Plugin.Iconize.SimpleLineIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.SimpleLineIcons)
 * [Xam.Plugin.Iconize.Typicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Typicons)
+* [Xam.Plugin.Iconize.WeatherIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.WeatherIcons)
 * [Xam.FormsPlugin.Iconize](https://www.nuget.org/packages/Xam.FormsPlugin.Iconize) - Required by Xamarin.Forms projects
 
 ###Configure###
