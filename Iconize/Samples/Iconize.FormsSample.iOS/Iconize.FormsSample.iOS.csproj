@@ -98,6 +98,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\Plugin.Iconize.EntypoPlus.iOS.csproj">
+      <Project>{eca521f1-372c-4841-9b7e-86f1d612938e}</Project>
+      <Name>Plugin.Iconize.EntypoPlus.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\Plugin.Iconize.FontAwesome.iOS.csproj">
       <Project>{8956329e-2087-41c7-9273-76900b0a217a}</Project>
       <Name>Plugin.Iconize.FontAwesome.iOS</Name>

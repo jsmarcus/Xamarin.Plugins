@@ -2,8 +2,14 @@
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms application!
 
+[![release version][build-status-img]][build-status-url]
+
+[build-status-img]: http://img.shields.io/appveyor/ci/JeremyMarcus/xamarin-plugins.svg?style=flat
+[build-status-url]: https://ci.appveyor.com/project/JeremyMarcus/xamarin-plugins
+
 ##Icon Fonts##
 
+* [Entypo+](http://entypo.com/) - pictograms by Daniel Bruce
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * [Ionicons](http://ionicons.com/)
 * [Material design icons](http://google.github.io/material-design-icons/)
@@ -12,10 +18,8 @@ Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms applicatio
 * [Typicons](https://github.com/stephenhutchings/typicons.font)
 * [Weather Icons](http://weathericons.io)
 
-**Coming Soon**
-
-* [Entypo+](http://entypo.com/)
-* And more!
+**Font Requests**  
+If you have an icon font or series of svg pictograms you'd like included, just submit an issue or pull request and we'll work to add it.
 
 **Extensibility**  
 In case you can't find the icon you want, you can extend the available icon directly from your app.
@@ -132,7 +136,10 @@ LoadApplication(new App());
 
 ##License##
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
-This work is licensed under a [Creative Commons Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+This work is licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+**Entypo+**  
+Entypo+ is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 **Font Awesome**  
 Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
@@ -141,7 +148,7 @@ Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.si
 Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 **Material design icons**  
-Material design icons are licensed under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Material design icons are licensed under the [Creative Common Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 **Meteocons**  
 Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www.alessioatzeni.com/).

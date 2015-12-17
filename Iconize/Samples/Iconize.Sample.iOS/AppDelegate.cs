@@ -18,7 +18,8 @@ namespace Iconize.Sample.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.EntypoPlusModule())
+                                  .With(new Plugin.Iconize.Fonts.FontAwesomeModule())
                                   .With(new Plugin.Iconize.Fonts.IoniconsModule())
                                   .With(new Plugin.Iconize.Fonts.MaterialModule())
                                   .With(new Plugin.Iconize.Fonts.MeteoconsModule())

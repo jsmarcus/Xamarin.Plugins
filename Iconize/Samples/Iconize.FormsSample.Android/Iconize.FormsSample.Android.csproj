@@ -121,6 +121,10 @@
     <AndroidResource Include="Resources\values-v21\style.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\Plugin.Iconize.EntypoPlus.Android.csproj">
+      <Project>{6507b5f9-82b7-4e24-9b1f-8bff65eb17c4}</Project>
+      <Name>Plugin.Iconize.EntypoPlus.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\Plugin.Iconize.FontAwesome.Android.csproj">
       <Project>{c610737e-e8b6-4cf4-834c-a5ebcf6f2219}</Project>
       <Name>Plugin.Iconize.FontAwesome.Android</Name>

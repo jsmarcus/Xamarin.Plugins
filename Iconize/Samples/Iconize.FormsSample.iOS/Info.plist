@@ -50,6 +50,7 @@
     <string>LaunchScreen</string>
     <key>UIAppFonts</key>
     <array>
+      <string>iconize-entypoplus.ttf</string>
       <string>iconize-fontawesome.ttf</string>
       <string>iconize-ionicons.ttf</string>
       <string>iconize-material.ttf</string>
