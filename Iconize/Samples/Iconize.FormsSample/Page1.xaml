@@ -5,6 +5,11 @@
              x:Class="Iconize.FormsSample.Page1"
              Title="{Binding FontFamily}">
 
+  <ContentPage.ToolbarItems>
+    <iconize:IconToolbarItem Icon="fa-500px" />
+    <iconize:IconToolbarItem Icon="fa-500px" IconColor="Red" />
+  </ContentPage.ToolbarItems>
+
   <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding Characters}">
     <ListView.ItemTemplate>
       <DataTemplate>

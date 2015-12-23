@@ -39,6 +39,7 @@
     <Compile Include="IconButton.cs" />
     <Compile Include="IconImage.cs" />
     <Compile Include="IconLabel.cs" />
+    <Compile Include="IconToolbarItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
