@@ -41,8 +41,8 @@ namespace FormsPlugin.Iconize.Android
             if (Control == null || Element == null)
                 return;
 
-            if (e.PropertyName == IconImage.IconProperty.PropertyName ||
-                e.PropertyName == IconImage.IconColorProperty.PropertyName)
+            if (e.PropertyName == nameof(IconImage.Icon) ||
+                e.PropertyName == nameof(IconImage.IconColor))
             {
                 var iconImage = Element as IconImage;
                 var drawable = new IconDrawable(Context, Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon))

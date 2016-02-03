@@ -7,7 +7,7 @@ namespace FormsPlugin.Iconize
         /// <summary>
         /// Property definition for the <see cref="IconColor"/> Property
         /// </summary>
-        public static BindableProperty IconColorProperty = BindableProperty.Create<IconToolbarItem, Color>(x => x.IconColor, Color.Default);
+        public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconToolbarItem), Color.Default);
 
         /// <summary>
         /// Gets or sets the color of the icon.

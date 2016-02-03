@@ -8,12 +8,12 @@ namespace FormsPlugin.Iconize
         /// <summary>
         /// Property definition for the <see cref="Icon"/> Property
         /// </summary>
-        public static BindableProperty IconProperty = BindableProperty.Create<IconImage, String>(x => x.Icon, String.Empty);
+        public static BindableProperty IconProperty = BindableProperty.Create(nameof(Icon), typeof(String), typeof(IconImage), String.Empty);
 
         /// <summary>
         /// Property definition for the <see cref="IconColor"/> Property
         /// </summary>
-        public static BindableProperty IconColorProperty = BindableProperty.Create<IconImage, Color>(x => x.IconColor, Color.Default);
+        public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconImage), Color.Default);
 
         /// <summary>
         /// Gets or sets the icon.

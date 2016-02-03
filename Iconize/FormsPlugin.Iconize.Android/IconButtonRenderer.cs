@@ -36,7 +36,7 @@ namespace FormsPlugin.Iconize.Android
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == Button.TextProperty.PropertyName)
+            if (e.PropertyName == nameof(Button.Text))
             {
                 Control.SetText(Control.Compute(Context, new String(Element.Text)), TextView.BufferType.Spannable);
             }

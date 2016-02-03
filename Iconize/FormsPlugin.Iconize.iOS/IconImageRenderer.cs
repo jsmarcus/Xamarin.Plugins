@@ -42,11 +42,11 @@ namespace FormsPlugin.Iconize.iOS
 
             var iconImage = Element as IconImage;
 
-            if (e.PropertyName == IconImage.IconProperty.PropertyName)
+            if (e.PropertyName == nameof(IconImage.Icon))
             {
                 Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.Height).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             }
-            else if (e.PropertyName == IconImage.IconColorProperty.PropertyName)
+            else if (e.PropertyName == nameof(IconImage.IconColor))
             {
                 Control.TintColor = iconImage.IconColor.ToUIColor();
             }

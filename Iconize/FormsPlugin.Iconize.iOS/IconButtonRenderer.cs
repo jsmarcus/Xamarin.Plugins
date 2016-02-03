@@ -35,7 +35,7 @@ namespace FormsPlugin.Iconize.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == Button.TextProperty.PropertyName)
+            if (e.PropertyName == nameof(Button.Text))
             {
                 Control.SetAttributedTitle(Control.Compute(Element.Text), UIControlState.Normal);
             }

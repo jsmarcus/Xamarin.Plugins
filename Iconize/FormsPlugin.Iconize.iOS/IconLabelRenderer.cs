@@ -34,7 +34,7 @@ namespace FormsPlugin.Iconize.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == Label.TextProperty.PropertyName)
+            if (e.PropertyName == nameof(Label.Text))
             {
                 Control.AttributedText = Control.Compute(Element.Text);
             }
