@@ -41,6 +41,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Icon.cs" />
     <Compile Include="Iconize.cs" />
     <Compile Include="IconModule.cs" />

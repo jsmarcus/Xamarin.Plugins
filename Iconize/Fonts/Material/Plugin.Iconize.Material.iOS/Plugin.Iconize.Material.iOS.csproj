@@ -36,6 +36,9 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Material.iOS.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|AnyCPU'">
+    <OutputPath>bin\AppStore\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\MaterialCollection.cs">
       <Link>MaterialCollection.cs</Link>
