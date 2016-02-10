@@ -31,7 +31,7 @@ namespace Plugin.Iconize.iOS.Controls
 
         public override void SetTitle(String title, UIControlState forState)
         {
-            base.SetAttributedTitle(this.Compute(title), forState);
+            base.SetAttributedTitle(this.Compute(title, Font.PointSize), forState);
         }
     }
 }

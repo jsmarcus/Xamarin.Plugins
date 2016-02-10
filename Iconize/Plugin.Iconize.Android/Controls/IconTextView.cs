@@ -42,7 +42,7 @@ namespace Plugin.Iconize.Android.Controls
 
         public override void SetText(ICharSequence text, BufferType type)
         {
-            base.SetText(this.Compute(Context, text), type);
+            base.SetText(this.Compute(Context, text, TextSize), type);
         }
 
         public void SetOnViewAttachListener(IOnViewAttachListener listener)

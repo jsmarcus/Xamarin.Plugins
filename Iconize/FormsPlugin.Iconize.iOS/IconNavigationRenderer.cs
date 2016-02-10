@@ -1,9 +1,7 @@
 ﻿using System;
-using FormsPlugin.Iconize.iOS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(NavigationPage), typeof(IconNavigationRenderer))]
 namespace FormsPlugin.Iconize.iOS
 {
     public class IconNavigationRenderer : NavigationRenderer

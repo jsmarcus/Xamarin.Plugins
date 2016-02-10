@@ -9,14 +9,14 @@ namespace Plugin.Iconize.iOS
 {
     public static class ParsingUtil
     {
-        public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text)
+        public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text, nfloat size)
         {
             var builder = new NSMutableAttributedString(text);
-            RecursivePrepareSpannableIndexes(modules, text.Value, builder, 0);
+            RecursivePrepareSpannableIndexes(modules, text.Value, size, builder, 0);
             return (NSAttributedString)builder.Copy();
         }
 
-        private static void RecursivePrepareSpannableIndexes(IList<IIconModule> modules, String text, NSMutableAttributedString builder, Int32 start)
+        private static void RecursivePrepareSpannableIndexes(IList<IIconModule> modules, String text, nfloat size, NSMutableAttributedString builder, Int32 start)
         {
             // Try to find a {...} in the string and extract expression from it
             var startIndex = builder.Value.IndexOf("{", start, StringComparison.Ordinal);
@@ -43,7 +43,7 @@ namespace Plugin.Iconize.iOS
             // If no match, ignore and continue
             if (icon == null)
             {
-                RecursivePrepareSpannableIndexes(modules, text, builder, endIndex);
+                RecursivePrepareSpannableIndexes(modules, text, size, builder, endIndex);
                 return;
             }
 
@@ -111,7 +111,7 @@ namespace Plugin.Iconize.iOS
 
             if (iconSizePt == nfloat.MinValue)
             {
-                iconSizePt = UIFont.SystemFontSize;
+                iconSizePt = size;
             }
 
             if (iconSizeRatio != nfloat.MinValue)
@@ -139,7 +139,7 @@ namespace Plugin.Iconize.iOS
             // Replace the character and apply the typeface
             builder.Replace(new NSRange(startIndex, endIndex - startIndex + 1), replaceString);
 
-            RecursivePrepareSpannableIndexes(modules, text, builder, startIndex);
+            RecursivePrepareSpannableIndexes(modules, text, size, builder, startIndex);
         }
     }
 }

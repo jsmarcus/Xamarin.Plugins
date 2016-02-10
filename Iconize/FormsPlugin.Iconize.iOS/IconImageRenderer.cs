@@ -24,7 +24,7 @@ namespace FormsPlugin.Iconize.iOS
                 return;
 
             var iconImage = Element as IconImage;
-            Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.Height).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             Control.TintColor = iconImage.IconColor.ToUIColor();
         }
 
@@ -44,7 +44,7 @@ namespace FormsPlugin.Iconize.iOS
 
             if (e.PropertyName == nameof(IconImage.Icon))
             {
-                Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.Height).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+                Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             }
             else if (e.PropertyName == nameof(IconImage.IconColor))
             {

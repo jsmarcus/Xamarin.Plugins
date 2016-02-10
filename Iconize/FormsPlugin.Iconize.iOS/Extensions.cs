@@ -8,27 +8,52 @@ namespace FormsPlugin.Iconize.iOS
 {
     public static class Extensions
     {
+        public static T FindView<T>(this UIViewController controller) where T : UIViewController
+        {
+            if (controller == null)
+                return null;
+
+            if (controller is T)
+                return (T)controller;
+
+            if (controller.ChildViewControllers.Length != 0)
+            {
+                for (var i = 0; i < controller.ChildViewControllers.Length; i++)
+                {
+                    var child = controller.ChildViewControllers[i];
+                    if (child is T)
+                        return (T)child;
+
+                    var view = FindView<T>(child);
+                    if (view != null)
+                        return view;
+                }
+            }
+
+            return null;
+        }
+
         public static void UpdateToolbarItems(this Page page)
         {
             if (UIApplication.SharedApplication.Windows.Length == 0)
                 return;
 
-            if (UIApplication.SharedApplication.Windows[0].RootViewController.ChildViewControllers.Length == 0)
+            var navController = FindView<UINavigationController>(UIApplication.SharedApplication.Windows[0].RootViewController);
+
+            if (navController == null)
                 return;
 
-            var viewController = (UIApplication.SharedApplication.Windows[0].RootViewController.ChildViewControllers[0] as UINavigationController).TopViewController;
-
-            if (viewController.NavigationItem.RightBarButtonItems != null)
+            if (navController.NavigationItem.RightBarButtonItems != null)
             {
-                foreach (var item in viewController.NavigationItem.RightBarButtonItems)
+                foreach (var item in navController.NavigationItem.RightBarButtonItems)
                 {
                     item.Dispose();
                 }
             }
 
-            if (viewController.ToolbarItems != null)
+            if (navController.ToolbarItems != null)
             {
-                foreach (var item in viewController.ToolbarItems)
+                foreach (var item in navController.ToolbarItems)
                 {
                     item.Dispose();
                 }
@@ -61,17 +86,14 @@ namespace FormsPlugin.Iconize.iOS
                 if (list1 != null)
                     list1.Reverse();
 
-                viewController.NavigationItem.SetRightBarButtonItems(list1 == null ? new UIBarButtonItem[0] : list1.ToArray(), false);
-                viewController.ToolbarItems = (list2 == null ? new UIBarButtonItem[0] : list2.ToArray());
+                navController.NavigationItem.SetRightBarButtonItems(list1 == null ? new UIBarButtonItem[0] : list1.ToArray(), false);
+                navController.ToolbarItems = (list2 == null ? new UIBarButtonItem[0] : list2.ToArray());
             }
         }
 
         private static IList<ToolbarItem> GetToolbarItems(this Page page)
         {
-            if (page is IPageContainer<Page>)
-                return (page as IPageContainer<Page>).CurrentPage?.GetToolbarItems();
-
-            return page.ToolbarItems;
+            return (page as IPageContainer<Page>)?.CurrentPage?.GetToolbarItems() ?? page.ToolbarItems;
         }
     }
 }

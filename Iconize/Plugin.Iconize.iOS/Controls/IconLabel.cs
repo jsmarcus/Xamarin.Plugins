@@ -27,7 +27,7 @@ namespace Plugin.Iconize.iOS.Controls
         public override String Text
         {
             get { return base.AttributedText.Value; }
-            set { base.AttributedText = this.Compute(value); }
+            set { base.AttributedText = this.Compute(value, Font.PointSize); }
         }
     }
 }

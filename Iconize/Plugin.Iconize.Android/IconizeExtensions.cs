@@ -10,7 +10,7 @@ namespace Plugin.Iconize.Android
 {
     public static class IconizeExtensions
     {
-        private static Dictionary<Type, Typeface> _typefaceCache = new Dictionary<Type, Typeface>();
+        private static readonly Dictionary<Type, Typeface> _typefaceCache = new Dictionary<Type, Typeface>();
 
         /// <summary>
         /// Replace "{}" tags in the given text views with actual icons, requesting the IconFontDescriptors
@@ -25,7 +25,7 @@ namespace Plugin.Iconize.Android
             {
                 if (textView != null)
                 {
-                    textView.SetText(textView.Compute(textView.Context, textView.TextFormatted), TextView.BufferType.Spannable);
+                    textView.SetText(textView.Compute(textView.Context, textView.TextFormatted, textView.TextSize), TextView.BufferType.Spannable);
                 }
             }
         }
@@ -37,14 +37,14 @@ namespace Plugin.Iconize.Android
         /// <param name="context">The context.</param>
         /// <param name="text">The text.</param>
         /// <returns></returns>
-        public static ICharSequence Compute(this View target, Context context, ICharSequence text)
+        public static ICharSequence Compute(this View target, Context context, ICharSequence text, Single size)
         {
-            return ParsingUtil.Parse(context, Iconize.Modules, text, target);
+            return ParsingUtil.Parse(context, Iconize.Modules, text, size, target);
         }
 
-        public static ICharSequence Compute(this ICharSequence text, Context context)
+        public static ICharSequence Compute(this ICharSequence text, Context context, Single size)
         {
-            return ParsingUtil.Parse(context, Iconize.Modules, text, null);
+            return ParsingUtil.Parse(context, Iconize.Modules, text, size, null);
         }
 
         /// <summary>

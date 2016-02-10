@@ -36,6 +36,9 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <DocumentationFile>bin\iPhone\Release\FormsPlugin.Iconize.iOS.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|AnyCPU'">
+    <OutputPath>bin\AppStore\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
     <Compile Include="IconButtonRenderer.cs" />

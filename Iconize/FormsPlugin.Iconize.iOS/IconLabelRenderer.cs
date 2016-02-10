@@ -22,7 +22,7 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            Control.AttributedText = Control.Compute(Element.Text);
+            Control.AttributedText = Control.Compute(Element.Text, (nfloat)Element.FontSize);
         }
 
         /// <summary>
@@ -34,9 +34,11 @@ namespace FormsPlugin.Iconize.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == nameof(Label.Text))
+            if ((e.PropertyName == nameof(Label.FontSize) ||
+                (e.PropertyName == nameof(Label.Text)) ||
+                (e.PropertyName == nameof(Label.TextColor))))
             {
-                Control.AttributedText = Control.Compute(Element.Text);
+                Control.AttributedText = Control.Compute(Element.Text, (nfloat)Element.FontSize);
             }
         }
     }

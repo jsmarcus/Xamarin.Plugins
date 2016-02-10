@@ -95,7 +95,7 @@ namespace Plugin.Iconize
         /// <returns>The icon, or null if no icon matches the key</returns>
         public static IIcon FindIconForKey(String iconKey)
         {
-            return Modules.Where(x => x.Keys.Contains(iconKey)).FirstOrDefault()?.GetIcon(iconKey);
+            return Modules.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
         }
     }
 }

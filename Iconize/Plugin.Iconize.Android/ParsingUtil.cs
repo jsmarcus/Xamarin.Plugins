@@ -7,7 +7,6 @@ using Android.Support.V4.View;
 using Android.Text;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
 
 namespace Plugin.Iconize.Android
 {
@@ -46,14 +45,14 @@ namespace Plugin.Iconize.Android
 
         private static readonly String ANDROID_PACKAGE_NAME = "android";
 
-        public static Java.Lang.ICharSequence Parse(Context context, IList<IIconModule> modules, Java.Lang.ICharSequence text, View target = null)
+        public static Java.Lang.ICharSequence Parse(Context context, IList<IIconModule> modules, Java.Lang.ICharSequence text, Single size, View target = null)
         {
             context = context.ApplicationContext;
 
             // Analyse the text and replace {} blocks with the appropriate character
             // Retain all transformations in the accumulator
             var builder = new SpannableStringBuilder(text);
-            RecursivePrepareSpannableIndexes(context, text.ToString(), builder, modules, 0);
+            RecursivePrepareSpannableIndexes(context, text.ToString(), size, builder, modules, 0);
             var isAnimated = HasAnimatedSpans(builder);
 
             // If animated, periodically invalidate the TextView so that the
@@ -90,7 +89,7 @@ namespace Plugin.Iconize.Android
             return false;
         }
 
-        private static void RecursivePrepareSpannableIndexes(Context context, String text, SpannableStringBuilder builder, IList<IIconModule> modules, Int32 start)
+        private static void RecursivePrepareSpannableIndexes(Context context, String text, Single size, SpannableStringBuilder builder, IList<IIconModule> modules, Int32 start)
         {
             // Try to find a {...} in the string and extract expression from it
             var stringText = builder.ToString();
@@ -118,12 +117,12 @@ namespace Plugin.Iconize.Android
             // If no match, ignore and continue
             if (icon == null)
             {
-                RecursivePrepareSpannableIndexes(context, text, builder, modules, endIndex);
+                RecursivePrepareSpannableIndexes(context, text, size, builder, modules, endIndex);
                 return;
             }
 
             // See if any more stroke within {} should be applied
-            var iconSizePx = -1f;
+            var iconSizePx = spToPx(context, size);
             var iconColor = Int32.MaxValue;
             var iconSizeRatio = -1f;
             var spin = false;
@@ -200,7 +199,7 @@ namespace Plugin.Iconize.Android
             // Replace the character and apply the typeface
             builder = (SpannableStringBuilder)builder.Replace(startIndex, endIndex, "" + icon.Character);
             builder.SetSpan(new CustomTypefaceSpan(icon, module.GetTypeface(context), iconSizePx, iconSizeRatio, iconColor, spin, baselineAligned), startIndex, startIndex + 1, SpanTypes.InclusiveExclusive);
-            RecursivePrepareSpannableIndexes(context, text, builder, modules, startIndex);
+            RecursivePrepareSpannableIndexes(context, text, size, builder, modules, startIndex);
         }
 
         public static Single GetPxFromDimen(Context context, String packageName, String resName)

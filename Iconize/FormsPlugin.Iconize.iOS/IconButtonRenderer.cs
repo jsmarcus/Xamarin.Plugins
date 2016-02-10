@@ -23,7 +23,7 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            Control.SetAttributedTitle(Control.Compute(Element.Text), UIControlState.Normal);
+            Control.SetAttributedTitle(Control.Compute(Element.Text, (nfloat)Element.FontSize), UIControlState.Normal);
         }
 
         /// <summary>
@@ -35,9 +35,11 @@ namespace FormsPlugin.Iconize.iOS
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == nameof(Button.Text))
+            if ((e.PropertyName == nameof(Button.FontSize) ||
+                (e.PropertyName == nameof(Button.Text)) ||
+                (e.PropertyName == nameof(Button.TextColor))))
             {
-                Control.SetAttributedTitle(Control.Compute(Element.Text), UIControlState.Normal);
+                Control.SetAttributedTitle(Control.Compute(Element.Text, (nfloat)Element.FontSize), UIControlState.Normal);
             }
         }
     }

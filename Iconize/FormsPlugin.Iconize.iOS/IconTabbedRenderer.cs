@@ -1,9 +1,6 @@
 ﻿using System;
-using FormsPlugin.Iconize.iOS;
-using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(TabbedPage), typeof(IconTabbedRenderer))]
 namespace FormsPlugin.Iconize.iOS
 {
     public class IconTabbedRenderer : TabbedRenderer

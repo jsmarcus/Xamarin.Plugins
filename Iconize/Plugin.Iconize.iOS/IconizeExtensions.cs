@@ -8,14 +8,17 @@ namespace Plugin.Iconize.iOS
 {
     public static class IconizeExtensions
     {
-        public static NSAttributedString Compute(this UIView target, NSAttributedString text)
+        public static NSAttributedString Compute(this UIView target, NSAttributedString text, nfloat size)
         {
-            return ParsingUtil.Parse(Iconize.Modules, text);
+            return ParsingUtil.Parse(Iconize.Modules, text, size);
         }
 
-        public static NSAttributedString Compute(this UIView target, String text)
+        public static NSAttributedString Compute(this UIView target, String text, nfloat size)
         {
-            return Compute(target, new NSAttributedString(text));
+            if (String.IsNullOrEmpty(text))
+                return new NSAttributedString();
+
+            return Compute(target, new NSAttributedString(text), size);
         }
 
         public static UIFont ToUIFont(this IIconModule module, nfloat size)

@@ -6,6 +6,7 @@ using Plugin.Iconize.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using ButtonRenderer = Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer;
+using Single = System.Single;
 using TextView = Android.Widget.TextView;
 
 [assembly: ExportRenderer(typeof(IconButton), typeof(IconButtonRenderer))]
@@ -24,7 +25,7 @@ namespace FormsPlugin.Iconize.Android
             if (Control == null || Element == null)
                 return;
 
-            Control.SetText(Control.Compute(Context, new String(Element.Text)), TextView.BufferType.Spannable);
+            Control.SetText(Control.Compute(Context, new String(Element.Text), (Single)Element.FontSize), TextView.BufferType.Spannable);
         }
 
         /// <summary>
@@ -36,9 +37,11 @@ namespace FormsPlugin.Iconize.Android
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == nameof(Button.Text))
+            if ((e.PropertyName == nameof(Button.FontSize) ||
+                (e.PropertyName == nameof(Button.Text)) ||
+                (e.PropertyName == nameof(Button.TextColor))))
             {
-                Control.SetText(Control.Compute(Context, new String(Element.Text)), TextView.BufferType.Spannable);
+                Control.SetText(Control.Compute(Context, new String(Element.Text), (Single)Element.FontSize), TextView.BufferType.Spannable);
             }
         }
     }

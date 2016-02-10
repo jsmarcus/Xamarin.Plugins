@@ -5,6 +5,7 @@ using Java.Lang;
 using Plugin.Iconize.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Single = System.Single;
 using TextView = Android.Widget.TextView;
 
 [assembly: ExportRenderer(typeof(IconLabel), typeof(IconLabelRenderer))]
@@ -23,7 +24,7 @@ namespace FormsPlugin.Iconize.Android
             if (Control == null || Element == null)
                 return;
 
-            Control.SetText(Control.Compute(Context, new String(Element.Text)), TextView.BufferType.Spannable);
+            Control.SetText(Control.Compute(Context, new String(Element.Text), (Single)Element.FontSize), TextView.BufferType.Spannable);
         }
 
         /// <summary>
@@ -35,9 +36,11 @@ namespace FormsPlugin.Iconize.Android
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == nameof(Label.Text))
+            if ((e.PropertyName == nameof(Label.FontSize) ||
+                (e.PropertyName == nameof(Label.Text)) ||
+                (e.PropertyName == nameof(Label.TextColor))))
             {
-                Control.SetText(Control.Compute(Context, new String(Element.Text)), TextView.BufferType.Spannable);
+                Control.SetText(Control.Compute(Context, new String(Element.Text), (Single)Element.FontSize), TextView.BufferType.Spannable);
             }
         }
     }
