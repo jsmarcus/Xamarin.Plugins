@@ -41,10 +41,12 @@ namespace FormsPlugin.Iconize.Droid
             if (Control == null || Element == null)
                 return;
 
-            if (e.PropertyName == nameof(IconImage.Icon) ||
-                e.PropertyName == nameof(IconImage.IconColor))
+            switch (e.PropertyName)
             {
-                UpdateImage();
+                case nameof(IconImage.Icon):
+                case nameof(IconImage.IconColor):
+                    UpdateImage();
+                    break;
             }
         }
 

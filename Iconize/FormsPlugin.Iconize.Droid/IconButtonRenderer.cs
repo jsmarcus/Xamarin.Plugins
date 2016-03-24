@@ -1,11 +1,11 @@
 using System;
+using System.ComponentModel;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.Droid;
 using Plugin.Iconize.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using ButtonRenderer = Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer;
-using Single = System.Single;
 
 [assembly: ExportRenderer(typeof(IconButton), typeof(IconButtonRenderer))]
 namespace FormsPlugin.Iconize.Droid
@@ -22,9 +22,12 @@ namespace FormsPlugin.Iconize.Droid
         /// <param name="disposing">if set to <c>true</c> [disposing].</param>
         protected override void Dispose(Boolean disposing)
         {
-            base.Dispose(disposing);
+            if (Control != null)
+            {
+                Control.TextChanged -= OnTextChanged;
+            }
 
-            Control.TextChanged -= OnTextChanged;
+            base.Dispose(disposing);
         }
 
         /// <summary>
@@ -39,7 +42,29 @@ namespace FormsPlugin.Iconize.Droid
                 return;
 
             Control.SetAllCaps(false);
+            UpdateText();
             Control.TextChanged += OnTextChanged;
+        }
+
+        /// <summary>
+        /// Called when [element property changed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
+        protected override void OnElementPropertyChanged(Object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+
+            if (Control == null || Element == null)
+                return;
+
+            switch (e.PropertyName)
+            {
+                case nameof(IconButton.FontSize):
+                case nameof(IconButton.TextColor):
+                    UpdateText();
+                    break;
+            }
         }
 
         /// <summary>
