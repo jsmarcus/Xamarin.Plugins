@@ -6,9 +6,19 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace FormsPlugin.Iconize.iOS
 {
+    /// <summary>
+    /// Defines the <see cref="Extensions" /> type.
+    /// </summary>
     public static class Extensions
     {
-        public static T FindView<T>(this UIViewController controller) where T : UIViewController
+        /// <summary>
+        /// Finds the view.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="controller">The controller.</param>
+        /// <returns></returns>
+        public static T FindView<T>(this UIViewController controller)
+            where T : UIViewController
         {
             if (controller == null)
                 return null;
@@ -33,6 +43,20 @@ namespace FormsPlugin.Iconize.iOS
             return null;
         }
 
+        /// <summary>
+        /// Gets the toolbar items.
+        /// </summary>
+        /// <param name="page">The page.</param>
+        /// <returns></returns>
+        private static IList<ToolbarItem> GetToolbarItems(this Page page)
+        {
+            return (page as IPageContainer<Page>)?.CurrentPage?.GetToolbarItems() ?? page.ToolbarItems;
+        }
+
+        /// <summary>
+        /// Updates the toolbar items.
+        /// </summary>
+        /// <param name="page">The page.</param>
         public static void UpdateToolbarItems(this Page page)
         {
             if (UIApplication.SharedApplication.Windows.Length == 0)
@@ -89,11 +113,6 @@ namespace FormsPlugin.Iconize.iOS
                 navController.NavigationItem.SetRightBarButtonItems(list1 == null ? new UIBarButtonItem[0] : list1.ToArray(), false);
                 navController.ToolbarItems = (list2 == null ? new UIBarButtonItem[0] : list2.ToArray());
             }
-        }
-
-        private static IList<ToolbarItem> GetToolbarItems(this Page page)
-        {
-            return (page as IPageContainer<Page>)?.CurrentPage?.GetToolbarItems() ?? page.ToolbarItems;
         }
     }
 }

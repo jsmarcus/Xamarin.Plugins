@@ -6,13 +6,30 @@ using UIKit;
 
 namespace Plugin.Iconize.iOS
 {
+    /// <summary>
+    /// Defines the <see cref="IconizeExtensions" /> extensions.
+    /// </summary>
     public static class IconizeExtensions
     {
+        /// <summary>
+        /// Computes the specified text.
+        /// </summary>
+        /// <param name="target">The target.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="size">The font size.</param>
+        /// <returns></returns>
         public static NSAttributedString Compute(this UIView target, NSAttributedString text, nfloat size)
         {
             return ParsingUtil.Parse(Iconize.Modules, text, size);
         }
 
+        /// <summary>
+        /// Computes the specified text.
+        /// </summary>
+        /// <param name="target">The target.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="size">The font size.</param>
+        /// <returns></returns>
         public static NSAttributedString Compute(this UIView target, String text, nfloat size)
         {
             if (String.IsNullOrEmpty(text))
@@ -21,11 +38,23 @@ namespace Plugin.Iconize.iOS
             return Compute(target, new NSAttributedString(text), size);
         }
 
+        /// <summary>
+        /// To the UI font.
+        /// </summary>
+        /// <param name="module">The module.</param>
+        /// <param name="size">The size.</param>
+        /// <returns></returns>
         public static UIFont ToUIFont(this IIconModule module, nfloat size)
         {
             return UIFont.FromName(module.FontName, size);
         }
 
+        /// <summary>
+        /// To the UI image.
+        /// </summary>
+        /// <param name="icon">The icon.</param>
+        /// <param name="size">The size.</param>
+        /// <returns></returns>
         public static UIImage ToUIImage(this IIcon icon, nfloat size)
         {
             var attributedString = new NSAttributedString($"{icon.Character}", new CTStringAttributes

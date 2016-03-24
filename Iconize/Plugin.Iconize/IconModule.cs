@@ -4,6 +4,10 @@ using System.Linq;
 
 namespace Plugin.Iconize
 {
+    /// <summary>
+    /// Defines the <see cref="IconModule" /> type.
+    /// </summary>
+    /// <seealso cref="Plugin.Iconize.IIconModule" />
     public abstract class IconModule : IIconModule
     {
         #region Members
@@ -53,6 +57,13 @@ namespace Plugin.Iconize
 
         #endregion Properties
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IconModule" /> class.
+        /// </summary>
+        /// <param name="fontFamily">The font family.</param>
+        /// <param name="fontName">Name of the font.</param>
+        /// <param name="fontPath">The font path.</param>
+        /// <param name="icons">The icons.</param>
         protected IconModule(String fontFamily, String fontName, String fontPath, IEnumerable<IIcon> icons)
         {
             FontFamily = fontFamily;
@@ -65,6 +76,11 @@ namespace Plugin.Iconize
             }
         }
 
+        /// <summary>
+        /// Gets the icon.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
         public IIcon GetIcon(String key)
         {
             if (_icons.ContainsKey(key))
@@ -74,6 +90,11 @@ namespace Plugin.Iconize
             return null;
         }
 
+        /// <summary>
+        /// Determines whether the specified icon is in the set.
+        /// </summary>
+        /// <param name="icon">The icon.</param>
+        /// <returns></returns>
         public Boolean HasIcon(IIcon icon)
         {
             return _icons.Values.Contains(icon);

@@ -10,12 +10,16 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(IconImage), typeof(IconImageRenderer))]
 namespace FormsPlugin.Iconize.iOS
 {
+    /// <summary>
+    /// Defines the <see cref="IconImageRenderer" /> renderer.
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.Platform.iOS.ImageRenderer" />
     public class IconImageRenderer : ImageRenderer
     {
         /// <summary>
         /// Raises the <see cref="E:ElementChanged" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="ElementChangedEventArgs{Image}"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="ElementChangedEventArgs{Image}" /> instance containing the event data.</param>
         protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
         {
             base.OnElementChanged(e);
@@ -32,7 +36,7 @@ namespace FormsPlugin.Iconize.iOS
         /// Called when [element property changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="PropertyChangedEventArgs" /> instance containing the event data.</param>
         protected override void OnElementPropertyChanged(Object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
@@ -42,13 +46,15 @@ namespace FormsPlugin.Iconize.iOS
 
             var iconImage = Element as IconImage;
 
-            if (e.PropertyName == nameof(IconImage.Icon))
+            switch (e.PropertyName)
             {
-                Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-            }
-            else if (e.PropertyName == nameof(IconImage.IconColor))
-            {
-                Control.TintColor = iconImage.IconColor.ToUIColor();
+                case nameof(IconImage.Icon):
+                    Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+                    break;
+
+                case nameof(IconImage.IconColor):
+                    Control.TintColor = iconImage.IconColor.ToUIColor();
+                    break;
             }
         }
     }

@@ -2,10 +2,14 @@
 
 namespace FormsPlugin.Iconize
 {
+    /// <summary>
+    /// Defines the <see cref="IconButton" /> control.
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.ToolbarItem" />
     public class IconToolbarItem : ToolbarItem
     {
         /// <summary>
-        /// Property definition for the <see cref="IconColor"/> Property
+        /// Backing store for the <see cref="IconColor" /> property.
         /// </summary>
         public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconToolbarItem), Color.Default);
 

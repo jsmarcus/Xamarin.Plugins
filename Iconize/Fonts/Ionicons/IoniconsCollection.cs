@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="IoniconsCollection" /> icon collection.
+    /// </summary>
     public static class IoniconsCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="IoniconsCollection" /> class.
+        /// </summary>
         static IoniconsCollection()
         {
             Icons.Add("ion-alert", '\uf101');

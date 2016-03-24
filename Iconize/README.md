@@ -116,7 +116,7 @@ Android:
 ```c#
 Xamarin.Forms.Forms.Init(this, savedInstanceState);
 ...
-FormsPlugin.Iconize.Android.IconControls.Init();
+FormsPlugin.Iconize.Droid.IconControls.Init();
 ...
 LoadApplication(new App());
 ```

@@ -3,15 +3,19 @@ using Xamarin.Forms;
 
 namespace FormsPlugin.Iconize
 {
+    /// <summary>
+    /// Defines the <see cref="IconImage" /> control.
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.Image" />
     public class IconImage : Image
     {
         /// <summary>
-        /// Property definition for the <see cref="Icon"/> Property
+        /// Property definition for the <see cref="Icon" /> Property
         /// </summary>
         public static BindableProperty IconProperty = BindableProperty.Create(nameof(Icon), typeof(String), typeof(IconImage), String.Empty);
 
         /// <summary>
-        /// Property definition for the <see cref="IconColor"/> Property
+        /// Property definition for the <see cref="IconColor" /> Property
         /// </summary>
         public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconImage), Color.Default);
 

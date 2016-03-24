@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="TypiconsCollection" /> icon collection.
+    /// </summary>
     public static class TypiconsCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="TypiconsCollection" /> class.
+        /// </summary>
         static TypiconsCollection()
         {
             Icons.Add("typcn-adjust-brightness", '\ue000');

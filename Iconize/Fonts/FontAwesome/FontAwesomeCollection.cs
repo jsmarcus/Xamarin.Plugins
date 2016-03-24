@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="FontAwesomeCollection" /> icon collection.
+    /// </summary>
     public static class FontAwesomeCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="FontAwesomeCollection" /> class.
+        /// </summary>
         static FontAwesomeCollection()
         {
             Icons.Add("fa-500px", '\uf26e');

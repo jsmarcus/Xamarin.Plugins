@@ -7,8 +7,18 @@ using UIKit;
 
 namespace Plugin.Iconize.iOS
 {
+    /// <summary>
+    /// Defines the <see cref="ParsingUtil" /> type.
+    /// </summary>
     public static class ParsingUtil
     {
+        /// <summary>
+        /// Parses the specified modules.
+        /// </summary>
+        /// <param name="modules">The modules.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="size">The size.</param>
+        /// <returns></returns>
         public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text, nfloat size)
         {
             var builder = new NSMutableAttributedString(text);
@@ -16,6 +26,15 @@ namespace Plugin.Iconize.iOS
             return (NSAttributedString)builder.Copy();
         }
 
+        /// <summary>
+        /// Recursives the prepare spannable indexes.
+        /// </summary>
+        /// <param name="modules">The modules.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="size">The size.</param>
+        /// <param name="builder">The builder.</param>
+        /// <param name="start">The start.</param>
+        /// <exception cref="System.ArgumentException">Unknown expression  + stroke +  in \ + text + \</exception>
         private static void RecursivePrepareSpannableIndexes(IList<IIconModule> modules, String text, nfloat size, NSMutableAttributedString builder, Int32 start)
         {
             // Try to find a {...} in the string and extract expression from it
@@ -51,21 +70,14 @@ namespace Plugin.Iconize.iOS
             var iconSizePt = nfloat.MinValue;
             var iconColor = UIColor.DarkTextColor;
             var iconSizeRatio = nfloat.MinValue;
-            var spin = false;
             var baselineAligned = false;
 
             for (var i = 1; i < strokes.Length; i++)
             {
                 var stroke = strokes[i];
 
-                // Look for "spin"
-                if (stroke.Equals("spin", StringComparison.OrdinalIgnoreCase))
-                {
-                    spin = true;
-                }
-
                 // Look for "baseline"
-                else if (stroke.Equals("baseline", StringComparison.OrdinalIgnoreCase))
+                if (stroke.Equals("baseline", StringComparison.OrdinalIgnoreCase))
                 {
                     baselineAligned = true;
                 }

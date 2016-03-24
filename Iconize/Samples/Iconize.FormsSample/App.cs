@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using FormsPlugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,14 +10,14 @@ namespace Iconize.FormsSample
         public App()
         {
             // The root page of your application
-            var tabbedPage = new TabbedPage { Title = "Iconize" };
+            var tabbedPage = new IconTabbedPage { Title = "Iconize" };
 
             foreach (var module in Plugin.Iconize.Iconize.Modules)
             {
                 tabbedPage.Children.Add(new Page1 { BindingContext = module });
             }
 
-            MainPage = new NavigationPage(tabbedPage);
+            MainPage = new IconNavigationPage(tabbedPage);
         }
 
         protected override void OnStart()

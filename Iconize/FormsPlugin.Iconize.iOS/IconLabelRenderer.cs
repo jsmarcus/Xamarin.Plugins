@@ -9,12 +9,16 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(IconLabel), typeof(IconLabelRenderer))]
 namespace FormsPlugin.Iconize.iOS
 {
+    /// <summary>
+    /// Defines the <see cref="IconLabelRenderer" /> renderer.
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.Platform.iOS.LabelRenderer" />
     public class IconLabelRenderer : LabelRenderer
     {
         /// <summary>
         /// Raises the <see cref="E:ElementChanged" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="ElementChangedEventArgs{Label}"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="ElementChangedEventArgs{Label}" /> instance containing the event data.</param>
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
@@ -22,21 +26,35 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            Control.AttributedText = Control.Compute(Element.Text, (nfloat)Element.FontSize);
+            UpdateText();
         }
 
         /// <summary>
         /// Called when [element property changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="PropertyChangedEventArgs" /> instance containing the event data.</param>
         protected override void OnElementPropertyChanged(Object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if ((e.PropertyName == nameof(Label.FontSize) ||
-                (e.PropertyName == nameof(Label.Text)) ||
-                (e.PropertyName == nameof(Label.TextColor))))
+            if (Control == null || Element == null)
+                return;
+
+            if ((e.PropertyName == nameof(IconLabel.FontSize) ||
+                (e.PropertyName == nameof(IconLabel.Text)) ||
+                (e.PropertyName == nameof(IconLabel.TextColor))))
+            {
+                UpdateText();
+            }
+        }
+
+        /// <summary>
+        /// Updates the text.
+        /// </summary>
+        private void UpdateText()
+        {
+            if (String.IsNullOrEmpty(Element.Text) == false)
             {
                 Control.AttributedText = Control.Compute(Element.Text, (nfloat)Element.FontSize);
             }

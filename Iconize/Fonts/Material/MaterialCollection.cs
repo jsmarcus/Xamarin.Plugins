@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="MaterialCollection" /> icon collection.
+    /// </summary>
     public static class MaterialCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="MaterialCollection" /> class.
+        /// </summary>
         static MaterialCollection()
         {
             Icons.Add("md-3d-rotation", '\ue84d');

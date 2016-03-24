@@ -1,0 +1,13 @@
+﻿using Xamarin.Forms;
+
+namespace FormsPlugin.Iconize
+{
+    /// <summary>
+    /// Defines the <see cref="IconButton" /> page.
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.TabbedPage" />
+    public class IconTabbedPage : TabbedPage
+    {
+        // Intentionally left blank
+    }
+}

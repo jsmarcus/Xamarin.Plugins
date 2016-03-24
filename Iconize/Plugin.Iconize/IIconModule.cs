@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize
 {
+    /// <summary>
+    /// Defines the <see cref="IIconModule" /> interface.
+    /// </summary>
     public interface IIconModule
     {
         /// <summary>

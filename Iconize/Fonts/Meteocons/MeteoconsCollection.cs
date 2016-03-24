@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="MeteoconsCollection" /> icon collection.
+    /// </summary>
     public static class MeteoconsCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="MeteoconsCollection" /> class.
+        /// </summary>
         static MeteoconsCollection()
         {
             Icons.Add("mc-sunrise-o", 'A');

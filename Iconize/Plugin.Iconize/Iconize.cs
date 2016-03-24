@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Plugin.Iconize
 {
+    /// <summary>
+    /// Defines the <see cref="Iconize" /> type.
+    /// </summary>
     public static class Iconize
     {
         private static readonly List<IIconModule> _modules = new List<IIconModule>();
@@ -42,12 +45,12 @@ namespace Plugin.Iconize
         }
 
         /// <summary>
-        /// Allows chain calls on <see cref="Iconize.With(IIconModule)"/>.
+        /// Allows chain calls on <see cref="Iconize.With(IIconModule)" />.
         /// </summary>
         public sealed class IconizeInitializer
         {
             /// <summary>
-            /// Initializes a new instance of the <see cref="IconizeInitializer"/> class.
+            /// Initializes a new instance of the <see cref="IconizeInitializer" /> class.
             /// </summary>
             /// <param name="iconFontDescriptor">The icon font descriptor.</param>
             public IconizeInitializer(IIconModule iconFontDescriptor)
@@ -74,7 +77,7 @@ namespace Plugin.Iconize
         /// <returns>
         ///     The font descriptor which contains info about the typeface to apply, or null
         ///     if the icon cannot be found. In that case, check that you properly added the modules
-        ///     using <see cref="With(IIconModule)"/> prior to calling this method.
+        ///     using <see cref="With(IIconModule)" /> prior to calling this method.
         /// </returns>
         public static IIconModule FindModuleOf(IIcon icon)
         {

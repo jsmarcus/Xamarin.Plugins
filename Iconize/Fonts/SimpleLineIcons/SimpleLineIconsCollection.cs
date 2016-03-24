@@ -2,10 +2,22 @@ using System.Collections.Generic;
 
 namespace Plugin.Iconize.Fonts
 {
+    /// <summary>
+    /// Defines the <see cref="SimpleLineIconsCollection" /> icon collection.
+    /// </summary>
     public static class SimpleLineIconsCollection
     {
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
+        /// <summary>
+        /// Initializes the <see cref="SimpleLineIconsCollection" /> class.
+        /// </summary>
         static SimpleLineIconsCollection()
         {
             Icons.Add("icon-user", '\ue005');

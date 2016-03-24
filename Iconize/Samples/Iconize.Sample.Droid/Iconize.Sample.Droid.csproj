@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35439771-7B34-44EB-97C0-3F10B8C644A9}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iconize.Sample.Droid</RootNamespace>
+    <AssemblyName>Iconize.Sample.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Design.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FontIconsViewPagerAdapter.cs" />
+    <Compile Include="IconAdapter.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AndroidUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\ItemFont.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ItemIcon.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Droid\Plugin.Iconize.EntypoPlus.Droid.csproj">
+      <Project>{6507b5f9-82b7-4e24-9b1f-8bff65eb17c4}</Project>
+      <Name>Plugin.Iconize.EntypoPlus.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Droid\Plugin.Iconize.FontAwesome.Droid.csproj">
+      <Project>{c610737e-e8b6-4cf4-834c-a5ebcf6f2219}</Project>
+      <Name>Plugin.Iconize.FontAwesome.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\Plugin.Iconize.Ionicons.Droid.csproj">
+      <Project>{d158e046-bc30-4726-9f11-7a8fe09a0701}</Project>
+      <Name>Plugin.Iconize.Ionicons.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.Droid\Plugin.Iconize.Material.Droid.csproj">
+      <Project>{bf31e501-7c92-4b90-bdc7-6323295cbc52}</Project>
+      <Name>Plugin.Iconize.Material.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\Plugin.Iconize.Meteocons.Droid.csproj">
+      <Project>{8dd64822-57a3-4fe9-9bfb-45b35aeb6164}</Project>
+      <Name>Plugin.Iconize.Meteocons.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Droid\Plugin.Iconize.SimpleLineIcons.Droid.csproj">
+      <Project>{5187aa08-61cb-4749-81d5-4b78dc81633f}</Project>
+      <Name>Plugin.Iconize.SimpleLineIcons.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\Typicons\Plugin.Iconize.Typicons.Droid\Plugin.Iconize.Typicons.Droid.csproj">
+      <Project>{c8fe4f23-70b6-475d-9b87-bd655b8cd22d}</Project>
+      <Name>Plugin.Iconize.Typicons.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\Plugin.Iconize.WeatherIcons.Droid.csproj">
+      <Project>{d19daa47-6696-40f4-8d7c-591a16d3991e}</Project>
+      <Name>Plugin.Iconize.WeatherIcons.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugin.Iconize.Droid\Plugin.Iconize.Droid.csproj">
+      <Project>{318a7d0f-5e8f-4cfe-be13-7dca1235e0ae}</Project>
+      <Name>Plugin.Iconize.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Dimen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-v21\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\header.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+ -->
+</Project>
