@@ -31,8 +31,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-emotsmile", '\ue021');
             Icons.Add("icon-phone", '\ue600');
             Icons.Add("icon-call-end", '\ue048');
-            Icons.Add("icon-call -in", '\ue047');
-            Icons.Add("icon-call -out", '\ue046');
+            Icons.Add("icon-call-in", '\ue047');
+            Icons.Add("icon-call-out", '\ue046');
             Icons.Add("icon-map", '\ue033');
             Icons.Add("icon-location-pin", '\ue096');
             Icons.Add("icon-direction", '\ue042');
