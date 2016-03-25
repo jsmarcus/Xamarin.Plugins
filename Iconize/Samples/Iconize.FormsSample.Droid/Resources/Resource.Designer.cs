@@ -2189,9 +2189,6 @@ namespace Iconize.FormsSample.Droid
 			// aapt resource value: 0x7f0b0012
 			public const int showTitle = 2131427346;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int sliding_tabs = 2131427457;
-			
 			// aapt resource value: 0x7f0b0065
 			public const int snackbar_action = 2131427429;
 			
@@ -2227,6 +2224,9 @@ namespace Iconize.FormsSample.Droid
 			
 			// aapt resource value: 0x7f0b000c
 			public const int tabMode = 2131427340;
+			
+			// aapt resource value: 0x7f0b0081
+			public const int tabs = 2131427457;
 			
 			// aapt resource value: 0x7f0b007e
 			public const int text = 2131427454;

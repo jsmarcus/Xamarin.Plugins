@@ -18,9 +18,9 @@ namespace Plugin.Iconize.iOS
         /// <param name="text">The text.</param>
         /// <param name="size">The font size.</param>
         /// <returns></returns>
-        public static NSAttributedString Compute(this UIView target, NSAttributedString text, nfloat size)
+        public static NSAttributedString Compute(this UIView target, NSAttributedString text, nfloat size, UIColor color = null)
         {
-            return ParsingUtil.Parse(Iconize.Modules, text, size);
+            return ParsingUtil.Parse(Iconize.Modules, text, size, color);
         }
 
         /// <summary>
@@ -30,12 +30,12 @@ namespace Plugin.Iconize.iOS
         /// <param name="text">The text.</param>
         /// <param name="size">The font size.</param>
         /// <returns></returns>
-        public static NSAttributedString Compute(this UIView target, String text, nfloat size)
+        public static NSAttributedString Compute(this UIView target, String text, nfloat size, UIColor color = null)
         {
             if (String.IsNullOrEmpty(text))
                 return new NSAttributedString();
 
-            return Compute(target, new NSAttributedString(text), size);
+            return Compute(target, new NSAttributedString(text), size, color);
         }
 
         /// <summary>

@@ -40,7 +40,8 @@
     <OutputPath>bin\AppStore\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
+    <Compile Include="IconCarouselRenderer.cs" />
+    <Compile Include="ToolbarItemExtensions.cs" />
     <Compile Include="IconButtonRenderer.cs" />
     <Compile Include="IconControls.cs" />
     <Compile Include="IconImageRenderer.cs" />

@@ -57,7 +57,7 @@ namespace FormsPlugin.Iconize.iOS
         {
             if (String.IsNullOrEmpty(Element.Text) == false)
             {
-                Control.SetAttributedTitle(Control.Compute(Element.Text, (nfloat)Element.FontSize), UIControlState.Normal);
+                Control.SetAttributedTitle(Control.Compute(Element.Text, (nfloat)Element.FontSize, Element.TextColor.ToUIColor()), UIControlState.Normal);
             }
         }
     }

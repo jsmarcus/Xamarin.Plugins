@@ -3,7 +3,7 @@
 namespace FormsPlugin.Iconize
 {
     /// <summary>
-    /// Defines the <see cref="IconButton" /> control.
+    /// Defines the <see cref="IconToolbarItem" /> control.
     /// </summary>
     /// <seealso cref="Xamarin.Forms.ToolbarItem" />
     public class IconToolbarItem : ToolbarItem

@@ -22,37 +22,10 @@ namespace FormsPlugin.Iconize.iOS
         protected NavigationPage Navigation => Element as NavigationPage;
 
         /// <summary>
-        /// Called when [navigation].
+        /// Disposes the specified disposing.
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="NavigationEventArgs" /> instance containing the event data.</param>
-        private void OnNavigation(Object sender, NavigationEventArgs e)
-        {
-            Navigation.UpdateToolbarItems();
-        }
-
-        /// <summary>
-        /// Views the did appear.
-        /// </summary>
-        /// <param name="animated">if set to <c>true</c> [animated].</param>
-        public override void ViewDidAppear(Boolean animated)
-        {
-            base.ViewDidAppear(animated);
-
-            if (Navigation != null)
-            {
-                Navigation.Popped += OnNavigation;
-                Navigation.PoppedToRoot += OnNavigation;
-                Navigation.Pushed += OnNavigation;
-                Navigation.UpdateToolbarItems();
-            }
-        }
-
-        /// <summary>
-        /// Views the did disappear.
-        /// </summary>
-        /// <param name="animated">if set to <c>true</c> [animated].</param>
-        public override void ViewDidDisappear(Boolean animated)
+        /// <param name="disposing">if set to <c>true</c> [disposing].</param>
+        protected override void Dispose(Boolean disposing)
         {
             if (Navigation != null)
             {
@@ -61,7 +34,40 @@ namespace FormsPlugin.Iconize.iOS
                 Navigation.Pushed -= OnNavigation;
             }
 
-            base.ViewDidDisappear(animated);
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:ElementChanged" /> event.
+        /// </summary>
+        /// <param name="e">The <see cref="VisualElementChangedEventArgs" /> instance containing the event data.</param>
+        protected override void OnElementChanged(VisualElementChangedEventArgs e)
+        {
+            base.OnElementChanged(e);
+
+            if (Navigation != null)
+            {
+                Navigation.Popped += OnNavigation;
+                Navigation.PoppedToRoot += OnNavigation;
+                Navigation.Pushed += OnNavigation;
+            }
+        }
+
+        public override void ViewDidAppear(Boolean animated)
+        {
+            base.ViewDidAppear(animated);
+
+            Navigation?.UpdateToolbarItems(this);
+        }
+
+        /// <summary>
+        /// Called when [navigation].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="NavigationEventArgs" /> instance containing the event data.</param>
+        private void OnNavigation(Object sender, NavigationEventArgs e)
+        {
+            Navigation?.UpdateToolbarItems(this);
         }
     }
 }

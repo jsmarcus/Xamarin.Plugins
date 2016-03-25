@@ -50,7 +50,7 @@ namespace FormsPlugin.Iconize.Droid
         /// Called when [element property changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="PropertyChangedEventArgs" /> instance containing the event data.</param>
         protected override void OnElementPropertyChanged(Object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
@@ -71,7 +71,7 @@ namespace FormsPlugin.Iconize.Droid
         /// Called when [text changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="Android.Text.TextChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="Android.Text.TextChangedEventArgs" /> instance containing the event data.</param>
         private void OnTextChanged(Object sender, Android.Text.TextChangedEventArgs e)
         {
             UpdateText();

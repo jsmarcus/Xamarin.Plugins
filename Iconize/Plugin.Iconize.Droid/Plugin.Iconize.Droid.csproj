@@ -58,6 +58,7 @@
     <Compile Include="IconizeExtensions.cs" />
     <Compile Include="CustomTypefaceSpan.cs" />
     <Compile Include="HasOnViewAttachListenerDelegate.cs" />
+    <Compile Include="MenuClickListener.cs" />
     <Compile Include="ParsingUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\IconToggleButton.cs" />

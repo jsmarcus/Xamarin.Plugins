@@ -69,7 +69,7 @@ namespace FormsPlugin.Iconize.Droid
         /// Called when [text changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="Android.Text.TextChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="Android.Text.TextChangedEventArgs" /> instance containing the event data.</param>
         private void OnTextChanged(Object sender, Android.Text.TextChangedEventArgs e)
         {
             UpdateText();

@@ -14,7 +14,7 @@ namespace Iconize.FormsSample
 
             foreach (var module in Plugin.Iconize.Iconize.Modules)
             {
-                tabbedPage.Children.Add(new Page1 { BindingContext = module });
+                tabbedPage.Children.Add(new Page1 { BindingContext = new ModuleWrapper(module) });
             }
 
             MainPage = new IconNavigationPage(tabbedPage);

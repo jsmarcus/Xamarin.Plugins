@@ -1,7 +1,7 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using FormsPlugin.Iconize.Droid;
 
 namespace Iconize.FormsSample.Droid
 {
@@ -13,7 +13,7 @@ namespace Iconize.FormsSample.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            FormsPlugin.Iconize.Droid.IconControls.Init();
+            IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
             ToolbarResource = Resource.Layout.toolbar;
             TabLayoutResource = Resource.Layout.tabs;
             LoadApplication(new App());

@@ -6,8 +6,8 @@
              Title="{Binding FontFamily}">
 
   <ContentPage.ToolbarItems>
-    <iconize:IconToolbarItem Icon="fa-500px" />
-    <iconize:IconToolbarItem Icon="fa-500px" IconColor="Red" />
+    <iconize:IconToolbarItem Command="{Binding MenuItemClick}" Icon="fa-500px" Text="Default" />
+    <iconize:IconToolbarItem Command="{Binding MenuItemClick}" Icon="fa-500px" IconColor="Red" Text="Red" />
   </ContentPage.ToolbarItems>
 
   <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding Characters}">

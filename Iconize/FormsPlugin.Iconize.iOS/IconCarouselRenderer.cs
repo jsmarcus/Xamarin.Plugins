@@ -4,14 +4,14 @@ using FormsPlugin.Iconize.iOS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(IconTabbedPage), typeof(IconTabbedRenderer))]
+[assembly: ExportRenderer(typeof(IconCarouselPage), typeof(IconCarouselRenderer))]
 namespace FormsPlugin.Iconize.iOS
 {
     /// <summary>
-    /// Defines the <see cref="IconTabbedRenderer" /> renderer.
+    /// Defines the <see cref="IconCarouselRenderer" /> renderer.
     /// </summary>
-    /// <seealso cref="Xamarin.Forms.Platform.iOS.TabbedRenderer" />
-    public class IconTabbedRenderer : TabbedRenderer
+    /// <seealso cref="Xamarin.Forms.Platform.iOS.CarouselPageRenderer" />
+    public class IconCarouselRenderer : CarouselPageRenderer
     {
         /// <summary>
         /// Disposes the specified disposing.
@@ -19,9 +19,9 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="disposing">if set to <c>true</c> [disposing].</param>
         protected override void Dispose(Boolean disposing)
         {
-            if (Tabbed != null)
+            if (Carousel != null)
             {
-                Tabbed.CurrentPageChanged -= OnPageChanged;
+                Carousel.CurrentPageChanged -= OnPageChanged;
             }
 
             base.Dispose(disposing);
@@ -35,9 +35,9 @@ namespace FormsPlugin.Iconize.iOS
         {
             base.OnElementChanged(e);
 
-            if (Tabbed != null)
+            if (Carousel != null)
             {
-                Tabbed.CurrentPageChanged += OnPageChanged;
+                Carousel.CurrentPageChanged += OnPageChanged;
             }
         }
 
@@ -48,7 +48,7 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void OnPageChanged(Object sender, EventArgs e)
         {
-            Tabbed?.UpdateToolbarItems(NavigationController);
+            Carousel?.UpdateToolbarItems(NavigationController);
         }
     }
 }

@@ -37,12 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="IconButton.cs" />
+    <Compile Include="IconCarouselPage.cs" />
     <Compile Include="IconImage.cs" />
     <Compile Include="IconLabel.cs" />
     <Compile Include="IconNavigationPage.cs" />
     <Compile Include="IconTabbedPage.cs" />
     <Compile Include="IconToolbarItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolbarItemExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -19,10 +19,10 @@ namespace Plugin.Iconize.iOS
         /// <param name="text">The text.</param>
         /// <param name="size">The size.</param>
         /// <returns></returns>
-        public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text, nfloat size)
+        public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text, nfloat size, UIColor color = null)
         {
             var builder = new NSMutableAttributedString(text);
-            RecursivePrepareSpannableIndexes(modules, text.Value, size, builder, 0);
+            RecursivePrepareSpannableIndexes(modules, text.Value, size, color ?? UIColor.DarkTextColor, builder, 0);
             return (NSAttributedString)builder.Copy();
         }
 
@@ -35,7 +35,7 @@ namespace Plugin.Iconize.iOS
         /// <param name="builder">The builder.</param>
         /// <param name="start">The start.</param>
         /// <exception cref="System.ArgumentException">Unknown expression  + stroke +  in \ + text + \</exception>
-        private static void RecursivePrepareSpannableIndexes(IList<IIconModule> modules, String text, nfloat size, NSMutableAttributedString builder, Int32 start)
+        private static void RecursivePrepareSpannableIndexes(IList<IIconModule> modules, String text, nfloat size, UIColor color, NSMutableAttributedString builder, Int32 start)
         {
             // Try to find a {...} in the string and extract expression from it
             var startIndex = builder.Value.IndexOf("{", start, StringComparison.Ordinal);
@@ -62,13 +62,13 @@ namespace Plugin.Iconize.iOS
             // If no match, ignore and continue
             if (icon == null)
             {
-                RecursivePrepareSpannableIndexes(modules, text, size, builder, endIndex);
+                RecursivePrepareSpannableIndexes(modules, text, size, color, builder, endIndex);
                 return;
             }
 
             // See if any more stroke within {} should be applied
             var iconSizePt = nfloat.MinValue;
-            var iconColor = UIColor.DarkTextColor;
+            var iconColor = color;
             var iconSizeRatio = nfloat.MinValue;
             var baselineAligned = false;
 
@@ -151,7 +151,7 @@ namespace Plugin.Iconize.iOS
             // Replace the character and apply the typeface
             builder.Replace(new NSRange(startIndex, endIndex - startIndex + 1), replaceString);
 
-            RecursivePrepareSpannableIndexes(modules, text, size, builder, startIndex);
+            RecursivePrepareSpannableIndexes(modules, text, size, color, builder, startIndex);
         }
     }
 }

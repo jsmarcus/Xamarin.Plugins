@@ -10,7 +10,15 @@ namespace Plugin.Iconize.Droid.Controls
 {
     public class IconDrawable : Drawable
     {
-        public static readonly Int32 ANDROID_ACTIONBAR_ICON_SIZE_DP = 24;
+        #region Constants
+
+        public const Int32 ANDROID_ACTIONBAR_ICON_SIZE_DP = 24;
+
+        #endregion Constants
+
+        #region Members
+
+        private Int32 _alpha = 255;
 
         private Context _context;
 
@@ -20,7 +28,19 @@ namespace Plugin.Iconize.Droid.Controls
 
         private Int32 _size = -1;
 
-        private Int32 _alpha = 255;
+        #endregion Members
+
+        #region Properties
+
+        public override Int32 IntrinsicHeight => _size;
+
+        public override Int32 IntrinsicWidth => _size;
+
+        public override Boolean IsStateful => true;
+
+        public override Int32 Opacity => _alpha;
+
+        #endregion Properties
 
         /// <summary>
         /// Create an <see cref="IconDrawable" />.
@@ -48,6 +68,14 @@ namespace Plugin.Iconize.Droid.Controls
             Init(context, icon);
         }
 
+        /// <summary>
+        /// Initializes the specified context.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="icon">The icon.</param>
+        /// <exception cref="Java.Lang.IllegalStateException">Unable to find the module associated  +
+        ///                         with icon  + icon.Key + , have you registered the module  +
+        ///                         you are trying to use with Iconize.With(...) in your Application?</exception>
         private void Init(Context context, IIcon icon)
         {
             _context = context;
@@ -64,7 +92,7 @@ namespace Plugin.Iconize.Droid.Controls
             _paint.SetStyle(Paint.Style.Fill);
             _paint.TextAlign = Paint.Align.Center;
             _paint.UnderlineText = false;
-            _paint.Color = global::Android.Graphics.Color.Black;
+            _paint.Color = Android.Graphics.Color.Black;
             _paint.AntiAlias = true;
         }
 
@@ -146,16 +174,10 @@ namespace Plugin.Iconize.Droid.Controls
             return this;
         }
 
-        public override Int32 IntrinsicHeight
-        {
-            get { return _size; }
-        }
-
-        public override Int32 IntrinsicWidth
-        {
-            get { return _size; }
-        }
-
+        /// <summary>
+        /// Draws the specified canvas.
+        /// </summary>
+        /// <param name="canvas">The canvas.</param>
         public override void Draw(Canvas canvas)
         {
             var bounds = Bounds;
@@ -169,11 +191,11 @@ namespace Plugin.Iconize.Droid.Controls
             canvas.DrawText(textValue, bounds.ExactCenterX(), textBottom, _paint);
         }
 
-        public override Boolean IsStateful
-        {
-            get { return true; }
-        }
-
+        /// <summary>
+        /// Sets the state.
+        /// </summary>
+        /// <param name="stateSet">The state set.</param>
+        /// <returns></returns>
         public override Boolean SetState(Int32[] stateSet)
         {
             var oldValue = _paint.Alpha;
@@ -182,25 +204,39 @@ namespace Plugin.Iconize.Droid.Controls
             return oldValue != newValue;
         }
 
+        /// <summary>
+        /// Sets the alpha.
+        /// </summary>
+        /// <param name="alpha">The alpha.</param>
         public override void SetAlpha(Int32 alpha)
         {
             _alpha = alpha;
             _paint.Alpha = alpha;
         }
 
+        /// <summary>
+        /// Sets the color filter.
+        /// </summary>
+        /// <param name="colorFilter">The color filter.</param>
         public override void SetColorFilter(ColorFilter colorFilter)
         {
             _paint.SetColorFilter(colorFilter);
         }
 
+        /// <summary>
+        /// </summary>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc" />
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#clearColorFilter()" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
         public override void ClearColorFilter()
         {
             _paint.SetColorFilter(null);
-        }
-
-        public override Int32 Opacity
-        {
-            get { return _alpha; }
         }
 
         /// <summary>
@@ -212,7 +248,11 @@ namespace Plugin.Iconize.Droid.Controls
             _paint.SetStyle(style);
         }
 
-        // Util
+        /// <summary>
+        /// Determines whether the specified state set is enabled.
+        /// </summary>
+        /// <param name="stateSet">The state set.</param>
+        /// <returns></returns>
         private Boolean IsEnabled(Int32[] stateSet)
         {
             foreach (var state in stateSet)
@@ -221,7 +261,12 @@ namespace Plugin.Iconize.Droid.Controls
             return false;
         }
 
-        // Util
+        /// <summary>
+        /// Converts the dp to px.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="dp">The dp.</param>
+        /// <returns></returns>
         private Int32 ConvertDpToPx(Context context, Single dp)
         {
             return (Int32)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, context.Resources.DisplayMetrics);
