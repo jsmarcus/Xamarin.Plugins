@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace FormsPlugin.Iconize
 {
@@ -8,6 +9,22 @@ namespace FormsPlugin.Iconize
     /// <seealso cref="Xamarin.Forms.CarouselPage" />
     public class IconCarouselPage : CarouselPage
     {
-        // Intentionally left blank
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IconCarouselPage" /> class.
+        /// </summary>
+        public IconCarouselPage()
+        {
+            CurrentPageChanged += OnCurrentPageChanged;
+        }
+
+        /// <summary>
+        /// Called when [current page changed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
+        private void OnCurrentPageChanged(Object sender, EventArgs e)
+        {
+            MessagingCenter.Send(sender, "Iconize.UpdateToolbarItems");
+        }
     }
 }

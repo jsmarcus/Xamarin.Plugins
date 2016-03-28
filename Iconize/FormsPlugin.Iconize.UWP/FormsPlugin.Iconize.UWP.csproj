@@ -111,12 +111,10 @@
   <ItemGroup>
     <Compile Include="ColorExtensions.cs" />
     <Compile Include="IconButtonRenderer.cs" />
-    <Compile Include="IconCarouselRenderer.cs" />
     <Compile Include="IconControls.cs" />
     <Compile Include="IconImageRenderer.cs" />
     <Compile Include="IconLabelRenderer.cs" />
     <Compile Include="IconNavigationRenderer.cs" />
-    <Compile Include="IconTabbedRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\FormsPlugin.Iconize.Windows.rd.xml" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace FormsPlugin.Iconize
 {
@@ -15,7 +16,20 @@ namespace FormsPlugin.Iconize
         public IconNavigationPage(Page root)
             : base (root)
         {
-            // Intentionally left blank
+            Popped += OnNavigation;
+            PoppedToRoot += OnNavigation;
+            Pushed += OnNavigation;
+        }
+
+        /// <summary>
+        /// Called when [navigation].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="NavigationEventArgs"/> instance containing the event data.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
+        private void OnNavigation(Object sender, NavigationEventArgs e)
+        {
+            MessagingCenter.Send(sender, "Iconize.UpdateToolbarItems");
         }
     }
 }

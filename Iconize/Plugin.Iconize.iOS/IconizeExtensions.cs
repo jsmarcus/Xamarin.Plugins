@@ -17,6 +17,7 @@ namespace Plugin.Iconize.iOS
         /// <param name="target">The target.</param>
         /// <param name="text">The text.</param>
         /// <param name="size">The font size.</param>
+        /// <param name="color">The color.</param>
         /// <returns></returns>
         public static NSAttributedString Compute(this UIView target, NSAttributedString text, nfloat size, UIColor color = null)
         {
@@ -29,6 +30,7 @@ namespace Plugin.Iconize.iOS
         /// <param name="target">The target.</param>
         /// <param name="text">The text.</param>
         /// <param name="size">The font size.</param>
+        /// <param name="color">The color.</param>
         /// <returns></returns>
         public static NSAttributedString Compute(this UIView target, String text, nfloat size, UIColor color = null)
         {

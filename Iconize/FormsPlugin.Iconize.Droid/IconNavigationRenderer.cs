@@ -15,56 +15,31 @@ namespace FormsPlugin.Iconize.Droid
     public class IconNavigationRenderer : NavigationPageRenderer
     {
         /// <summary>
-        /// Disposes the specified disposing.
-        /// </summary>
-        /// <param name="disposing">if set to <c>true</c> [disposing].</param>
-        protected override void Dispose(Boolean disposing)
-        {
-            if (Element != null)
-            {
-                Element.Popped -= OnNavigation;
-                Element.PoppedToRoot -= OnNavigation;
-                Element.Pushed -= OnNavigation;
-            }
-
-            base.Dispose(disposing);
-        }
-
-        /// <summary>
         /// Called when [attached to window].
         /// </summary>
         protected override void OnAttachedToWindow()
         {
             base.OnAttachedToWindow();
 
-            if (Element != null)
-            {
-                Element.UpdateToolbarItems(Context);
-            }
+            OnUpdateToolbarItems(this);
+            MessagingCenter.Subscribe<Object>(this, "Iconize.UpdateToolbarItems", OnUpdateToolbarItems);
         }
 
         /// <summary>
-        /// Raises the <see cref="E:ElementChanged" /> event.
+        /// Called when [detached from window].
         /// </summary>
-        /// <param name="e">The <see cref="ElementChangedEventArgs{NavigationPage}" /> instance containing the event data.</param>
-        protected override void OnElementChanged(ElementChangedEventArgs<NavigationPage> e)
+        protected override void OnDetachedFromWindow()
         {
-            base.OnElementChanged(e);
+            base.OnDetachedFromWindow();
 
-            if (Element != null)
-            {
-                Element.Popped += OnNavigation;
-                Element.PoppedToRoot += OnNavigation;
-                Element.Pushed += OnNavigation;
-            }
+            MessagingCenter.Unsubscribe<Object>(this, "Iconize.UpdateToolbarItems");
         }
 
         /// <summary>
-        /// Called when [navigation].
+        /// Called when [update toolbar items].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="NavigationEventArgs" /> instance containing the event data.</param>
-        private void OnNavigation(Object sender, NavigationEventArgs e)
+        private void OnUpdateToolbarItems(Object sender)
         {
             Element?.UpdateToolbarItems(Context);
         }

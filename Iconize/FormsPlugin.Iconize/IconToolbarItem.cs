@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace FormsPlugin.Iconize
 {
@@ -14,6 +16,11 @@ namespace FormsPlugin.Iconize
         public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconToolbarItem), Color.Default);
 
         /// <summary>
+        /// Backing store for the <see cref="IsVisible" /> property.
+        /// </summary>
+        public static BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(Boolean), typeof(IconToolbarItem), true);
+
+        /// <summary>
         /// Gets or sets the color of the icon.
         /// </summary>
         /// <value>
@@ -23,6 +30,36 @@ namespace FormsPlugin.Iconize
         {
             get { return (Color)GetValue(IconColorProperty); }
             set { SetValue(IconColorProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this toolbar item is visible.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this toolbar item is visible; otherwise, <c>false</c>.
+        /// </value>
+        public Boolean IsVisible
+        {
+            get { return (Boolean)GetValue(IsVisibleProperty); }
+            set { SetValue(IsVisibleProperty, value); }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IconToolbarItem" /> class.
+        /// </summary>
+        public IconToolbarItem()
+        {
+            PropertyChanged += OnPropertyChanged;
+        }
+
+        /// <summary>
+        /// Called when [property changed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
+        private void OnPropertyChanged(Object sender, PropertyChangedEventArgs e)
+        {
+            MessagingCenter.Send(sender, "Iconize.UpdateToolbarItems");
         }
     }
 }

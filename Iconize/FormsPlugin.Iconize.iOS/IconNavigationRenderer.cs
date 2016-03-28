@@ -14,60 +14,35 @@ namespace FormsPlugin.Iconize.iOS
     public class IconNavigationRenderer : NavigationRenderer
     {
         /// <summary>
-        /// Gets the navigation.
+        /// Views the did appear.
         /// </summary>
-        /// <value>
-        /// The navigation.
-        /// </value>
-        protected NavigationPage Navigation => Element as NavigationPage;
-
-        /// <summary>
-        /// Disposes the specified disposing.
-        /// </summary>
-        /// <param name="disposing">if set to <c>true</c> [disposing].</param>
-        protected override void Dispose(Boolean disposing)
-        {
-            if (Navigation != null)
-            {
-                Navigation.Popped -= OnNavigation;
-                Navigation.PoppedToRoot -= OnNavigation;
-                Navigation.Pushed -= OnNavigation;
-            }
-
-            base.Dispose(disposing);
-        }
-
-        /// <summary>
-        /// Raises the <see cref="E:ElementChanged" /> event.
-        /// </summary>
-        /// <param name="e">The <see cref="VisualElementChangedEventArgs" /> instance containing the event data.</param>
-        protected override void OnElementChanged(VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged(e);
-
-            if (Navigation != null)
-            {
-                Navigation.Popped += OnNavigation;
-                Navigation.PoppedToRoot += OnNavigation;
-                Navigation.Pushed += OnNavigation;
-            }
-        }
-
+        /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewDidAppear(Boolean animated)
         {
             base.ViewDidAppear(animated);
 
-            Navigation?.UpdateToolbarItems(this);
+            OnUpdateToolbarItems(this);
+            MessagingCenter.Subscribe<Object>(this, "Iconize.UpdateToolbarItems", OnUpdateToolbarItems);
         }
 
         /// <summary>
-        /// Called when [navigation].
+        /// Views the did disappear.
+        /// </summary>
+        /// <param name="animated">if set to <c>true</c> [animated].</param>
+        public override void ViewDidDisappear(Boolean animated)
+        {
+            base.ViewDidDisappear(animated);
+
+            MessagingCenter.Unsubscribe<Object>(this, "Iconize.UpdateToolbarItems");
+        }
+
+        /// <summary>
+        /// Called when [update toolbar items].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="NavigationEventArgs" /> instance containing the event data.</param>
-        private void OnNavigation(Object sender, NavigationEventArgs e)
+        private void OnUpdateToolbarItems(Object sender)
         {
-            Navigation?.UpdateToolbarItems(this);
+            (Element as NavigationPage)?.UpdateToolbarItems(this);
         }
     }
 }

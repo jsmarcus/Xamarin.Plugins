@@ -18,6 +18,7 @@ namespace Plugin.Iconize.iOS
         /// <param name="modules">The modules.</param>
         /// <param name="text">The text.</param>
         /// <param name="size">The size.</param>
+        /// <param name="color">The color.</param>
         /// <returns></returns>
         public static NSAttributedString Parse(IList<IIconModule> modules, NSAttributedString text, nfloat size, UIColor color = null)
         {
@@ -32,6 +33,7 @@ namespace Plugin.Iconize.iOS
         /// <param name="modules">The modules.</param>
         /// <param name="text">The text.</param>
         /// <param name="size">The size.</param>
+        /// <param name="color">The color.</param>
         /// <param name="builder">The builder.</param>
         /// <param name="start">The start.</param>
         /// <exception cref="System.ArgumentException">Unknown expression  + stroke +  in \ + text + \</exception>
