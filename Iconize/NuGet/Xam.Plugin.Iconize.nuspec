@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize</id>
-    <version>1.0.5-alpha4</version>
+    <version>1.0.5-beta3</version>
     <title>Iconize Plugin for Xamarin and Windows</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>

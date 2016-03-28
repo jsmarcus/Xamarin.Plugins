@@ -18,11 +18,11 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="controller">The controller.</param>
         public static void UpdateToolbarItems(this Page page, UINavigationController controller)
         {
-            var navController = controller.TopViewController;
+            var navController = controller?.TopViewController;
             if (navController == null)
                 return;
 
-            if (navController.NavigationItem.RightBarButtonItems != null)
+            if (navController.NavigationItem?.RightBarButtonItems != null)
             {
                 for (var i = 0; i < navController.NavigationItem.RightBarButtonItems.Length; ++i)
                     navController.NavigationItem.RightBarButtonItems[i].Dispose();
@@ -34,7 +34,7 @@ namespace FormsPlugin.Iconize.iOS
                     navController.ToolbarItems[i].Dispose();
             }
 
-            var toolbarItems = page.GetToolbarItems();
+            var toolbarItems = page?.GetToolbarItems();
             if (toolbarItems == null)
                 return;
 
@@ -46,7 +46,7 @@ namespace FormsPlugin.Iconize.iOS
                 var barButtonItem = toolbarItem.ToUIBarButtonItem(toolbarItem.Order == ToolbarItemOrder.Secondary);
                 if (toolbarItem is IconToolbarItem)
                 {
-                    var iconItem = toolbarItem as IconToolbarItem;
+                    var iconItem = (IconToolbarItem)toolbarItem;
                     if (iconItem.IsVisible == false)
                         continue;
 

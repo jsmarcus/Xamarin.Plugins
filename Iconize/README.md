@@ -32,7 +32,7 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 
 **Xamarin.Android (AppCompat)**
 
-* IconButton (Button)
+* IconButton (AppCompatButton)
 * IconDrawable (Drawable)
 * IconTextView (TextView)
 * IconToggleButton (ToggleButton)
@@ -48,7 +48,14 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 * IconButton (Button)
 * IconImage (Image)
 * IconLabel (Label)
-* IconToolbarItem (ToolbarItem) **Coming soon!**
+* IconToolbarItem (ToolbarItem)
+
+**UWP (Coming Soon)**
+
+* IconButton (Button)
+* IconLabel (TextBlock)
+* Bitmap (extension)
+
 
 ##Setup##
 

@@ -2,7 +2,6 @@ using System;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.Droid;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(IconNavigationPage), typeof(IconNavigationRenderer))]
@@ -30,9 +29,9 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         protected override void OnDetachedFromWindow()
         {
-            base.OnDetachedFromWindow();
-
             MessagingCenter.Unsubscribe<Object>(this, "Iconize.UpdateToolbarItems");
+
+            base.OnDetachedFromWindow();
         }
 
         /// <summary>
