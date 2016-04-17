@@ -27,9 +27,7 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            var iconImage = Element as IconImage;
-            Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-            Control.TintColor = iconImage.IconColor.ToUIColor();
+            this.UpdateImage(true);
         }
 
         /// <summary>
@@ -44,18 +42,41 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            var iconImage = Element as IconImage;
-
             switch (e.PropertyName)
             {
                 case nameof(IconImage.Icon):
-                    Control.Image = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon).ToUIImage((nfloat)Element.HeightRequest).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+                case nameof(IconImage.IconSize):
+                    this.UpdateImage(true);
                     break;
 
                 case nameof(IconImage.IconColor):
-                    Control.TintColor = iconImage.IconColor.ToUIColor();
+                    this.UpdateImage(false);
                     break;
             }
+        }
+
+        private void UpdateImage(bool shouldUpdateImage)
+        {
+            var iconImage = Element as IconImage;
+            if (shouldUpdateImage)
+            {
+                Control.ContentMode =
+                        iconImage.IconSize > 0 ?
+                            UIViewContentMode.Center :
+                            UIViewContentMode.ScaleAspectFit;
+
+                var iconToDraw = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
+                if (iconToDraw == null)
+                {
+                    Control.Image = null;
+                    return;
+                }
+                Control.Image =
+                        iconToDraw
+                        .ToUIImage(iconImage.IconSize > 0 ? (nfloat)iconImage.IconSize : (nfloat)Element.HeightRequest)
+                        .ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            }
+            Control.TintColor = iconImage.IconColor.ToUIColor();
         }
     }
 }
