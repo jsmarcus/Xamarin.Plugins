@@ -85,6 +85,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("wi-night-thunderstorm", '\uf03b');
             Icons.Add("wi-lunar-eclipse", '\uf070');
             Icons.Add("wi-stars", '\uf077');
+            Icons.Add("wi-storm-showers", '\uf01d');
+            Icons.Add("wi-thunderstorm", '\uf01e');
             Icons.Add("wi-night-alt-cloudy-high", '\uf07e');
             Icons.Add("wi-night-cloudy-high", '\uf080');
             Icons.Add("wi-night-alt-partly-cloudy", '\uf081');
@@ -104,6 +106,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("wi-storm-showers", '\uf01d');
             Icons.Add("wi-thunderstorm", '\uf01e');
             Icons.Add("wi-snow-wind", '\uf064');
+            Icons.Add("wi-snow", '\uf01b');
             Icons.Add("wi-smog", '\uf074');
             Icons.Add("wi-smoke", '\uf062');
             Icons.Add("wi-lightning", '\uf016');

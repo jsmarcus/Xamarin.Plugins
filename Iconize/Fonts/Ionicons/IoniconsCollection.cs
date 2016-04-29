@@ -95,7 +95,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("ion-android-laptop", '\uf390');
             Icons.Add("ion-android-list", '\uf391');
             Icons.Add("ion-android-locate", '\uf2e9');
-            Icons.Add("ion-android -lock", '\uf392');
+            Icons.Add("ion-android-lock", '\uf392');
             Icons.Add("ion-android-mail", '\uf2eb');
             Icons.Add("ion-android-map", '\uf393');
             Icons.Add("ion-android-menu", '\uf394');
@@ -165,8 +165,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("ion-arrow-left-c", '\uf108');
             Icons.Add("ion-arrow-move", '\uf263');
             Icons.Add("ion-arrow-resize", '\uf264');
-            Icons.Add("ion-arrow -return -left", '\uf265');
-            Icons.Add("ion-arrow -return -right", '\uf266');
+            Icons.Add("ion-arrow-return-left", '\uf265');
+            Icons.Add("ion-arrow-return-right", '\uf266');
             Icons.Add("ion-arrow-right-a", '\uf109');
             Icons.Add("ion-arrow-right-b", '\uf10a');
             Icons.Add("ion-arrow-right-c", '\uf10b');

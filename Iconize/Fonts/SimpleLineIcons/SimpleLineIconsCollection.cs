@@ -101,7 +101,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-film", '\ue03a');
             Icons.Add("icon-feed", '\ue03b');
             Icons.Add("icon-drop", '\ue03e');
-            Icons.Add("icon-drawar", '\ue03f');
+            Icons.Add("icon-drawer", '\ue03f');
             Icons.Add("icon-docs", '\ue040');
             Icons.Add("icon-doc", '\ue085');
             Icons.Add("icon-diamond", '\ue043');
@@ -180,7 +180,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-reload", '\ue099');
             Icons.Add("icon-settings", '\ue09a');
             Icons.Add("icon-star", '\ue09b');
-            Icons.Add("icon-symble-female", '\ue09c');
+            Icons.Add("icon-symbol-female", '\ue09c');
             Icons.Add("icon-symbol-male", '\ue09d');
             Icons.Add("icon-target", '\ue09e');
             Icons.Add("icon-credit-card", '\ue025');

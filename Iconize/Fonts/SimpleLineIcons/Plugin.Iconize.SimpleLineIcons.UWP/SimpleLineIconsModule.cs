@@ -10,7 +10,7 @@
         /// Initializes a new instance of the <see cref="SimpleLineIconsModule" /> class.
         /// </summary>
         public SimpleLineIconsModule()
-            : base("Simple Line Icons", "simple-line-icons", "/Assets/Fonts/iconize-simplelineicons.ttf", SimpleLineIconsCollection.Icons)
+            : base("simple-line-icons", "simple-line-icons", "/Assets/Fonts/iconize-simplelineicons.ttf", SimpleLineIconsCollection.Icons)
         {
             // Intentionally left blank
         }

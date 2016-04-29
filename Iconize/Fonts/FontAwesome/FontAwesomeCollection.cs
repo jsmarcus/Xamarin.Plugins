@@ -29,6 +29,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-align-right", '\uf038');
             Icons.Add("fa-amazon", '\uf270');
             Icons.Add("fa-ambulance", '\uf0f9');
+            Icons.Add("fa-american-sign-language-interpreting", '\uf2a3');
             Icons.Add("fa-anchor", '\uf13d');
             Icons.Add("fa-android", '\uf17b');
             Icons.Add("fa-angellist", '\uf209');
@@ -59,8 +60,11 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-arrows-alt", '\uf0b2');
             Icons.Add("fa-arrows-h", '\uf07e');
             Icons.Add("fa-arrows-v", '\uf07d');
+            Icons.Add("fa-asl-interpreting", '\uf2a3');
+            Icons.Add("fa-assistive-listening-systems", '\uf2a2');
             Icons.Add("fa-asterisk", '\uf069');
             Icons.Add("fa-at", '\uf1fa');
+            Icons.Add("fa-audio-description", '\uf29e');
             Icons.Add("fa-automobile", '\uf1b9');
             Icons.Add("fa-backward", '\uf04a');
             Icons.Add("fa-balance-scale", '\uf24e');
@@ -95,6 +99,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-bitbucket-square", '\uf172');
             Icons.Add("fa-bitcoin", '\uf15a');
             Icons.Add("fa-black-tie", '\uf27e');
+            Icons.Add("fa-blind", '\uf29d');
             Icons.Add("fa-bluetooth", '\uf293');
             Icons.Add("fa-bluetooth-b", '\uf294');
             Icons.Add("fa-bold", '\uf032');
@@ -103,6 +108,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-book", '\uf02d');
             Icons.Add("fa-bookmark", '\uf02e');
             Icons.Add("fa-bookmark-o", '\uf097');
+            Icons.Add("fa-braille", '\uf2a1');
             Icons.Add("fa-briefcase", '\uf0b1');
             Icons.Add("fa-btc", '\uf15a');
             Icons.Add("fa-bug", '\uf188');
@@ -205,6 +211,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-dashboard", '\uf0e4');
             Icons.Add("fa-dashcube", '\uf210');
             Icons.Add("fa-database", '\uf1c0');
+            Icons.Add("fa-deaf", '\uf2a4');
+            Icons.Add("fa-deafness", '\uf2a4');
             Icons.Add("fa-dedent", '\uf03b');
             Icons.Add("fa-delicious", '\uf1a5');
             Icons.Add("fa-desktop", '\uf108');
@@ -226,6 +234,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-envelope", '\uf0e0');
             Icons.Add("fa-envelope-o", '\uf003');
             Icons.Add("fa-envelope-square", '\uf199');
+            Icons.Add("fa-envira", '\uf299');
             Icons.Add("fa-eraser", '\uf12d');
             Icons.Add("fa-eur", '\uf153');
             Icons.Add("fa-euro", '\uf153');
@@ -286,7 +295,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-folder-open", '\uf07c');
             Icons.Add("fa-folder-open-o", '\uf115');
             Icons.Add("fa-font", '\uf031');
-            Icons.Add("fa-fontIcons", '\uf280');
+            Icons.Add("fa-fonticons", '\uf280');
             Icons.Add("fa-fort-awesome", '\uf286');
             Icons.Add("fa-forumbee", '\uf211');
             Icons.Add("fa-forward", '\uf04e');
@@ -309,8 +318,11 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-github", '\uf09b');
             Icons.Add("fa-github-alt", '\uf113');
             Icons.Add("fa-github-square", '\uf092');
+            Icons.Add("fa-gitlab", '\uf296');
             Icons.Add("fa-gittip", '\uf184');
             Icons.Add("fa-glass", '\uf000');
+            Icons.Add("fa-glide", '\uf2a5');
+            Icons.Add("fa-glide-g", '\uf2a6');
             Icons.Add("fa-globe", '\uf0ac');
             Icons.Add("fa-google", '\uf1a0');
             Icons.Add("fa-google-plus", '\uf0d5');
@@ -334,6 +346,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-hand-scissors-o", '\uf257');
             Icons.Add("fa-hand-spock-o", '\uf259');
             Icons.Add("fa-hand-stop-o", '\uf256');
+            Icons.Add("fa-hard-of-hearing", '\uf2a4');
             Icons.Add("fa-hashtag", '\uf292');
             Icons.Add("fa-hdd-o", '\uf0a0');
             Icons.Add("fa-header", '\uf1dc');
@@ -406,6 +419,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-long-arrow-left", '\uf177');
             Icons.Add("fa-long-arrow-right", '\uf178');
             Icons.Add("fa-long-arrow-up", '\uf176');
+            Icons.Add("fa-low-vision", '\uf2a8');
             Icons.Add("fa-magic", '\uf0d0');
             Icons.Add("fa-magnet", '\uf076');
             Icons.Add("fa-mail-forward", '\uf064');
@@ -499,6 +513,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-qrcode", '\uf029');
             Icons.Add("fa-question", '\uf128');
             Icons.Add("fa-question-circle", '\uf059');
+            Icons.Add("fa-question-circle-o", '\uf29c');
             Icons.Add("fa-quote-left", '\uf10d');
             Icons.Add("fa-quote-right", '\uf10e');
             Icons.Add("fa-ra", '\uf1d0');
@@ -553,8 +568,10 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-shopping-basket", '\uf291');
             Icons.Add("fa-shopping-cart", '\uf07a');
             Icons.Add("fa-sign-in", '\uf090');
+            Icons.Add("fa-sign-language", '\uf2a7');
             Icons.Add("fa-sign-out", '\uf08b');
             Icons.Add("fa-signal", '\uf012');
+            Icons.Add("fa-signing", '\uf2a7');
             Icons.Add("fa-simplybuilt", '\uf215');
             Icons.Add("fa-sitemap", '\uf0e8');
             Icons.Add("fa-skyatlas", '\uf216');
@@ -563,6 +580,9 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-sliders", '\uf1de');
             Icons.Add("fa-slideshare", '\uf1e7');
             Icons.Add("fa-smile-o", '\uf118');
+            Icons.Add("fa-snapchat", '\uf2ab');
+            Icons.Add("fa-snapchat-ghost", '\uf2ac');
+            Icons.Add("fa-snapchat-square", '\uf2ad');
             Icons.Add("fa-soccer-ball-o", '\uf1e3');
             Icons.Add("fa-sort", '\uf0dc');
             Icons.Add("fa-sort-alpha-asc", '\uf15d');
@@ -664,6 +684,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-umbrella", '\uf0e9');
             Icons.Add("fa-underline", '\uf0cd');
             Icons.Add("fa-undo", '\uf0e2');
+            Icons.Add("fa-universal-access", '\uf29a');
             Icons.Add("fa-university", '\uf19c');
             Icons.Add("fa-unlink", '\uf127');
             Icons.Add("fa-unlock", '\uf09c');
@@ -682,11 +703,14 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-venus-double", '\uf226');
             Icons.Add("fa-venus-mars", '\uf228');
             Icons.Add("fa-viacoin", '\uf237');
+            Icons.Add("fa-viadeo", '\uf2a9');
+            Icons.Add("fa-viadeo-square", '\uf2aa');
             Icons.Add("fa-video-camera", '\uf03d');
             Icons.Add("fa-vimeo", '\uf27d');
             Icons.Add("fa-vimeo-square", '\uf194');
             Icons.Add("fa-vine", '\uf1ca');
             Icons.Add("fa-vk", '\uf189');
+            Icons.Add("fa-volume-control-phone", '\uf2a0');
             Icons.Add("fa-volume-down", '\uf027');
             Icons.Add("fa-volume-off", '\uf026');
             Icons.Add("fa-volume-up", '\uf028');
@@ -696,11 +720,14 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-weixin", '\uf1d7');
             Icons.Add("fa-whatsapp", '\uf232');
             Icons.Add("fa-wheelchair", '\uf193');
+            Icons.Add("fa-wheelchair-alt", '\uf29b');
             Icons.Add("fa-wifi", '\uf1eb');
             Icons.Add("fa-wikipedia-w", '\uf266');
             Icons.Add("fa-windows", '\uf17a');
             Icons.Add("fa-won", '\uf159');
             Icons.Add("fa-wordpress", '\uf19a');
+            Icons.Add("fa-wpbeginner", '\uf297');
+            Icons.Add("fa-wpforms", '\uf298');
             Icons.Add("fa-wrench", '\uf0ad');
             Icons.Add("fa-xing", '\uf168');
             Icons.Add("fa-xing-square", '\uf169');
