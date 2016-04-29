@@ -103,10 +103,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("wi-sleet", '\uf0b5');
             Icons.Add("wi-snow", '\uf01b');
             Icons.Add("wi-sprinkle", '\uf01c');
-            Icons.Add("wi-storm-showers", '\uf01d');
-            Icons.Add("wi-thunderstorm", '\uf01e');
             Icons.Add("wi-snow-wind", '\uf064');
-            Icons.Add("wi-snow", '\uf01b');
             Icons.Add("wi-smog", '\uf074');
             Icons.Add("wi-smoke", '\uf062');
             Icons.Add("wi-lightning", '\uf016');
