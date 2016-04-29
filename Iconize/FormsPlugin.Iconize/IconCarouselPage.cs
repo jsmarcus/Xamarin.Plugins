@@ -24,7 +24,7 @@ namespace FormsPlugin.Iconize
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void OnCurrentPageChanged(Object sender, EventArgs e)
         {
-            MessagingCenter.Send(sender, "Iconize.UpdateToolbarItems");
+            MessagingCenter.Send(sender, IconToolbarItem.UpdateToolbarItemsMessage);
         }
     }
 }

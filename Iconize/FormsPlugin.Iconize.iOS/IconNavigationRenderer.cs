@@ -1,6 +1,7 @@
 ﻿using System;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.iOS;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -14,24 +15,6 @@ namespace FormsPlugin.Iconize.iOS
     public class IconNavigationRenderer : NavigationRenderer
     {
         /// <summary>
-        /// Views the did appear.
-        /// </summary>
-        /// <param name="animated">if set to <c>true</c> [animated].</param>
-        public override void ViewDidAppear(Boolean animated)
-        {
-            base.ViewDidAppear(animated);
-        }
-
-        /// <summary>
-        /// Views the did disappear.
-        /// </summary>
-        /// <param name="animated">if set to <c>true</c> [animated].</param>
-        public override void ViewDidDisappear(Boolean animated)
-        {
-            base.ViewDidDisappear(animated);
-        }
-
-        /// <summary>
         /// Views the will appear.
         /// </summary>
         /// <param name="animated">if set to <c>true</c> [animated].</param>
@@ -40,7 +23,7 @@ namespace FormsPlugin.Iconize.iOS
             base.ViewWillAppear(animated);
 
             OnUpdateToolbarItems(this);
-            MessagingCenter.Subscribe<Object>(this, "Iconize.UpdateToolbarItems", OnUpdateToolbarItems);
+            MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
         }
 
         /// <summary>
@@ -49,7 +32,7 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewWillDisappear(Boolean animated)
         {
-            MessagingCenter.Unsubscribe<Object>(this, "Iconize.UpdateToolbarItems");
+            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
 
             base.ViewWillDisappear(animated);
         }

@@ -81,10 +81,14 @@ namespace FormsPlugin.Iconize.Droid
         private void UpdateText()
         {
             Control.TextChanged -= OnTextChanged;
-            if (String.IsNullOrEmpty(Element.Text) == false)
+
+            var icon = Plugin.Iconize.Iconize.FindIconForKey(Element.Text);
+            if (icon != null)
             {
-                Control.TextFormatted = Control.Compute(Context, new Java.Lang.String(Element.Text), (Single)Element.FontSize);
+                Control.Text = $"{icon.Character}";
+                Control.Typeface = Plugin.Iconize.Iconize.FindModuleOf(icon).ToTypeface(Context);
             }
+
             Control.TextChanged += OnTextChanged;
         }
     }

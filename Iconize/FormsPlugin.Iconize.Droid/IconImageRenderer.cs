@@ -59,15 +59,15 @@ namespace FormsPlugin.Iconize.Droid
         {
             var iconImage = Element as IconImage;
 
-            var iconToDraw = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
-            if (iconToDraw == null)
+            var icon = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
+            if (icon == null)
             {
                 Control.SetImageResource(Android.Resource.Color.Transparent);
                 return;
             }
 
-            var drawable = new IconDrawable(Context, iconToDraw).Color(iconImage.IconColor.ToAndroid())
-                                                                .SizeDp(iconImage.IconSize > 0 ? (Int32)iconImage.IconSize : (Int32)Element.HeightRequest);
+            var drawable = new IconDrawable(Context, icon).Color(iconImage.IconColor.ToAndroid())
+                                                          .SizeDp(iconImage.IconSize > 0 ? (Int32)iconImage.IconSize : (Int32)Element.HeightRequest);
             Control.SetScaleType(iconImage.IconSize > 0 ? ImageView.ScaleType.Center : ImageView.ScaleType.FitCenter);
             Control.SetImageDrawable(drawable);
         }

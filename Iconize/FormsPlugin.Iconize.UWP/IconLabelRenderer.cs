@@ -41,11 +41,13 @@ namespace FormsPlugin.Iconize.UWP
             if (Control == null || Element == null)
                 return;
 
-            if ((e.PropertyName == nameof(IconButton.FontSize) ||
-                (e.PropertyName == nameof(IconButton.Text)) ||
-                (e.PropertyName == nameof(IconButton.TextColor))))
+            switch (e.PropertyName)
             {
-                UpdateText();
+                case nameof(IconLabel.FontSize):
+                case nameof(IconLabel.Text):
+                case nameof(IconLabel.TextColor):
+                    UpdateText();
+                    break;
             }
         }
 
@@ -54,10 +56,11 @@ namespace FormsPlugin.Iconize.UWP
         /// </summary>
         private void UpdateText()
         {
-            if (String.IsNullOrEmpty(Element.Text) == false)
+            var icon = Plugin.Iconize.Iconize.FindIconForKey(Element.Text);
+            if (icon != null)
             {
-                Control.Inlines.Clear();
-                Control.Inlines.Add(ParsingUtil.Parse(Plugin.Iconize.Iconize.Modules, Element.Text, Element.FontSize));
+                Control.Text = $"{icon.Character}";
+                Control.FontFamily = Plugin.Iconize.Iconize.FindModuleOf(icon).ToFontFamily();
             }
         }
     }

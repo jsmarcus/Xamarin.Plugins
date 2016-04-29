@@ -18,7 +18,7 @@ namespace FormsPlugin.Iconize
         {
             Popped += OnNavigation;
             PoppedToRoot += OnNavigation;
-            Pushed += OnNavigation;
+            Pushed += OnNavigation;            
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace FormsPlugin.Iconize
         /// <exception cref="System.NotImplementedException"></exception>
         private void OnNavigation(Object sender, NavigationEventArgs e)
         {
-            MessagingCenter.Send(sender, "Iconize.UpdateToolbarItems");
+            MessagingCenter.Send(sender, IconToolbarItem.UpdateToolbarItemsMessage);
         }
     }
 }

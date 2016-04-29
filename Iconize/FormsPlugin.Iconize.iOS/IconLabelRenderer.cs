@@ -41,11 +41,13 @@ namespace FormsPlugin.Iconize.iOS
             if (Control == null || Element == null)
                 return;
 
-            if ((e.PropertyName == nameof(IconLabel.FontSize) ||
-                (e.PropertyName == nameof(IconLabel.Text)) ||
-                (e.PropertyName == nameof(IconLabel.TextColor))))
+            switch (e.PropertyName)
             {
-                UpdateText();
+                case nameof(IconLabel.FontSize):
+                case nameof(IconLabel.Text):
+                case nameof(IconLabel.TextColor):
+                    UpdateText();
+                    break;
             }
         }
 
@@ -54,9 +56,11 @@ namespace FormsPlugin.Iconize.iOS
         /// </summary>
         private void UpdateText()
         {
-            if (String.IsNullOrEmpty(Element.Text) == false)
+            var icon = Plugin.Iconize.Iconize.FindIconForKey(Element.Text);
+            if (icon != null)
             {
-                Control.AttributedText = Control.Compute(Element.Text, (nfloat)Element.FontSize);
+                Control.Text = $"{icon.Character}";
+                Control.Font = Plugin.Iconize.Iconize.FindModuleOf(icon).ToUIFont((nfloat)Element.FontSize);
             }
         }
     }

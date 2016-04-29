@@ -17,8 +17,9 @@
         <ViewCell>
           <StackLayout Orientation="Horizontal">
             <iconize:IconImage HeightRequest="20" Icon="{Binding Key}" IconColor="Blue" WidthRequest="20" />
-            <iconize:IconButton FontSize="20" Text="{Binding Key, StringFormat='{}{{{0}}}'}" TextColor="Red" WidthRequest="48" />
-            <iconize:IconLabel FontSize="20" Text="{Binding Key, StringFormat='{}{{{0}}}'}" TextColor="Green" VerticalTextAlignment="Center" />
+            <iconize:IconImage HeightRequest="20" Icon="{Binding Key}" BackgroundColor="Blue" IconColor="Yellow" WidthRequest="20" IconSize="10" />
+            <iconize:IconButton FontSize="20" Text="{Binding Key}" TextColor="Red" WidthRequest="48" />
+            <iconize:IconLabel FontSize="20" Text="{Binding Key}" TextColor="Green" VerticalTextAlignment="Center" />
             <Label Text="{Binding Key}" VerticalTextAlignment="Center" />
           </StackLayout>
         </ViewCell>

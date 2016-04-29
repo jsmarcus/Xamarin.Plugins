@@ -21,7 +21,7 @@ namespace FormsPlugin.Iconize.Droid
             base.OnAttachedToWindow();
 
             OnUpdateToolbarItems(this);
-            MessagingCenter.Subscribe<Object>(this, "Iconize.UpdateToolbarItems", OnUpdateToolbarItems);
+            MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         protected override void OnDetachedFromWindow()
         {
-            MessagingCenter.Unsubscribe<Object>(this, "Iconize.UpdateToolbarItems");
+            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
 
             base.OnDetachedFromWindow();
         }

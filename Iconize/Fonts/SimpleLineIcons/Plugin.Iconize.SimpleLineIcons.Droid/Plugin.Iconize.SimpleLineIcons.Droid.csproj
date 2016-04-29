@@ -53,11 +53,6 @@
     <Compile Include="SimpleLineIconsModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\iconize-simplelineicons.ttf">
-      <Link>Assets\Iconize\iconize-simplelineicons.ttf</Link>
-    </AndroidAsset>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Plugin.Iconize.Droid\Plugin.Iconize.Droid.csproj">
       <Project>{318a7d0f-5e8f-4cfe-be13-7dca1235e0ae}</Project>
       <Name>Plugin.Iconize.Droid</Name>
@@ -66,6 +61,11 @@
       <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
       <Name>Plugin.Iconize</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\iconize-simplelineicons.ttf">
+      <Link>Assets\Iconize\iconize-simplelineicons.ttf</Link>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

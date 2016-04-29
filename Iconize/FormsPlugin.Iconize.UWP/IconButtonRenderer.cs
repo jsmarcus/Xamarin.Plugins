@@ -5,7 +5,6 @@ using FormsPlugin.Iconize.UWP;
 using Plugin.Iconize.UWP;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
-using TextBlock = Windows.UI.Xaml.Controls.TextBlock;
 
 [assembly: ExportRenderer(typeof(IconButton), typeof(IconButtonRenderer))]
 namespace FormsPlugin.Iconize.UWP
@@ -42,11 +41,13 @@ namespace FormsPlugin.Iconize.UWP
             if (Control == null || Element == null)
                 return;
 
-            if ((e.PropertyName == nameof(IconButton.FontSize) ||
-                (e.PropertyName == nameof(IconButton.Text)) ||
-                (e.PropertyName == nameof(IconButton.TextColor))))
+            switch (e.PropertyName)
             {
-                UpdateText();
+                case nameof(IconButton.FontSize):
+                case nameof(IconButton.Text):
+                case nameof(IconButton.TextColor):
+                    UpdateText();
+                    break;
             }
         }
 
@@ -55,11 +56,11 @@ namespace FormsPlugin.Iconize.UWP
         /// </summary>
         private void UpdateText()
         {
-            if (String.IsNullOrEmpty(Element.Text) == false)
+            var icon = Plugin.Iconize.Iconize.FindIconForKey(Element.Text);
+            if (icon != null)
             {
-                var content = new TextBlock();
-                content.Inlines.Add(ParsingUtil.Parse(Plugin.Iconize.Iconize.Modules, Element.Text, Element.FontSize));
-                Control.Content = content;
+                Control.Content = $"{icon.Character}";
+                Control.FontFamily = Plugin.Iconize.Iconize.FindModuleOf(icon).ToFontFamily();
             }
         }
     }

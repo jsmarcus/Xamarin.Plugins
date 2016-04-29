@@ -98,6 +98,11 @@ namespace Plugin.Iconize
         /// <returns>The icon, or null if no icon matches the key</returns>
         public static IIcon FindIconForKey(String iconKey)
         {
+            if (String.IsNullOrWhiteSpace(iconKey))
+            {
+                return null;
+            }
+
             return Modules.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
         }
     }

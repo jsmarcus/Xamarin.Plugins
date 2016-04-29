@@ -38,20 +38,22 @@ namespace Plugin.Iconize.UWP
         /// <param name="size">The size.</param>
         /// <param name="color">The color.</param>
         /// <returns></returns>
-        public static async Task<ImageSource> ToImageSourceAsync(this IIcon icon, Double size, Color color)
+        public static ImageSource ToImageSource(this IIcon icon, Int32 size, Color color)
         {
-            var grid = new Grid();
-            grid.Children.Add(new TextBlock
-            {
-                FontFamily = Iconize.FindModuleOf(icon).ToFontFamily(),
-                FontSize = size,
-                Foreground = new SolidColorBrush(color),
-                Text = $"{icon.Character}"
-            });
+            //var text = new TextBlock
+            //{
+            //    FontFamily = Iconize.FindModuleOf(icon).ToFontFamily(),
+            //    FontSize = size,
+            //    Foreground = new SolidColorBrush(color),
+            //    Text = $"{icon.Character}"
+            //};
+            //    var grid = new Grid();
+            //grid.Children.Add(text);
 
-            var bitmap = new RenderTargetBitmap();
-            await bitmap.RenderAsync(grid);
-            return bitmap;
+            //var bitmap = BitmapFactory.New(size, size);
+            //bitmap.Render(text, null);
+            //return bitmap;
+            return null;
         }
     }
 }

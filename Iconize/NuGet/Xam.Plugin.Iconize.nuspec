@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize</id>
-    <version>1.0.5-beta3</version>
+    <version>1.0.5</version>
     <title>Iconize Plugin for Xamarin and Windows</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -16,8 +16,10 @@
     <dependencies>
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xamarin.Android.Support.v4" version="23.0.1.3" />
-        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="23.0.1.3" />
+        <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.v4" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.Vector.Drawable" version="23.3.0" />
       </group>
     </dependencies>
   </metadata>
