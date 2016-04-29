@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using Android.Widget;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.Droid;
 using Plugin.Iconize.Droid.Controls;
@@ -45,6 +46,7 @@ namespace FormsPlugin.Iconize.Droid
             {
                 case nameof(IconImage.Icon):
                 case nameof(IconImage.IconColor):
+                case nameof(IconImage.IconSize):
                     UpdateImage();
                     break;
             }
@@ -56,9 +58,17 @@ namespace FormsPlugin.Iconize.Droid
         private void UpdateImage()
         {
             var iconImage = Element as IconImage;
-            var drawable = new IconDrawable(Context, Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon))
-                                     .Color(iconImage.IconColor.ToAndroid())
-                                     .SizeDp((Int32)Element.HeightRequest);
+
+            var iconToDraw = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
+            if (iconToDraw == null)
+            {
+                Control.SetImageResource(Android.Resource.Color.Transparent);
+                return;
+            }
+
+            var drawable = new IconDrawable(Context, iconToDraw).Color(iconImage.IconColor.ToAndroid())
+                                                                .SizeDp(iconImage.IconSize > 0 ? (Int32)iconImage.IconSize : (Int32)Element.HeightRequest);
+            Control.SetScaleType(iconImage.IconSize > 0 ? ImageView.ScaleType.Center : ImageView.ScaleType.FitCenter);
             Control.SetImageDrawable(drawable);
         }
     }

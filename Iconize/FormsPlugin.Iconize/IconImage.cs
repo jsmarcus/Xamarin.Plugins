@@ -9,6 +9,17 @@ namespace FormsPlugin.Iconize
     /// <seealso cref="Xamarin.Forms.Image" />
     public class IconImage : Image
     {
+        #region Constants
+
+        /// <summary>
+        /// When the property <see cref="IconSize" /> is set to this value, the icon size will match the Image Size.
+        /// </summary>
+        public const Double AutoSize = -1.0;
+
+        #endregion Constants
+
+        #region Bindables
+
         /// <summary>
         /// Property definition for the <see cref="Icon" /> Property
         /// </summary>
@@ -18,6 +29,15 @@ namespace FormsPlugin.Iconize
         /// Property definition for the <see cref="IconColor" /> Property
         /// </summary>
         public static BindableProperty IconColorProperty = BindableProperty.Create(nameof(IconColor), typeof(Color), typeof(IconImage), Color.Default);
+
+        /// <summary>
+        /// Property definition for the <see cref="IconSize" /> Property
+        /// </summary>
+        public static BindableProperty IconSizeProperty = BindableProperty.Create(nameof(IconSize), typeof(Double), typeof(IconImage), IconImage.AutoSize);
+
+        #endregion Bindables
+
+        #region Properties
 
         /// <summary>
         /// Gets or sets the icon.
@@ -42,5 +62,19 @@ namespace FormsPlugin.Iconize
             get { return (Color)GetValue(IconColorProperty); }
             set { SetValue(IconColorProperty, value); }
         }
+
+        /// <summary>
+        /// Gets or sets the size of the icon.
+        /// </summary>
+        /// <value>
+        /// The size of the icon.
+        /// </value>
+        public Double IconSize
+        {
+            get { return (Double)GetValue(IconSizeProperty); }
+            set { SetValue(IconSizeProperty, value); }
+        }
+
+        #endregion Properties
     }
 }

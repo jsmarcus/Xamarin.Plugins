@@ -41,10 +41,13 @@ namespace FormsPlugin.Iconize.UWP
             if (Control == null || Element == null)
                 return;
 
-            if (e.PropertyName == nameof(IconImage.Icon) ||
-                e.PropertyName == nameof(IconImage.IconColor))
+            switch (e.PropertyName)
             {
-                await UpdateImageAsync();
+                case nameof(IconImage.Icon):
+                case nameof(IconImage.IconColor):
+                case nameof(IconImage.IconSize):
+                    await UpdateImageAsync();
+                    break;
             }
         }
 
