@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Xamarin.Forms;
 
 namespace FormsPlugin.Iconize
@@ -47,9 +46,8 @@ namespace FormsPlugin.Iconize
         /// <param name="menuItem">The menu item.</param>
         public static void Activate(this MenuItem menuItem)
         {
-            if (menuItem.Command != null && menuItem.Command.CanExecute(menuItem.CommandParameter))
-                menuItem.Command.Execute(menuItem.CommandParameter);
-            //menuItem.OnClicked();
+            if (menuItem.Command?.CanExecute(menuItem.CommandParameter) ?? false)
+                menuItem.Command?.Execute(menuItem.CommandParameter);
         }
     }
 }

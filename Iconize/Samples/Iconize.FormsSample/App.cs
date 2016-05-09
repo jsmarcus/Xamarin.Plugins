@@ -1,4 +1,5 @@
-﻿using FormsPlugin.Iconize;
+﻿using System.Linq;
+using FormsPlugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +15,11 @@ namespace Iconize.FormsSample
 
             foreach (var module in Plugin.Iconize.Iconize.Modules)
             {
-                tabbedPage.Children.Add(new Page1 { BindingContext = new ModuleWrapper(module) });
+                tabbedPage.Children.Add(new Page1
+                {
+                    BindingContext = new ModuleWrapper(module),
+                    Icon = module.Keys.FirstOrDefault()
+                });
             }
 
             MainPage = new IconNavigationPage(tabbedPage);

@@ -1,7 +1,6 @@
 ﻿using System;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.iOS;
-using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -20,10 +19,10 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewWillAppear(Boolean animated)
         {
-            base.ViewWillAppear(animated);
-
-            OnUpdateToolbarItems(this);
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
+            OnUpdateToolbarItems(this);
+
+            base.ViewWillAppear(animated);
         }
 
         /// <summary>
@@ -32,9 +31,9 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewWillDisappear(Boolean animated)
         {
-            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
-
             base.ViewWillDisappear(animated);
+
+            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
         }
 
         /// <summary>

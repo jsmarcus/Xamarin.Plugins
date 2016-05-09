@@ -69,10 +69,12 @@ namespace Plugin.Iconize.iOS
 
             UIGraphics.BeginImageContextWithOptions(boundSize, false, 0f);
             attributedString.DrawString(new CGRect(0, 0, boundSize.Width, boundSize.Height));
-            var image = UIGraphics.GetImageFromCurrentImageContext();
-            UIGraphics.EndImageContext();
+            using (var image = UIGraphics.GetImageFromCurrentImageContext())
+            {
+                UIGraphics.EndImageContext();
 
-            return image;
+                return image.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            }
         }
     }
 }

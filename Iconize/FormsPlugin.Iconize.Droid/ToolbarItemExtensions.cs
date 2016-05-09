@@ -17,6 +17,31 @@ namespace FormsPlugin.Iconize.Droid
     public static class ToolbarItemExtensions
     {
         /// <summary>
+        /// Gets the toolbar item drawable.
+        /// </summary>
+        /// <param name="toolbarItem">The toolbar item.</param>
+        /// <param name="context">The context.</param>
+        /// <returns></returns>
+        private static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
+        {
+            if (String.IsNullOrWhiteSpace(toolbarItem.Icon))
+                return null;
+
+            var iconItem = toolbarItem as IconToolbarItem;
+            if (iconItem == null)
+                return ResourceManager.GetDrawable(context.Resources, toolbarItem.Icon);
+
+            var drawable = new IconDrawable(context, iconItem.Icon);
+            if (drawable == null)
+                return null;
+
+            if (iconItem.IconColor != Color.Default)
+                drawable = drawable.Color(iconItem.IconColor.ToAndroid());
+
+            return drawable.ActionBarSize();
+        }
+
+        /// <summary>
         /// Updates the toolbar items.
         /// </summary>
         /// <param name="page">The page.</param>
@@ -48,31 +73,6 @@ namespace FormsPlugin.Iconize.Droid
                 if (toolbarItem.Order != ToolbarItemOrder.Secondary)
                     menuItem.SetShowAsAction(ShowAsAction.Always);
             }
-        }
-
-        /// <summary>
-        /// Gets the toolbar item drawable.
-        /// </summary>
-        /// <param name="toolbarItem">The toolbar item.</param>
-        /// <param name="context">The context.</param>
-        /// <returns></returns>
-        private static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
-        {
-            if (String.IsNullOrWhiteSpace(toolbarItem.Icon))
-                return null;
-
-            var iconItem = toolbarItem as IconToolbarItem;
-            if (iconItem == null)
-                return ResourceManager.GetDrawable(context.Resources, toolbarItem.Icon);
-
-            var drawable = new IconDrawable(context, iconItem.Icon);
-            if (drawable == null)
-                return null;
-
-            if (iconItem.IconColor != Color.Default)
-                drawable = drawable.Color(iconItem.IconColor.ToAndroid());
-
-            return drawable.ActionBarSize();
         }
     }
 }

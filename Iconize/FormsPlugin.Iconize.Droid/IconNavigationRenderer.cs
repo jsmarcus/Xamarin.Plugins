@@ -2,6 +2,7 @@ using System;
 using FormsPlugin.Iconize;
 using FormsPlugin.Iconize.Droid;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(IconNavigationPage), typeof(IconNavigationRenderer))]
@@ -18,10 +19,21 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         protected override void OnAttachedToWindow()
         {
-            base.OnAttachedToWindow();
-
-            OnUpdateToolbarItems(this);
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
+            (Context as FormsAppCompatActivity).ConfigurationChanged += OnConfigurationChanged;
+            OnUpdateToolbarItems(this);
+
+            base.OnAttachedToWindow();
+        }
+
+        /// <summary>
+        /// Called when [configuration changed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void OnConfigurationChanged(Object sender, EventArgs e)
+        {
+            OnUpdateToolbarItems(this);
         }
 
         /// <summary>
@@ -29,9 +41,10 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         protected override void OnDetachedFromWindow()
         {
-            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
-
             base.OnDetachedFromWindow();
+
+            (Context as FormsAppCompatActivity).ConfigurationChanged -= OnConfigurationChanged;
+            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
         }
 
         /// <summary>
@@ -40,7 +53,11 @@ namespace FormsPlugin.Iconize.Droid
         /// <param name="sender">The sender.</param>
         private void OnUpdateToolbarItems(Object sender)
         {
-            Element?.UpdateToolbarItems(Context);
+            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
+            {
+                Element?.UpdateToolbarItems(Context);
+                return false;
+            });
         }
     }
 }

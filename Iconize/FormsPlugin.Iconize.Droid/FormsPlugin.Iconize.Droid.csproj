@@ -103,6 +103,7 @@
     <Compile Include="IconImageRenderer.cs" />
     <Compile Include="IconLabelRenderer.cs" />
     <Compile Include="IconNavigationRenderer.cs" />
+    <Compile Include="IconTabbedPageRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolbarItemExtensions.cs" />
   </ItemGroup>

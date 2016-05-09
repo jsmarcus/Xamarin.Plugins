@@ -38,8 +38,8 @@ namespace FormsPlugin.Iconize.iOS
             if (toolbarItems == null)
                 return;
 
-            var list1 = (List<UIBarButtonItem>)null;
-            var list2 = (List<UIBarButtonItem>)null;
+            List<UIBarButtonItem> primaries = null;
+            List<UIBarButtonItem> secondaries = null;
 
             foreach (var toolbarItem in toolbarItems)
             {
@@ -50,22 +50,29 @@ namespace FormsPlugin.Iconize.iOS
                     if (iconItem.IsVisible == false)
                         continue;
 
-                    barButtonItem.Image = Plugin.Iconize.Iconize.FindIconForKey(iconItem.Icon).ToUIImage(24).ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-                    if (iconItem.IconColor != Color.Default)
-                        barButtonItem.TintColor = iconItem.IconColor.ToUIColor();
+                    var icon = Plugin.Iconize.Iconize.FindIconForKey(iconItem.Icon);
+                    if (icon != null)
+                    {
+                        using (var image = icon.ToUIImage(22))
+                        {
+                            barButtonItem.Image = image;
+                            if (iconItem.IconColor != Color.Default)
+                                barButtonItem.TintColor = iconItem.IconColor.ToUIColor();
+                        }
+                    }
                 }
 
                 if (toolbarItem.Order == ToolbarItemOrder.Secondary)
-                    (list2 = list2 ?? new List<UIBarButtonItem>()).Add(barButtonItem);
+                    (secondaries = secondaries ?? new List<UIBarButtonItem>()).Add(barButtonItem);
                 else
-                    (list1 = list1 ?? new List<UIBarButtonItem>()).Add(barButtonItem);
+                    (primaries = primaries ?? new List<UIBarButtonItem>()).Add(barButtonItem);
             }
 
-            if (list1 != null)
-                list1.Reverse();
+            if (primaries != null)
+                primaries.Reverse();
 
-            navController.NavigationItem.SetRightBarButtonItems(list1 == null ? new UIBarButtonItem[0] : list1.ToArray(), false);
-            navController.ToolbarItems = (list2 == null ? new UIBarButtonItem[0] : list2.ToArray());
+            navController.NavigationItem.SetRightBarButtonItems(primaries == null ? new UIBarButtonItem[0] : primaries.ToArray(), false);
+            navController.ToolbarItems = (secondaries == null ? new UIBarButtonItem[0] : secondaries.ToArray());
         }
     }
 }

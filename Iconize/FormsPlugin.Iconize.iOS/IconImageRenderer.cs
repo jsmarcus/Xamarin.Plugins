@@ -67,15 +67,19 @@ namespace FormsPlugin.Iconize.iOS
             {
                 Control.ContentMode = iconImage.IconSize > 0 ? UIViewContentMode.Center : UIViewContentMode.ScaleAspectFit;
 
-                var iconToDraw = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
-                if (iconToDraw == null)
+                var icon = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);
+                if (icon == null)
                 {
                     Control.Image = null;
                     return;
                 }
 
-                Control.Image = iconToDraw.ToUIImage(iconImage.IconSize > 0 ? (nfloat)iconImage.IconSize : (nfloat)Element.HeightRequest)
-                                          .ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+                var iconSize = (iconImage.IconSize > 0 ? (nfloat)iconImage.IconSize : (nfloat)Element.HeightRequest);
+
+                using (var image = icon.ToUIImage(iconSize))
+                {
+                    Control.Image = image;
+                }
             }
 
             Control.TintColor = iconImage.IconColor.ToUIColor();
