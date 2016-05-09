@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize.Ionicons</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>Iconize Plugin for Xamarin - Ionicons</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -16,17 +16,17 @@
     <dependencies>
       <!--UWP-->
       <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.5" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.6" />
       </group>
       
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.5" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.6" />
       </group>
       
       <!--Xamarin.iOS-->
       <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.5" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.6" />
       </group>
     </dependencies>
   </metadata>
