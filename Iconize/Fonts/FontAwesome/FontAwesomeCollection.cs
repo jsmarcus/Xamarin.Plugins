@@ -283,6 +283,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-fire", '\uf06d');
             Icons.Add("fa-fire-extinguisher", '\uf134');
             Icons.Add("fa-firefox", '\uf269');
+            Icons.Add("fa-first-order", '\uf2b0');
             Icons.Add("fa-flag", '\uf024');
             Icons.Add("fa-flag-checkered", '\uf11e');
             Icons.Add("fa-flag-o", '\uf11d');
@@ -491,8 +492,9 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-photo", '\uf03e');
             Icons.Add("fa-picture-o", '\uf03e');
             Icons.Add("fa-pie-chart", '\uf200');
-            Icons.Add("fa-pied-piper", '\uf1a7');
+            Icons.Add("fa-pied-piper", '\uf2ae');
             Icons.Add("fa-pied-piper-alt", '\uf1a8');
+            Icons.Add("fa-pied-piper-pp", '\uf1a7');
             Icons.Add("fa-pinterest", '\uf0d2');
             Icons.Add("fa-pinterest-p", '\uf231');
             Icons.Add("fa-pinterest-square", '\uf0d3');
@@ -531,6 +533,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-repeat", '\uf01e');
             Icons.Add("fa-reply", '\uf112');
             Icons.Add("fa-reply-all", '\uf122');
+            Icons.Add("fa-resistance", '\uf1d0');
             Icons.Add("fa-retweet", '\uf079');
             Icons.Add("fa-rmb", '\uf157');
             Icons.Add("fa-road", '\uf018');
@@ -645,6 +648,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-th", '\uf00a');
             Icons.Add("fa-th-large", '\uf009');
             Icons.Add("fa-th-list", '\uf00b');
+            Icons.Add("fa-themeisle", '\uf2b2');
             Icons.Add("fa-thumb-tack", '\uf08d');
             Icons.Add("fa-thumbs-down", '\uf165');
             Icons.Add("fa-thumbs-o-down", '\uf088');
@@ -738,6 +742,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-yc-square", '\uf1d4');
             Icons.Add("fa-yelp", '\uf1e9');
             Icons.Add("fa-yen", '\uf157');
+            Icons.Add("fa-yoast", '\uf2b1');
             Icons.Add("fa-youtube", '\uf167');
             Icons.Add("fa-youtube-play", '\uf16a');
             Icons.Add("fa-youtube-square", '\uf166');

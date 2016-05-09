@@ -54,7 +54,9 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-check", '\ue080');
             Icons.Add("icon-clock", '\ue081');
             Icons.Add("icon-plus", '\ue095');
+            Icons.Add("icon-minus", '\ue615');
             Icons.Add("icon-close", '\ue082');
+            Icons.Add("icon-organization", '\ue616');
             Icons.Add("icon-trophy", '\ue006');
             Icons.Add("icon-screen-smartphone", '\ue010');
             Icons.Add("icon-screen-desktop", '\ue011');
@@ -192,7 +194,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-social-linkedin", '\ue60a');
             Icons.Add("icon-social-pinterest", '\ue60b');
             Icons.Add("icon-social-github", '\ue60c');
-            Icons.Add("icon-social-gplus", '\ue60d');
+            Icons.Add("icon-social-google", '\ue60d');
             Icons.Add("icon-social-reddit", '\ue60e');
             Icons.Add("icon-social-skype", '\ue60f');
             Icons.Add("icon-social-dribbble", '\ue00d');
