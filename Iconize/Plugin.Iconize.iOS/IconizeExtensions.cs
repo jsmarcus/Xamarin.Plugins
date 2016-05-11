@@ -68,7 +68,7 @@ namespace Plugin.Iconize.iOS
             var boundSize = attributedString.GetBoundingRect(new CGSize(10000f, 10000f), NSStringDrawingOptions.UsesLineFragmentOrigin, null).Size;
 
             UIGraphics.BeginImageContextWithOptions(boundSize, false, 0f);
-            attributedString.DrawString(new CGRect(0, 0, boundSize.Width, boundSize.Height));
+            attributedString.DrawString(new CGRect(0f, 0f, boundSize.Width, boundSize.Height));
             using (var image = UIGraphics.GetImageFromCurrentImageContext())
             {
                 UIGraphics.EndImageContext();
