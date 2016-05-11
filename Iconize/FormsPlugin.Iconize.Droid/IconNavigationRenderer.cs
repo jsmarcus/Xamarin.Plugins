@@ -33,7 +33,11 @@ namespace FormsPlugin.Iconize.Droid
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void OnConfigurationChanged(Object sender, EventArgs e)
         {
-            OnUpdateToolbarItems(this);
+            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
+            {
+                OnUpdateToolbarItems(this);
+                return false;
+            });
         }
 
         /// <summary>
@@ -53,11 +57,7 @@ namespace FormsPlugin.Iconize.Droid
         /// <param name="sender">The sender.</param>
         private void OnUpdateToolbarItems(Object sender)
         {
-            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
-            {
-                Element?.UpdateToolbarItems(Context);
-                return false;
-            });
+            Element?.UpdateToolbarItems(this);
         }
     }
 }

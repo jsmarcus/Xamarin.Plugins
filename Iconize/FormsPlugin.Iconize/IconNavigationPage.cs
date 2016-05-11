@@ -14,11 +14,11 @@ namespace FormsPlugin.Iconize
         /// </summary>
         /// <param name="root">The root page.</param>
         public IconNavigationPage(Page root)
-            : base (root)
+            : base(root)
         {
             Popped += OnNavigation;
             PoppedToRoot += OnNavigation;
-            Pushed += OnNavigation;            
+            Pushed += OnNavigation;
         }
 
         /// <summary>

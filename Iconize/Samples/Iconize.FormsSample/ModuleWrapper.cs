@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using FormsPlugin.Iconize;
 using Plugin.Iconize;
 using Xamarin.Forms;
 
@@ -11,8 +13,11 @@ namespace Iconize.FormsSample
     {
         #region Commands
 
-        private Command _menuItemClick;
-        public Command MenuItemClick => _menuItemClick ?? (_menuItemClick = new Command(ExecuteMenuClick));
+        private Command _modalTestCommand;
+        public ICommand ModalTestCommand => _modalTestCommand ?? (_modalTestCommand = new Command(ExecuteModalTest));
+
+        private Command _visibleTestCommand;
+        public ICommand VisibleTestCommand => _visibleTestCommand ?? (_visibleTestCommand = new Command(ExecuteVisibleTest));
 
         #endregion Commands
 
@@ -55,7 +60,12 @@ namespace Iconize.FormsSample
             _module = module;
         }
 
-        public void ExecuteMenuClick()
+        public void ExecuteModalTest()
+        {
+            Application.Current.MainPage.Navigation.PushModalAsync(new IconNavigationPage(new Page1 { BindingContext = this }));
+        }
+
+        public void ExecuteVisibleTest()
         {
             VisibleTest = !VisibleTest;
         }

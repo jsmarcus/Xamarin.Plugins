@@ -1,5 +1,4 @@
 using System;
-using Android.App;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.Support.V7.Widget;
@@ -46,9 +45,9 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         /// <param name="page">The page.</param>
         /// <param name="context">The context.</param>
-        public static void UpdateToolbarItems(this Page page, Context context)
+        public static void UpdateToolbarItems(this Page page, Android.Views.View view)
         {
-            var toolbar = (context as Activity)?.FindViewById<Toolbar>(IconControls.ToolbarId);
+            var toolbar = view.FindViewById<Toolbar>(IconControls.ToolbarId);
             if (toolbar == null)
                 return;
 
