@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Android.App;
 using Android.Content;
 using Android.Support.Design.Widget;
 using FormsPlugin.Iconize;
@@ -55,7 +54,7 @@ namespace FormsPlugin.Iconize.Droid
         /// </summary>
         private void UpdateTabbedIcons(Context context)
         {
-            var tabLayout = (context as Activity)?.FindViewById<TabLayout>(IconControls.TabLayoutId);
+            var tabLayout = FindViewById<TabLayout>(IconControls.TabLayoutId);
             if (tabLayout == null || tabLayout.TabCount == 0)
                 return;
 
