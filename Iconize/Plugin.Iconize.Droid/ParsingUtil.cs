@@ -17,7 +17,7 @@ namespace Plugin.Iconize.Droid
     {
         public class MyListener : Java.Lang.Object, IOnViewAttachListener, Java.Lang.IRunnable
         {
-            private Boolean _isAttached = false;
+            private Boolean _isAttached;
             private readonly View _view;
 
             public MyListener(View view)

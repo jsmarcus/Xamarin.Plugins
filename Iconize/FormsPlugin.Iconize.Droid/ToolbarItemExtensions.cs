@@ -28,7 +28,7 @@ namespace FormsPlugin.Iconize.Droid
 
             var iconItem = toolbarItem as IconToolbarItem;
             if (iconItem == null)
-                return ResourceManager.GetDrawable(context.Resources, toolbarItem.Icon);
+                return context.Resources.GetDrawable(toolbarItem.Icon);
 
             var drawable = new IconDrawable(context, iconItem.Icon);
             if (drawable == null)

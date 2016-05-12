@@ -32,8 +32,8 @@ namespace Iconize.Sample.iOS
     [Register("ModuleViewController")]
     public class ModuleViewController : UICollectionViewController
     {
-        static NSString cellId = new NSString("IconViewCell");
-        private Plugin.Iconize.IIconModule _module;
+        static readonly NSString cellId = new NSString("IconViewCell");
+        private readonly Plugin.Iconize.IIconModule _module;
 
         public ModuleViewController(Plugin.Iconize.IIconModule module, UICollectionViewLayout layout)
             : base(layout)

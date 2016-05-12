@@ -6,7 +6,7 @@ namespace Plugin.Iconize.Droid
 {
     public class MenuClickListener : Java.Lang.Object, IMenuItemOnMenuItemClickListener, IJavaObject, IDisposable
     {
-        private Action _callback;
+        private readonly Action _callback;
 
         public MenuClickListener(Action callback)
         {

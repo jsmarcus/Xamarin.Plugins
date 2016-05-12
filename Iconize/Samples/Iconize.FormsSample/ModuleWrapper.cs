@@ -39,7 +39,7 @@ namespace Iconize.FormsSample
 
         public String FontFamily => _module.FontFamily;
 
-        private Boolean _visibleTest = false;
+        private Boolean _visibleTest;
         public Boolean VisibleTest
         {
             get
