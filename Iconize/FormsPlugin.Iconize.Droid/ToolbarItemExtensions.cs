@@ -44,7 +44,7 @@ namespace FormsPlugin.Iconize.Droid
         /// Updates the toolbar items.
         /// </summary>
         /// <param name="page">The page.</param>
-        /// <param name="context">The context.</param>
+        /// <param name="view">The view.</param>
         public static void UpdateToolbarItems(this Page page, Android.Views.View view)
         {
             var toolbar = view.FindViewById<Toolbar>(IconControls.ToolbarId);
