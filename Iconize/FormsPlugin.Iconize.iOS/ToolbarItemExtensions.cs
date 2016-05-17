@@ -18,7 +18,10 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="controller">The controller.</param>
         public static void UpdateToolbarItems(this Page page, UINavigationController controller)
         {
-            var navController = controller?.TopViewController;
+            if (controller?.IsBeingDismissed == true)
+                return;
+
+            var navController = controller?.VisibleViewController;
             if (navController == null)
                 return;
 
