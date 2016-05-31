@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <title>Iconize Plugin for Xamarin and Windows</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -35,6 +35,7 @@
     <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\UAP10\Plugin.Iconize.xml" />
     <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.dll" target="lib\UAP10\Plugin.Iconize.UWP.dll" />
     <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pdb" target="lib\UAP10\Plugin.Iconize.UWP.pdb" />
+    <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pri" target="lib\UAP10\Plugin.Iconize.UWP.pri" />
     <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.xml" target="lib\UAP10\Plugin.Iconize.UWP.xml" />
 
     <!--Xamarin.Android-->

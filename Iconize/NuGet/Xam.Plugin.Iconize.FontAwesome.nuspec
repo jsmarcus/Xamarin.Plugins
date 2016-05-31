@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize.FontAwesome</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <title>Iconize Plugin for Xamarin - Font Awesome</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -16,17 +16,17 @@
     <dependencies>
       <!--UWP-->
       <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
       </group>
       
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
       </group>
       
       <!--Xamarin.iOS-->
       <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
       </group>
     </dependencies>
   </metadata>
@@ -34,6 +34,7 @@
     <!--UWP-->
     <file src="..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.dll" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.dll" />
     <file src="..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.pdb" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.pdb" />
+    <file src="..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.pri" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.pri" />
     <file src="..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.xml" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.xml" />
     
     <!--Xamarin.Android-->

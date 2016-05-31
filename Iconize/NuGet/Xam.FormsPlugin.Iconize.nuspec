@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.FormsPlugin.Iconize</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <title>Iconize Controls Plugin for Xamarin.Forms</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -16,19 +16,19 @@
     <dependencies>
       <!--Core-->
       <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
         <dependency id="Xamarin.Forms" version="2.2.0.31" />
       </group>
       
       <!--UWP-->
       <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
         <dependency id="Xamarin.Forms" version="2.2.0.31" />
       </group>
       
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
         <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.Design" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.v4" version="23.3.0" />
@@ -42,7 +42,7 @@
       
       <!--Xamarin.iOS-->
       <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.8" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
         <dependency id="Xamarin.Forms" version="2.2.0.31" />
       </group>
     </dependencies>
@@ -59,6 +59,7 @@
     <file src="..\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\UAP10\FormsPlugin.Iconize.xml" />
     <file src="..\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.dll" target="lib\UAP10\FormsPlugin.Iconize.UWP.dll" />
     <file src="..\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.pdb" target="lib\UAP10\FormsPlugin.Iconize.UWP.pdb" />
+    <file src="..\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.pri" target="lib\UAP10\FormsPlugin.Iconize.UWP.pri" />
     <file src="..\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.xml" target="lib\UAP10\FormsPlugin.Iconize.UWP.xml" />
     
     <!--Xamarin.Android-->
