@@ -6,6 +6,10 @@ using Java.Lang;
 
 namespace Plugin.Iconize.Droid
 {
+    /// <summary>
+    /// Defines the <see cref="CustomTypefaceSpan" /> span.
+    /// </summary>
+    /// <seealso cref="Android.Text.Style.ReplacementSpan" />
     public class CustomTypefaceSpan : ReplacementSpan
     {
         private static readonly Int32 ROTATION_DURATION = 2000;
@@ -22,8 +26,24 @@ namespace Plugin.Iconize.Droid
         private readonly System.Boolean _baselineAligned;
         private readonly Int64 _rotationStartTime;
 
+        /// <summary>
+        /// Gets a value indicating whether this instance is animated.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this instance is animated; otherwise, <c>false</c>.
+        /// </value>
         public System.Boolean IsAnimated => _rotate;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomTypefaceSpan" /> class.
+        /// </summary>
+        /// <param name="icon">The icon.</param>
+        /// <param name="type">The type.</param>
+        /// <param name="iconSizePx">The icon size px.</param>
+        /// <param name="iconSizeRatio">The icon size ratio.</param>
+        /// <param name="iconColor">Color of the icon.</param>
+        /// <param name="rotate">if set to <c>true</c> [rotate].</param>
+        /// <param name="baselineAligned">if set to <c>true</c> [baseline aligned].</param>
         public CustomTypefaceSpan(IIcon icon, Typeface type, Single iconSizePx, Single iconSizeRatio, Int32 iconColor, System.Boolean rotate, System.Boolean baselineAligned)
         {
             _rotate = rotate;
@@ -52,6 +72,26 @@ namespace Plugin.Iconize.Droid
             paint.Flags = paint.Flags | PaintFlags.SubpixelText;
         }
 
+        /// <summary>
+        /// </summary>
+        /// <param name="canvas">To be added.</param>
+        /// <param name="text">To be added.</param>
+        /// <param name="start">To be added.</param>
+        /// <param name="end">To be added.</param>
+        /// <param name="x">To be added.</param>
+        /// <param name="top">To be added.</param>
+        /// <param name="y">To be added.</param>
+        /// <param name="bottom">To be added.</param>
+        /// <param name="paint">To be added.</param>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc" />
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/text/style/ReplacementSpan.html#draw(android.graphics.Canvas, java.lang.CharSequence, int, int, float, int, int, int, android.graphics.Paint)" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
         public override void Draw(Canvas canvas, ICharSequence text, Int32 start, Int32 end, Single x, Int32 top, Int32 y, Int32 bottom, Paint paint)
         {
             ApplyCustomTypeFace(paint, _type);
@@ -70,6 +110,15 @@ namespace Plugin.Iconize.Droid
             canvas.Restore();
         }
 
+        /// <summary>
+        /// Gets the size.
+        /// </summary>
+        /// <param name="paint">The paint.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="start">The start.</param>
+        /// <param name="end">The end.</param>
+        /// <param name="fm">The fm.</param>
+        /// <returns></returns>
         public override Int32 GetSize(Paint paint, ICharSequence text, Int32 start, Int32 end, Paint.FontMetricsInt fm)
         {
             LOCAL_PAINT.Set(paint);

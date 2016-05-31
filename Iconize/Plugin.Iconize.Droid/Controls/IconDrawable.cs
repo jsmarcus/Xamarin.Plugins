@@ -2,16 +2,24 @@ using System;
 using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
+using Android.Support.V4.Content;
 using Android.Text;
 using Android.Util;
 using R = Android.Resource;
 
 namespace Plugin.Iconize.Droid.Controls
 {
+    /// <summary>
+    /// Defines the <see cref="IconDrawable" /> drawable.
+    /// </summary>
+    /// <seealso cref="Android.Graphics.Drawables.Drawable" />
     public class IconDrawable : Drawable
     {
         #region Constants
 
+        /// <summary>
+        /// The android actionbar icon size dp
+        /// </summary>
         public const Int32 ANDROID_ACTIONBAR_ICON_SIZE_DP = 24;
 
         #endregion Constants
@@ -32,12 +40,97 @@ namespace Plugin.Iconize.Droid.Controls
 
         #region Properties
 
+        /// <summary>
+        /// Return the intrinsic height of the underlying drawable object.
+        /// </summary>
+        /// <value>
+        /// To be added.
+        /// </value>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc">Return the intrinsic height of the underlying drawable object. Returns
+        /// -1 if it has no intrinsic height, such as with a solid color.
+        /// </para>
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getIntrinsicHeight()" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
         public override Int32 IntrinsicHeight => _size;
 
+        /// <summary>
+        /// Return the intrinsic width of the underlying drawable object.
+        /// </summary>
+        /// <value>
+        /// To be added.
+        /// </value>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc">Return the intrinsic width of the underlying drawable object.  Returns
+        /// -1 if it has no intrinsic width, such as with a solid color.
+        /// </para>
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getIntrinsicWidth()" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
         public override Int32 IntrinsicWidth => _size;
 
+        /// <summary>
+        /// Indicates whether this view will change its appearance based on state.
+        /// </summary>
+        /// <value>
+        /// To be added.
+        /// </value>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc">Indicates whether this view will change its appearance based on state.
+        /// Clients can use this to determine whether it is necessary to calculate
+        /// their state and call setState.</para>
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#isStateful()" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
+        /// <altmember cref="M:Android.Graphics.Drawables.Drawable.SetState(System.Int32[])" />
         public override Boolean IsStateful => true;
 
+        /// <summary>
+        /// Return the opacity/transparency of this Drawable.
+        /// </summary>
+        /// <value>
+        /// To be added.
+        /// </value>
+        /// <remarks>
+        /// <para tool="javadoc-to-mdoc">Return the opacity/transparency of this Drawable.  The returned value is
+        /// one of the abstract format constants in
+        /// <c><see cref="T:Android.Graphics.PixelFormat" /></c>:
+        /// <c><see cref="F:Android.Graphics.Format.Unknown" /></c>,
+        /// <c><see cref="F:Android.Graphics.Format.Translucent" /></c>,
+        /// <c><see cref="F:Android.Graphics.Format.Transparent" /></c>, or
+        /// <c><see cref="F:Android.Graphics.Format.Opaque" /></c>.
+        /// </para>
+        /// <para tool="javadoc-to-mdoc">Generally a Drawable should be as conservative as possible with the
+        /// value it returns.  For example, if it contains multiple child drawables
+        /// and only shows one of them at a time, if only one of the children is
+        /// TRANSLUCENT and the others are OPAQUE then TRANSLUCENT should be
+        /// returned.  You can use the method <c><see cref="M:Android.Graphics.Drawables.Drawable.ResolveOpacity(System.Int32, System.Int32)" /></c> to perform a
+        /// standard reduction of two opacities to the appropriate single output.
+        /// </para>
+        /// <para tool="javadoc-to-mdoc">Note that the returned value does <i>not</i> take into account a
+        /// custom alpha or color filter that has been applied by the client through
+        /// the <c><see cref="M:Android.Graphics.Drawables.Drawable.SetAlpha(System.Int32)" /></c> or <c><see cref="M:Android.Graphics.Drawables.Drawable.SetColorFilter(Android.Graphics.ColorFilter)" /></c> methods.</para>
+        /// <para tool="javadoc-to-mdoc">
+        ///   <format type="text/html">
+        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getOpacity()" target="_blank">[Android Documentation]</a>
+        ///   </format>
+        /// </para>
+        /// </remarks>
+        /// <since version="Added in API level 1" />
+        /// <altmember cref="T:Android.Graphics.PixelFormat" />
         public override Int32 Opacity => _alpha;
 
         #endregion Properties
@@ -157,7 +250,7 @@ namespace Plugin.Iconize.Droid.Controls
         /// <returns>The current IconDrawable for chaining.</returns>
         public IconDrawable ColorRes(Int32 colorRes)
         {
-            _paint.Color = _context.Resources.GetColor(colorRes);
+            _paint.Color = new Color(ContextCompat.GetColor(_context, colorRes));
             InvalidateSelf();
             return this;
         }

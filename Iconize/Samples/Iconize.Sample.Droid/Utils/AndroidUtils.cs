@@ -37,19 +37,22 @@ namespace Iconize.Sample.Droid.Utils
                     realWidth = (Int32)mGetRawW.Invoke(display);
                     realHeight = (Int32)mGetRawH.Invoke(display);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     //this may not be 100% accurate, but it's all we've got
-                    realWidth = display.Width;
-                    realHeight = display.Height;
-                    //Log.e("Display Info", "Couldn't use reflection to get the real display metrics.");
+                    var metrics = new DisplayMetrics();
+                    display.GetMetrics(metrics);
+                    realWidth = metrics.WidthPixels;
+                    realHeight = metrics.HeightPixels;
                 }
             }
             else
             {
                 //This should be close, as lower API devices should not have window navigation bars
-                realWidth = display.Width;
-                realHeight = display.Height;
+                var metrics = new DisplayMetrics();
+                display.GetMetrics(metrics);
+                realWidth = metrics.WidthPixels;
+                realHeight = metrics.HeightPixels;
             }
 
             return new Size(realWidth, realHeight);
