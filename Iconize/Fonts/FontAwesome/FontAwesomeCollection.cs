@@ -249,6 +249,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-eye", '\uf06e');
             Icons.Add("fa-eye-slash", '\uf070');
             Icons.Add("fa-eyedropper", '\uf1fb');
+            Icons.Add("fa-fa", '\uf2b4');
             Icons.Add("fa-facebook", '\uf09a');
             Icons.Add("fa-facebook-f", '\uf09a');
             Icons.Add("fa-facebook-official", '\uf230');
@@ -296,6 +297,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-folder-open", '\uf07c');
             Icons.Add("fa-folder-open-o", '\uf115');
             Icons.Add("fa-font", '\uf031');
+            Icons.Add("fa-font-awesome", '\uf2b4');
             Icons.Add("fa-fonticons", '\uf280');
             Icons.Add("fa-fort-awesome", '\uf286');
             Icons.Add("fa-forumbee", '\uf211');
@@ -327,6 +329,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-globe", '\uf0ac');
             Icons.Add("fa-google", '\uf1a0');
             Icons.Add("fa-google-plus", '\uf0d5');
+            Icons.Add("fa-google-plus-circle", '\uf2b3');
+            Icons.Add("fa-google-plus-official", '\uf2b3');
             Icons.Add("fa-google-plus-square", '\uf0d4');
             Icons.Add("fa-google-wallet", '\uf1ee');
             Icons.Add("fa-graduation-cap", '\uf19d');
