@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize.SimpleLineIcons</id>
-    <version>1.0.9</version>
+    <version>1.0.10</version>
     <title>Iconize Plugin for Xamarin - Simple Line Icons</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -16,17 +16,17 @@
     <dependencies>
       <!--UWP-->
       <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
       </group>
       
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
       </group>
       
       <!--Xamarin.iOS-->
       <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.9" />
+        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
       </group>
     </dependencies>
   </metadata>

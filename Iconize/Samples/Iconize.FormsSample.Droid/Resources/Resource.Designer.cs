@@ -26,6 +26,7 @@ namespace Iconize.FormsSample.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Iconize.FormsSample.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
