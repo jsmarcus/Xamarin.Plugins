@@ -19,10 +19,10 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewWillAppear(Boolean animated)
         {
+            base.ViewWillAppear(animated);
+
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
             OnUpdateToolbarItems(this);
-
-            base.ViewWillAppear(animated);
         }
 
         /// <summary>
@@ -31,9 +31,9 @@ namespace FormsPlugin.Iconize.iOS
         /// <param name="animated">if set to <c>true</c> [animated].</param>
         public override void ViewWillDisappear(Boolean animated)
         {
-            base.ViewWillDisappear(animated);
-
             MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
+
+            base.ViewWillDisappear(animated);            
         }
 
         /// <summary>
