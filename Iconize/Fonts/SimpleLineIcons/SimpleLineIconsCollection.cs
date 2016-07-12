@@ -56,6 +56,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-plus", '\ue095');
             Icons.Add("icon-minus", '\ue615');
             Icons.Add("icon-close", '\ue082');
+            Icons.Add("icon-exclamation", '\ue617');
             Icons.Add("icon-organization", '\ue616');
             Icons.Add("icon-trophy", '\ue006');
             Icons.Add("icon-screen-smartphone", '\ue010');
