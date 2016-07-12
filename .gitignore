@@ -135,6 +135,9 @@ publish/
 *.publishproj
 
 # NuGet Packages
+*.lock.json
+*.nuget.props
+*.nuget.targets
 *.nupkg
 # The packages folder can be ignored because of Package Restore
 **/packages/*

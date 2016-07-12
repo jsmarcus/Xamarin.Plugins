@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.FormsPlugin.Iconize</id>
-    <version>1.0.10</version>
+    <version>1.5.0-beta1</version>
     <title>Iconize Controls Plugin for Xamarin.Forms</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -14,21 +14,13 @@
     <copyright>Copyright © Jeremy Marcus</copyright>
     <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
     <dependencies>
-      <!--Core-->
-      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
-        <dependency id="Xamarin.Forms" version="2.2.0.31" />
-      </group>
-      
-      <!--UWP-->
-      <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
-        <dependency id="Xamarin.Forms" version="2.2.0.31" />
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="1.5.0-beta1" />
+        <dependency id="Xamarin.Forms" version="[2, 3)" />
       </group>
       
       <!--Xamarin.Android-->
       <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
         <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.Design" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.v4" version="23.3.0" />
@@ -37,18 +29,11 @@
         <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.3.0" />
         <dependency id="Xamarin.Android.Support.Vector.Drawable" version="23.3.0" />
-        <dependency id="Xamarin.Forms" version="2.2.0.31" />
-      </group>
-      
-      <!--Xamarin.iOS-->
-      <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
-        <dependency id="Xamarin.Forms" version="2.2.0.31" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <!--Core-->
+    <!--PCL-->
     <file src="..\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.dll" />
     <file src="..\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.pdb" />
     <file src="..\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.xml" />

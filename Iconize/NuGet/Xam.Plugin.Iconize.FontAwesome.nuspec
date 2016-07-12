@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize.FontAwesome</id>
-    <version>1.0.10</version>
+    <version>1.5.0-beta1</version>
     <title>Iconize Plugin for Xamarin - Font Awesome</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -14,19 +14,8 @@
     <copyright>Copyright © Jeremy Marcus</copyright>
     <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
     <dependencies>
-      <!--UWP-->
-      <group targetFramework="UAP10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
-      </group>
-      
-      <!--Xamarin.Android-->
-      <group targetFramework="MonoAndroid10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
-      </group>
-      
-      <!--Xamarin.iOS-->
-      <group targetFramework="Xamarin.iOS10">
-        <dependency id="Xam.Plugin.Iconize" version="1.0.10" />
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="1.5.0-beta1" />
       </group>
     </dependencies>
   </metadata>

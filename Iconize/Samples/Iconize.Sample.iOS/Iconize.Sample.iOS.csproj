@@ -91,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Content Include="Entitlements.plist" />
+    <BundleResource Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
