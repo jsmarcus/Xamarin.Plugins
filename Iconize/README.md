@@ -144,8 +144,7 @@ LoadApplication(new App());
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
 
 ##License##
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
-This work is licensed under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+This work is licensed under a [Apache License, Versio 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Entypo+**  
 Entypo+ is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
