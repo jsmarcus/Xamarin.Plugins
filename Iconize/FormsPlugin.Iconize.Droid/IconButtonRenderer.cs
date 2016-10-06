@@ -17,17 +17,23 @@ namespace FormsPlugin.Iconize.Droid
     public class IconButtonRenderer : ButtonRenderer
     {
         /// <summary>
-        /// Disposes the specified disposing.
+        /// Called when [attached to window].
         /// </summary>
-        /// <param name="disposing">if set to <c>true</c> [disposing].</param>
-        protected override void Dispose(Boolean disposing)
+        protected override void OnAttachedToWindow()
         {
-            if (Control != null)
-            {
-                Control.TextChanged -= OnTextChanged;
-            }
+            base.OnAttachedToWindow();
 
-            base.Dispose(disposing);
+            Control.TextChanged += OnTextChanged;
+        }
+
+        /// <summary>
+        /// Called when [detached from window].
+        /// </summary>
+        protected override void OnDetachedFromWindow()
+        {
+            Control.TextChanged -= OnTextChanged;
+
+            base.OnDetachedFromWindow();
         }
 
         /// <summary>
@@ -43,7 +49,6 @@ namespace FormsPlugin.Iconize.Droid
 
             Control.SetAllCaps(false);
             UpdateText();
-            Control.TextChanged += OnTextChanged;
         }
 
         /// <summary>
