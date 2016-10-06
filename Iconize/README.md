@@ -142,6 +142,7 @@ LoadApplication(new App());
 
 * Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
+* Kevin Petit [@kvpt](https://github.com/kvpt)
 
 ##License##
 This work is licensed under a [Apache License, Versio 2.0](http://www.apache.org/licenses/LICENSE-2.0).
