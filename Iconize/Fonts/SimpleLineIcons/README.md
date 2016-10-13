@@ -1,3 +1,3 @@
-http://thesabbir.github.io/simple-line-icons/
+https://github.com/thesabbir/simple-line-icons
 
-Version: 2.3.2
+Version: 2.4.1

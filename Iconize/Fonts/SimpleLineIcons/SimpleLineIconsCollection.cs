@@ -10,9 +10,7 @@ namespace Plugin.Iconize.Fonts
         /// <summary>
         /// Gets the icons.
         /// </summary>
-        /// <value>
-        /// The icons.
-        /// </value>
+        /// <value>The icons.</value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
         /// <summary>
@@ -56,6 +54,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-plus", '\ue095');
             Icons.Add("icon-minus", '\ue615');
             Icons.Add("icon-close", '\ue082');
+            Icons.Add("icon-event", '\ue619');
             Icons.Add("icon-exclamation", '\ue617');
             Icons.Add("icon-organization", '\ue616');
             Icons.Add("icon-trophy", '\ue006');
@@ -206,6 +205,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("icon-social-stumbleupon", '\ue614');
             Icons.Add("icon-social-youtube", '\ue008');
             Icons.Add("icon-social-dropbox", '\ue00c');
+            Icons.Add("icon-social-vkontakte", '\ue618');
+            Icons.Add("icon-social-steam", '\ue620');
         }
     }
 }
