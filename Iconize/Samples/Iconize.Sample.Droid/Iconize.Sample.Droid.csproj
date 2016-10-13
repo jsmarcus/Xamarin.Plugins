@@ -83,48 +83,6 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Droid\Plugin.Iconize.EntypoPlus.Droid.csproj">
-      <Project>{6507b5f9-82b7-4e24-9b1f-8bff65eb17c4}</Project>
-      <Name>Plugin.Iconize.EntypoPlus.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Droid\Plugin.Iconize.FontAwesome.Droid.csproj">
-      <Project>{c610737e-e8b6-4cf4-834c-a5ebcf6f2219}</Project>
-      <Name>Plugin.Iconize.FontAwesome.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\Plugin.Iconize.Ionicons.Droid.csproj">
-      <Project>{d158e046-bc30-4726-9f11-7a8fe09a0701}</Project>
-      <Name>Plugin.Iconize.Ionicons.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.Droid\Plugin.Iconize.Material.Droid.csproj">
-      <Project>{bf31e501-7c92-4b90-bdc7-6323295cbc52}</Project>
-      <Name>Plugin.Iconize.Material.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\Plugin.Iconize.Meteocons.Droid.csproj">
-      <Project>{8dd64822-57a3-4fe9-9bfb-45b35aeb6164}</Project>
-      <Name>Plugin.Iconize.Meteocons.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Droid\Plugin.Iconize.SimpleLineIcons.Droid.csproj">
-      <Project>{5187aa08-61cb-4749-81d5-4b78dc81633f}</Project>
-      <Name>Plugin.Iconize.SimpleLineIcons.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Typicons\Plugin.Iconize.Typicons.Droid\Plugin.Iconize.Typicons.Droid.csproj">
-      <Project>{c8fe4f23-70b6-475d-9b87-bd655b8cd22d}</Project>
-      <Name>Plugin.Iconize.Typicons.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\Plugin.Iconize.WeatherIcons.Droid.csproj">
-      <Project>{d19daa47-6696-40f4-8d7c-591a16d3991e}</Project>
-      <Name>Plugin.Iconize.WeatherIcons.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin.Iconize.Droid\Plugin.Iconize.Droid.csproj">
-      <Project>{318a7d0f-5e8f-4cfe-be13-7dca1235e0ae}</Project>
-      <Name>Plugin.Iconize.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,7 @@
 ﻿{
   "supports": {},
   "dependencies": {
+    "Xam.FormsPlugin.Iconize": "1.0.10",
     "Xamarin.Forms": "2.3.2.127"
   },
   "frameworks": {

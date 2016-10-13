@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Xam.Plugin.Iconize</id>
-    <version>1.5.0-beta1</version>
+    <version>$version$</version>
     <title>Iconize Plugin for Xamarin and Windows</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
@@ -25,31 +25,31 @@
   </metadata>
   <files>
     <!--PCL-->
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.dll" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.pdb" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.xml" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.dll" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.pdb" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.xml" />
 
     <!--UWP-->
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\UAP10\Plugin.Iconize.dll" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\UAP10\Plugin.Iconize.pdb" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\UAP10\Plugin.Iconize.xml" />
-    <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.dll" target="lib\UAP10\Plugin.Iconize.UWP.dll" />
-    <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pdb" target="lib\UAP10\Plugin.Iconize.UWP.pdb" />
-    <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pri" target="lib\UAP10\Plugin.Iconize.UWP.pri" />
-    <file src="..\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.xml" target="lib\UAP10\Plugin.Iconize.UWP.xml" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\UAP10\Plugin.Iconize.dll" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\UAP10\Plugin.Iconize.pdb" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\UAP10\Plugin.Iconize.xml" />
+    <file src="Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.dll" target="lib\UAP10\Plugin.Iconize.UWP.dll" />
+    <file src="Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pdb" target="lib\UAP10\Plugin.Iconize.UWP.pdb" />
+    <file src="Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pri" target="lib\UAP10\Plugin.Iconize.UWP.pri" />
+    <file src="Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.xml" target="lib\UAP10\Plugin.Iconize.UWP.xml" />
 
     <!--Xamarin.Android-->
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\MonoAndroid10\Plugin.Iconize.dll" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\MonoAndroid10\Plugin.Iconize.pdb" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\MonoAndroid10\Plugin.Iconize.xml" />
-    <file src="..\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Droid.dll" />
-    <file src="..\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Droid.pdb" />
-    <file src="..\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Droid.xml" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\MonoAndroid10\Plugin.Iconize.dll" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\MonoAndroid10\Plugin.Iconize.pdb" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\MonoAndroid10\Plugin.Iconize.xml" />
+    <file src="Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Droid.dll" />
+    <file src="Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Droid.pdb" />
+    <file src="Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Droid.xml" />
 
     <!--Xamarin.iOS-->
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.dll" />
-    <file src="..\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.xml" />
-    <file src="..\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll" />
-    <file src="..\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.xml" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.dll" />
+    <file src="Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.xml" />
+    <file src="Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll" />
+    <file src="Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.xml" />
   </files>
 </package>

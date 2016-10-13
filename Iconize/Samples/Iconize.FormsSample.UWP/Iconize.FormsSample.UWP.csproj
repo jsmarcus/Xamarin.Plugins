@@ -127,54 +127,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\Plugin.Iconize.EntypoPlus.UWP.csproj">
-      <Project>{b0f749de-a613-4633-aa99-6d4cf853225a}</Project>
-      <Name>Plugin.Iconize.EntypoPlus.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\Plugin.Iconize.FontAwesome.UWP.csproj">
-      <Project>{04d50fb0-129d-4c72-bffd-3d826ac956fc}</Project>
-      <Name>Plugin.Iconize.FontAwesome.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\Plugin.Iconize.Ionicons.UWP.csproj">
-      <Project>{6e763529-491d-4413-8da3-0a15b48d8da7}</Project>
-      <Name>Plugin.Iconize.Ionicons.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Material\Plugin.Iconize.Material.UWP\Plugin.Iconize.Material.UWP.csproj">
-      <Project>{c9bf340a-a8f2-4967-8cf1-aecf14a57dcb}</Project>
-      <Name>Plugin.Iconize.Material.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\Plugin.Iconize.Meteocons.UWP.csproj">
-      <Project>{89e4a646-1f0d-4e13-997d-0888fa706def}</Project>
-      <Name>Plugin.Iconize.Meteocons.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.UWP\Plugin.Iconize.SimpleLineIcons.UWP.csproj">
-      <Project>{befe71bc-dd78-4d45-895e-d10bb14e342f}</Project>
-      <Name>Plugin.Iconize.SimpleLineIcons.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\Plugin.Iconize.Typicons.UWP.csproj">
-      <Project>{62201abe-abff-486e-b3c1-124dae18a8fd}</Project>
-      <Name>Plugin.Iconize.Typicons.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\Plugin.Iconize.WeatherIcons.UWP.csproj">
-      <Project>{1bbc78f7-1ab9-4ee4-9573-9df1e64b6f2a}</Project>
-      <Name>Plugin.Iconize.WeatherIcons.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FormsPlugin.Iconize.UWP\FormsPlugin.Iconize.UWP.csproj">
-      <Project>{aeb3b832-586a-431e-822b-909db61ef79d}</Project>
-      <Name>FormsPlugin.Iconize.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FormsPlugin.Iconize\FormsPlugin.Iconize.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>FormsPlugin.Iconize</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin.Iconize.UWP\Plugin.Iconize.UWP.csproj">
-      <Project>{70ead9be-c324-4954-b3cc-8ccb81a636e6}</Project>
-      <Name>Plugin.Iconize.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Iconize.FormsSample\Iconize.FormsSample.csproj">
       <Project>{28a53533-c5e4-42a6-a247-63ad5de50778}</Project>
       <Name>Iconize.FormsSample</Name>
