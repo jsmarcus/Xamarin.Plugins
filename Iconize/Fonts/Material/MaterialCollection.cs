@@ -10,9 +10,7 @@ namespace Plugin.Iconize.Fonts
         /// <summary>
         /// Gets the icons.
         /// </summary>
-        /// <value>
-        /// The icons.
-        /// </value>
+        /// <value>The icons.</value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
         /// <summary>

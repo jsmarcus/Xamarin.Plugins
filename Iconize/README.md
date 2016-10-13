@@ -145,7 +145,7 @@ LoadApplication(new App());
 * Kevin Petit [@kvpt](https://github.com/kvpt)
 
 ##License##
-This work is licensed under a [Apache License, Versio 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+This work is licensed under a [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Entypo+**  
 Entypo+ is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
@@ -157,7 +157,7 @@ Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.si
 Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 **Material design icons**  
-Material design icons are licensed under the [Creative Common Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Material design icons are licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Meteocons**  
 Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www.alessioatzeni.com/).
