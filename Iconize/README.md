@@ -78,8 +78,8 @@ All packages are provided via NuGet.
 ###Configure###
 
 **Xamarin.Android**  
-Initialize any number of modules in Application.OnCreate().
-```c#
+Initialize any number of modules in Application.OnCreate() or Activity.OnCreate().
+```csharp
 public override void OnCreate()
 {
     base.OnCreate();
@@ -91,10 +91,24 @@ public override void OnCreate()
     ...
 }
 ```
+**OR**
+```csharp
+protected override void OnCreate(Bundle bundle)
+{
+    base.OnCreate(bundle);
+
+    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+    ...
+}
+```
+
 
 **Xamarin.iOS**  
 Initialize any number of modules in AppDelegate.FinishedLaunching().
-```c#
+```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 {
     Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
@@ -121,16 +135,16 @@ Add the UIAppFonts key to Info.plist.
 Follow the instructions for the specific platforms above and add the following:
 
 Android:
-```c#
+```csharp
 Xamarin.Forms.Forms.Init(this, savedInstanceState);
 ...
-FormsPlugin.Iconize.Droid.IconControls.Init();
+FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
 ...
 LoadApplication(new App());
 ```
 
 iOS:
-```c#
+```csharp
 Xamarin.Forms.Forms.Init();
 ...
 FormsPlugin.Iconize.iOS.IconControls.Init();
