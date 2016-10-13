@@ -1,9 +1,7 @@
-﻿{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
+{
+  "supports": {},
+  "dependencies": {},
   "frameworks": {
-    "netstandard1.4": {}
-  },
-  "supports": {}
+    ".NETPortable,Version=v4.5,Profile=Profile259": {}
+  }
 }
