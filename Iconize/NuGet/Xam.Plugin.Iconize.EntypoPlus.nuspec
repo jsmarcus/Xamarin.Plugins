@@ -30,7 +30,8 @@
     <file src="Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\Release\Plugin.Iconize.EntypoPlus.UWP.pdb" target="lib\UAP10\Plugin.Iconize.EntypoPlus.UWP.pdb" />
     <file src="Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\Release\Plugin.Iconize.EntypoPlus.UWP.pri" target="lib\UAP10\Plugin.Iconize.EntypoPlus.UWP.pri" />
     <file src="Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\Release\Plugin.Iconize.EntypoPlus.UWP.xml" target="lib\UAP10\Plugin.Iconize.EntypoPlus.UWP.xml" />
-    
+    <file src="Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\UAP10\Plugin.Iconize.EntypoPlus.UWP\Assets\Fonts\iconize-entypoplus.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Droid\bin\Release\Plugin.Iconize.EntypoPlus.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.EntypoPlus.Droid.dll" />
     <file src="Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Droid\bin\Release\Plugin.Iconize.EntypoPlus.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.EntypoPlus.Droid.pdb" />

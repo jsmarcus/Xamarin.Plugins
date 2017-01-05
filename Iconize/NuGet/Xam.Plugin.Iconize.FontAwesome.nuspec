@@ -30,6 +30,7 @@
     <file src="Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.pdb" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.pdb" />
     <file src="Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.pri" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.pri" />
     <file src="Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\Release\Plugin.Iconize.FontAwesome.UWP.xml" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP.xml" />
+    <file src="Fonts\FontAwesome\iconize-fontawesome.ttf" target="lib\UAP10\Plugin.Iconize.FontAwesome.UWP\Assets\Fonts\iconize-fontawesome.ttf" />
     
     <!--Xamarin.Android-->
     <file src="Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Droid\bin\Release\Plugin.Iconize.FontAwesome.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.FontAwesome.Droid.dll" />

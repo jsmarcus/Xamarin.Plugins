@@ -30,6 +30,7 @@
     <file src="Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Material.UWP.pdb" />
     <file src="Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pri" target="lib\UAP10\Plugin.Iconize.Material.UWP.pri" />
     <file src="Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.xml" target="lib\UAP10\Plugin.Iconize.Material.UWP.xml" />
+    <file src="Fonts\Material\iconize-material.ttf" target="lib\UAP10\Plugin.Iconize.Material.UWP\Assets\Fonts\iconize-material.ttf" />
 
     <!--Xamarin.Android-->
     <file src="Fonts\Material\Plugin.Iconize.Material.Droid\bin\Release\Plugin.Iconize.Material.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Material.Droid.dll" />
