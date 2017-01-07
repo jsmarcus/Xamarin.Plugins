@@ -30,7 +30,8 @@
     <file src="Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pdb" />
     <file src="Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pri" />
     <file src="Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.xml" />
-    
+    <file src="Fonts\Ionicons\iconize-ionicons.ttf" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP\Assets\Fonts\iconize-ionicons.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\bin\Release\Plugin.Iconize.Ionicons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.dll" />
     <file src="Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\bin\Release\Plugin.Iconize.Ionicons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.pdb" />

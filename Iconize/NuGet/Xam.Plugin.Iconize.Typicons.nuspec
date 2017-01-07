@@ -30,7 +30,8 @@
     <file src="Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.pdb" />
     <file src="Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.pri" />
     <file src="Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.xml" />
-    
+    <file src="Fonts\Typicons\iconize-typicons.ttf" target="lib\UAP10\Plugin.Iconize.Typicons.UWP\Assets\Fonts\iconize-typicons.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\Typicons\Plugin.Iconize.Typicons.Droid\bin\Release\Plugin.Iconize.Typicons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.dll" />
     <file src="Fonts\Typicons\Plugin.Iconize.Typicons.Droid\bin\Release\Plugin.Iconize.Typicons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.pdb" />

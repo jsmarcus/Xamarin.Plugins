@@ -30,7 +30,8 @@
     <file src="Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pdb" />
     <file src="Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pri" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pri" />
     <file src="Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.xml" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.xml" />
-    
+    <file src="Fonts\WeatherIcons\iconize-weathericons.ttf" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP\Assets\Fonts\iconize-weathericons.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\bin\Release\Plugin.Iconize.WeatherIcons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.dll" />
     <file src="Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\bin\Release\Plugin.Iconize.WeatherIcons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.pdb" />

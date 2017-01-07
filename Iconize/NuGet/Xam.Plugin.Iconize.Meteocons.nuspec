@@ -30,7 +30,8 @@
     <file src="Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.pdb" />
     <file src="Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.pri" />
     <file src="Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.xml" />
-    
+    <file src="Fonts\Meteocons\iconize-meteocons.ttf" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP\Assets\Fonts\iconize-meteocons.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\bin\Release\Plugin.Iconize.Meteocons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.dll" />
     <file src="Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\bin\Release\Plugin.Iconize.Meteocons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.pdb" />

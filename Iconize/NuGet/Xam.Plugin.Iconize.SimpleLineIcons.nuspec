@@ -30,7 +30,8 @@
     <file src="Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.UWP\bin\Release\Plugin.Iconize.SimpleLineIcons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.SimpleLineIcons.UWP.pdb" />
     <file src="Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.UWP\bin\Release\Plugin.Iconize.SimpleLineIcons.UWP.pri" target="lib\UAP10\Plugin.Iconize.SimpleLineIcons.UWP.pri" />
     <file src="Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.UWP\bin\Release\Plugin.Iconize.SimpleLineIcons.UWP.xml" target="lib\UAP10\Plugin.Iconize.SimpleLineIcons.UWP.xml" />
-    
+    <file src="Fonts\SimpleLineIcons\iconize-simplelineicons.ttf" target="lib\UAP10\Plugin.Iconize.SimpleLineIcons.UWP\Assets\Fonts\iconize-simplelineicons.ttf" />
+
     <!--Xamarin.Android-->
     <file src="Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Droid\bin\Release\Plugin.Iconize.SimpleLineIcons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.SimpleLineIcons.Droid.dll" />
     <file src="Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Droid\bin\Release\Plugin.Iconize.SimpleLineIcons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.SimpleLineIcons.Droid.pdb" />
