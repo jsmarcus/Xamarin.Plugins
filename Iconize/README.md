@@ -67,6 +67,7 @@ All packages are provided via NuGet.
 
 * [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize) - Required by all projects
 * [Xam.FormsPlugin.Iconize](https://www.nuget.org/packages/Xam.FormsPlugin.Iconize) - Required by Xamarin.Forms projects
+* [Xam.Plugin.Iconize.EntypoPlus](https://www.nuget.org/packages/Xam.Plugin.Iconize.EntypoPlus)
 * [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
 * [Xam.Plugin.Iconize.Ionicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Ionicons)
 * [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
