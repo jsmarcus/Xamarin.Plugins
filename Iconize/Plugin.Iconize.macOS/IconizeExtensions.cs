@@ -3,6 +3,8 @@ using AppKit;
 using CoreGraphics;
 using CoreText;
 using Foundation;
+using CoreVideo;
+using System.Diagnostics.Contracts;
 
 namespace Plugin.Iconize.macOS
 {
@@ -20,30 +22,30 @@ namespace Plugin.Iconize.macOS
 		}
 
 		/// <summary>
-		/// To the UI image.
+		/// To the NS image.
 		/// </summary>
 		/// <param name="icon">The icon.</param>
 		/// <param name="size">The size.</param>
 		/// <returns></returns>
         public static NSImage ToNSImage(this IIcon icon, nfloat size)
 		{
-            throw new NotImplementedException();
-			//var attributedString = new NSAttributedString($"{icon.Character}", new CTStringAttributes
-			//{
-			//	Font = new CTFont(Iconize.FindModuleOf(icon).FontName, size),
-			//	ForegroundColorFromContext = true
-			//});
+            var attributedString = new NSAttributedString($"{icon.Character}", new CTStringAttributes
+            {
+                Font = new CTFont(Iconize.FindModuleOf(icon).FontName, size),
+                ForegroundColorFromContext = true
+            });
 
-			//var boundSize = attributedString.GetBoundingRect(new CGSize(10000f, 10000f), NSStringDrawingOptions.UsesLineFragmentOrigin, null).Size;
+            using (var ctx = new CGBitmapContext(IntPtr.Zero,(nint)size, (nint)size, 8, 4 * (nint)(size), CGColorSpace.CreateDeviceRGB(), CGImageAlphaInfo.PremultipliedFirst))
+            {
+                //ctx.SetFillColor(NSColor.Red.CGColor);
 
-			//UIGraphics.BeginImageContextWithOptions(boundSize, false, 0f);
-			//attributedString.DrawString(new CGRect(0f, 0f, boundSize.Width, boundSize.Height));
-			//using (var image = UIGraphics.GetImageFromCurrentImageContext())
-			//{
-			//	UIGraphics.EndImageContext();
+                using(var textLine = new CTLine(attributedString))
+                {
+                    textLine.Draw(ctx);
+                }
 
-			//	return image.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-			//}
+                return new NSImage(ctx.ToImage(), new CGSize(size, size));
+            }
 		}
     }
 }
