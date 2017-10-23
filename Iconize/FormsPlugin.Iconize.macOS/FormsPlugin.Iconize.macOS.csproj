@@ -69,6 +69,7 @@
     <Compile Include="IconControls.cs" />
     <Compile Include="IconButtonRenderer.cs" />
     <Compile Include="IconTabbedPageRenderer.cs" />
+    <Compile Include="IconImageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.Iconize\Plugin.Iconize.csproj">

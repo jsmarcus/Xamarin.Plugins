@@ -29,23 +29,28 @@ namespace Plugin.Iconize.macOS
 		/// <returns></returns>
         public static NSImage ToNSImage(this IIcon icon, nfloat size)
 		{
-            var attributedString = new NSAttributedString($"{icon.Character}", new CTStringAttributes
-            {
-                Font = new CTFont(Iconize.FindModuleOf(icon).FontName, size),
-                ForegroundColorFromContext = true
-            });
+            return ToNSImageWithColor(icon, size, NSColor.Black.CGColor);
+		}
 
-            using (var ctx = new CGBitmapContext(IntPtr.Zero,(nint)size, (nint)size, 8, 4 * (nint)(size), CGColorSpace.CreateDeviceRGB(), CGImageAlphaInfo.PremultipliedFirst))
-            {
-                //ctx.SetFillColor(NSColor.Red.CGColor);
+		public static NSImage ToNSImageWithColor(this IIcon icon, nfloat size, CGColor color)
+		{
+			var attributedString = new NSAttributedString($"{icon.Character}", new CTStringAttributes
+			{
+				Font = new CTFont(Iconize.FindModuleOf(icon).FontName, size),
+				ForegroundColorFromContext = true
+			});
 
-                using(var textLine = new CTLine(attributedString))
-                {
-                    textLine.Draw(ctx);
-                }
+			using (var ctx = new CGBitmapContext(IntPtr.Zero, (nint)size, (nint)size, 8, 4 * (nint)(size), CGColorSpace.CreateDeviceRGB(), CGImageAlphaInfo.PremultipliedFirst))
+			{
+				ctx.SetFillColor(color);
 
-                return new NSImage(ctx.ToImage(), new CGSize(size, size));
-            }
+				using (var textLine = new CTLine(attributedString))
+				{
+					textLine.Draw(ctx);
+				}
+
+				return new NSImage(ctx.ToImage(), new CGSize(size, size));
+			}
 		}
     }
 }
