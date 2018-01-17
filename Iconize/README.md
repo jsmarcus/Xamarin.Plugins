@@ -1,4 +1,4 @@
-#Iconize Plugin for Xamarin#
+# Iconize Plugin for Xamarin
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms application!
 
@@ -7,7 +7,7 @@ Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms applicatio
 [build-status-img]: http://img.shields.io/appveyor/ci/JeremyMarcus/xamarin-plugins.svg?style=flat
 [build-status-url]: https://ci.appveyor.com/project/JeremyMarcus/xamarin-plugins
 
-##Icon Fonts##
+## Icon Fonts
 
 * [Entypo+](http://entypo.com/) - pictograms by Daniel Bruce
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
@@ -28,7 +28,7 @@ All you need to do is to implement IIconModule with a .ttf file in your assets/r
 There are no constraints on the icon keys, but I strongly suggest you use a unique prefix like my- or anything, to avoid conflicts with other modules.
 FYI, if there is a conflict, the first module declared with Iconize.With() has priority.
 
-##Controls##
+## Controls
 
 **Xamarin.Android (AppCompat)**
 
@@ -58,9 +58,9 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 * Bitmap (extension)
 
 
-##Setup##
+## Setup
 
-###Install###
+### Install
 
 **Nuget**  
 All packages are provided via NuGet.
@@ -76,7 +76,7 @@ All packages are provided via NuGet.
 * [Xam.Plugin.Iconize.Typicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Typicons)
 * [Xam.Plugin.Iconize.WeatherIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.WeatherIcons)
 
-###Configure###
+### Configure
 
 **Xamarin.Android**  
 Initialize any number of modules in Application.OnCreate() or Activity.OnCreate().
@@ -153,13 +153,13 @@ FormsPlugin.Iconize.iOS.IconControls.Init();
 LoadApplication(new App());
 ```
 
-##Contributions##
+## Contributions
 
 * Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
 * Kevin Petit [@kvpt](https://github.com/kvpt)
 
-##License##
+## License
 This work is licensed under a [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Entypo+**  
